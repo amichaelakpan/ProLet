@@ -3,19 +3,19 @@ const NavLinks = () => {
     <div className='nav-link'>
       <ul className='nav-list'>
         <li className='nav-item'>
-          <a href='#'>Home</a>
+          <a href='/'>Home</a>
         </li>
         <li className='nav-item'>
-          <a href='#'>Services</a>
+          <a href='/'>Services</a>
         </li>
         <li className='nav-item'>
-          <a href='#'>About</a>
+          <a href='/'>About</a>
         </li>
         <li className='nav-item'>
-          <a href='#'>Contact</a>
+          <a href='/'>Contact</a>
         </li>
         <li className='nav-item'>
-          <a href='#'>Dashboard</a>
+          <a href='/'>Dashboard</a>
         </li>
       </ul>
     </div>

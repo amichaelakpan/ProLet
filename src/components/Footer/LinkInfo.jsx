@@ -17,16 +17,16 @@ const Lease = () => {
         <h5 className='lease-header'>LEASE</h5>
         <ul className='lease-list'>
           <li>
-            <a href='#'>Register as a landlord</a>
+            <a href='/'>Register as a landlord</a>
           </li>
           <li>
-            <a href='#'>Post Property</a>
+            <a href='/'>Post Property</a>
           </li>
           <li>
-            <a href='#'>Reviews</a>
+            <a href='/'>Reviews</a>
           </li>
           <li>
-            <a href='#'>Stories</a>
+            <a href='/'>Stories</a>
           </li>
         </ul>
       </div>
@@ -41,14 +41,14 @@ const Rent = () => {
         <h5 className='lease-header'>RENT</h5>
         <ul className='lease-list'>
           <li>
-            <a href='#'>Rent Home</a>
+            <a href='/'>Rent Home</a>
           </li>
           <li>
-            <a href='#'>Explore Properties</a>
+            <a href='/'>Explore Properties</a>
           </li>
 
           <li>
-            <a href='#'>Stories</a>
+            <a href='/'>Stories</a>
           </li>
         </ul>
       </div>
@@ -63,18 +63,18 @@ const About = () => {
         <h5 className='lease-header'>ABOUT</h5>
         <ul className='lease-list'>
           <li>
-            <a href='#'>Company</a>
+            <a href='/'>Company</a>
           </li>
           <li>
-            <a href='#'>How it works</a>
-          </li>
-
-          <li>
-            <a href='#'>Contact</a>
+            <a href='/'>How it works</a>
           </li>
 
           <li>
-            <a href='#'>Agents</a>
+            <a href='/'>Contact</a>
+          </li>
+
+          <li>
+            <a href='/'>Agents</a>
           </li>
         </ul>
       </div>
@@ -89,14 +89,14 @@ const Terms = () => {
         <h5 className='lease-header'>TERMS & PRIVACY</h5>
         <ul className='lease-list'>
           <li>
-            <a href='#'>Trust & Safety</a>
+            <a href='/'>Trust & Safety</a>
           </li>
           <li>
-            <a href='#'>Terms of Service</a>
+            <a href='/'>Terms of Service</a>
           </li>
 
           <li>
-            <a href='#'>Privacy Policy</a>
+            <a href='/'>Privacy Policy</a>
           </li>
         </ul>
       </div>
@@ -111,14 +111,14 @@ const Resources = () => {
         <h5 className='lease-header'>RESOURCES</h5>
         <ul className='lease-list'>
           <li>
-            <a href='#'>Guides</a>
+            <a href='/'>Guides</a>
           </li>
           <li>
-            <a href='#'>FAQ</a>
+            <a href='/'>FAQ</a>
           </li>
 
           <li>
-            <a href='#'>Help Center</a>
+            <a href='/'>Help Center</a>
           </li>
         </ul>
       </div>
