@@ -1,0 +1,79 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #fff; */
+  height: 25rem;
+  width: 20rem;
+  text-transform: none;
+  border: 1px solid none;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: blue;
+
+  /* background-image: url('../assets/images/property.png'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #0d59bf;
+}
+
+.card-details-price {
+  flex: 1;
+  align-content: center;
+  color: #3357d0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.per-month {
+  font-weight: 300;
+  text-transform: lowercase;
+  font-size: 0.7rem;
+  color: black;
+}
+
+.card-details-location {
+  flex: 1;
+  /* align-self: center; */
+}
+
+.card-details-location h3 {
+  justify-self: left;
+  margin-bottom: 6px;
+  margin-top: 5px;
+
+  /* align-self: center; */
+}
+
+.card-details-specs {
+  flex: 1;
+  align-content: center;
+
+  display: flex;
+  gap: 30px;
+}
+
+.dimensions {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}

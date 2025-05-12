@@ -1,0 +1,159 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 150px 2fr 1fr;
+  /* grid-template-rows: 1fr; */
+  /* height: 15vh; */
+  /* background-color: lightblue; */
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; */
+  /* background-color: #fff; */
+}
+
+/* Logo Styles  */
+.logo {
+  /* background-color: lightcoral; */
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+
+  font-family: Plus Jakarta Sans;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.proletlogo {
+  height: 5px;
+  width: 5px;
+}
+
+/* Navlink Styles  */
+.nav-link {
+  /* background-color: lightgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-link ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.nav-list li {
+  margin: 0 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+/* Action Button Styles  */
+.action-buttons {
+  /* background-color: lightyellow; */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: lightblue;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+@media (max-width: 885px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 0.5rem;
+  }
+  .logo {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .nav-link ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+  .action-buttons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+/* 
+@media (max-width: 480px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 0.5rem;
+  }
+  .logo {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .nav-link ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+  .action-buttons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+} */
+/* Compare this snippet from src/components/Join/Join.css: */
+
+/* @media (min-width: 481px) and (max-width: 1200px) {
+  body {
+    background-color: powderblue;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  body {
+    background-color: limegreen;
+  }
+}
+
+@media (min-width: 1601px) {
+  body {
+    background-color: seagreen;
+  }
+} */
