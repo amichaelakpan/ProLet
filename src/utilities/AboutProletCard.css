@@ -1,0 +1,28 @@
+.about-prolet-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 16px;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  background-color: #f0f4f8;
+}
+
+.about-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #0d59bf;
+  box-shadow: 0 4px 20px rgba(38, 110, 212, 0.45); /* X-offset, Y-offset, Blur, Color */
+}
+
+.card-text {
+  font-size: 0.8rem;
+  letter-spacing: 0.04rem;
+  line-height: 1.5;
+  font-weight: 300;
+}

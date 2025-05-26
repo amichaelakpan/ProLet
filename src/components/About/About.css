@@ -1,0 +1,312 @@
+.about-header {
+  background-color: #f0effb;
+  display: flex;
+  gap: 0px;
+  height: 80vh;
+}
+
+/* About Header Left Section  */
+.about-header-left {
+  flex: 1;
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+
+  -webkit-mask-image: linear-gradient(to left, transparent, black 20%);
+  mask-image: linear-gradient(to left, transparent, black 20%);
+}
+
+.about-header-header {
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+/* About Header Right Section  */
+.about-header-right {
+  flex: 1;
+  /* background-color: lightgreen; */
+
+  flex: 2;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+
+  justify-content: center;
+  align-items: flex-end;
+  /* text-transform: uppercase; */
+  padding-bottom: 1rem;
+
+  background-image: url('../../assets/images/about-property.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
+  mask-image: linear-gradient(to right, transparent, black 40%);
+}
+
+.about-section-stat {
+  height: 6rem;
+  width: 20rem;
+  color: #fff;
+  background-color: #375ad1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.about-section-stat-item h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about-section-stat-item p {
+  font-size: 10px;
+}
+
+.about-section-stat-item {
+  border-left: 2px solid #fff;
+  padding-left: 1rem;
+}
+
+/* About Content Main Section  */
+.about-content {
+  width: 100%;
+  /* background-color: pink; */
+  height: 70rem;
+  display: flex;
+  padding: 2rem;
+}
+
+/* About Content Left Section */
+.about-content-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 25rem 2rem 0;
+  gap: 1.5rem;
+  height: 64rem;
+  width: 50%;
+}
+
+.about-content-left-who {
+  text-transform: uppercase;
+  color: #4361ee;
+}
+
+.about-content-left-header {
+  font-size: 2rem;
+  line-height: 1.4;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+.about-content-left-content {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* About Content right Section */
+.about-content-right {
+  flex: 1.5;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 64rem;
+  /* background-color: #fff; */
+  /* height: auto; */
+}
+
+.about-content-right-1 {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  align-items: center;
+  /* background-color: #a0e8fb; */
+  height: 80%;
+}
+
+.about-content-right-1-first {
+  flex: 3;
+  /* background-color: rgb(15, 125, 52); */
+  /* height: 3rem; */
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+
+  background-image: url('../../assets/images/about-image-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-content-right-1-second {
+  flex: 1;
+  /* background-color: rgb(59, 16, 141); */
+  /* height: 1rem; */
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+
+  background-image: url('../../assets/images/about-image-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-content-right-2 {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  align-items: center;
+  /* background-color: #a0e8fb; */
+  height: 80%;
+}
+
+.about-content-right-2-first {
+  flex: 2;
+  /* background-color: rgb(15, 125, 52); */
+  /* height: 3rem; */
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+
+  background-image: url('../../assets/images/about-image-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-content-right-2-second {
+  flex: 1;
+  /* background-color: rgb(59, 16, 141); */
+  /* height: 1rem; */
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+
+  background-image: url('../../assets/images/about-image-4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-content-right-2-third {
+  flex: 2;
+  /* background-color: rgb(59, 16, 141); */
+  /* height: 1rem; */
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+
+  background-image: url('../../assets/images/about-image-5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* About Services Section */
+.about-services {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #eeedf2;
+  padding: 2rem;
+  gap: 1rem;
+}
+.about-services-header1 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.about-services-cards {
+  /* background-color: #d409da; */
+  height: 30rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 50rem;
+  margin: 2rem auto;
+}
+
+.about-statistics {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #100a55;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.about-statistics-item {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  /* background-color: red; */
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.middle {
+  /* background-color: pink; */
+  width: 80%;
+  padding: 3rem 2rem;
+}
+.bottom {
+  background-color: lightgreen;
+  width: 80%;
+}
+
+.about-statistics-header {
+  flex: 1;
+  text-align: left;
+}
+.about-statistics-description {
+  flex: 1;
+  display: flex;
+  padding: 0 10rem;
+  text-align: left;
+}
+
+.blue-text {
+  color: #4e91ff;
+}

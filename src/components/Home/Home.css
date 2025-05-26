@@ -201,7 +201,7 @@
 
 .main-content-right-right {
   flex: 1;
-  background-color: #e0d767;
+  /* background-color: #e0d767; */
   height: 100%;
   width: 100%;
 }

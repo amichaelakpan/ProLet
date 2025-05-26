@@ -1,5 +1,6 @@
 import Property from '../../utilities/Property'
 import image1 from '../../assets/images/property.png'
+import location from '../../assets/images/location.png'
 
 import './Home.css'
 
@@ -10,8 +11,7 @@ const HomePage = () => {
         <main className='left-section-main'>
           <h2>Rent or Lease your property easily</h2>
           <p>
-            A great platform to rent or lease your properties for without
-            landlord/tenant palava
+            A great platform to rent or lease your properties without palava
           </p>
         </main>
         <div className='left-section-stat'>
@@ -52,7 +52,9 @@ const HomePage = () => {
         <div className='main-content-right-left'>
           <Property img={image1} />
         </div>
-        <div className='main-content-right-right'>Right</div>
+        <div className='main-content-right-right'>
+          <img src={location} alt='Coordinates' />
+        </div>
       </div>
     </div>
   )
