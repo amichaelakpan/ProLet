@@ -259,7 +259,7 @@
 
 .about-statistics {
   width: 100%;
-  height: 40rem;
+  height: 70rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,8 +292,13 @@
   padding: 3rem 2rem;
 }
 .bottom {
-  background-color: lightgreen;
-  width: 80%;
+  /* background-color: #100a55; */
+  width: 60rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
 }
 
 .about-statistics-header {

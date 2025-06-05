@@ -4,6 +4,7 @@ import Property from '../../utilities/Property'
 import Button from '../../utilities/Button'
 import HelpDetails from '../../utilities/HelpDetails'
 import AboutProletCard from '../../utilities/AboutProletCard'
+import StatCard from '../../utilities/StatCard'
 import bed from '../../assets/images/bed.png'
 import home from '../../assets/images/home.png'
 import octagon from '../../assets/images/octagon.png'
@@ -169,7 +170,26 @@ const About = () => {
             textColor={'#a3c6ff'}
           />
         </div>
-        <div className='about-statistics-item bottom'>Bottom</div>
+        <div className='about-statistics-item bottom'>
+          <StatCard
+            textColor={'#fff'}
+            header={'7.4%'}
+            content={'Property return rate'}
+            borderRightColor={'#fff'}
+          />
+          <StatCard
+            textColor={'#fff'}
+            header={'3,856'}
+            content={'Properties in rent'}
+            borderRightColor={'#fff'}
+          />
+          <StatCard
+            textColor={'#fff'}
+            header={'2,540'}
+            content={'Daily completed transactions'}
+            borderRightColor={'none'}
+          />
+        </div>
       </div>
     </>
   )

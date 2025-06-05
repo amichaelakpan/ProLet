@@ -9,15 +9,21 @@
   background-color: #f0f4f8;
 }
 
-.about-card-image {
+.about-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90px;
-  width: 90px;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   background-color: #0d59bf;
   box-shadow: 0 4px 20px rgba(38, 110, 212, 0.45); /* X-offset, Y-offset, Blur, Color */
+}
+
+.about-card-image {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
 }
 
 .card-text {
