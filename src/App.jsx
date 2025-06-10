@@ -8,6 +8,7 @@ import Home from './components/Home/Home'
 import Search from './components/Search/Search'
 import About from './components/About/About'
 import Services from './components/Services/Services'
+import Dashboard from './components/Dashboard/Dashboard'
 
 // function App() {
 //   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='/search' element={<Search />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
 

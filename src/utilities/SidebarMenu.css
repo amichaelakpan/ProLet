@@ -1,0 +1,13 @@
+.menu-container {
+  margin: 0.5rem 0.8rem;
+  background-color: cyan;
+
+  padding: 0.8rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  & > img {
+    margin-right: 0.5rem;
+  }
+}
