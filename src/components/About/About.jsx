@@ -1,6 +1,5 @@
 import Property from '../../utilities/Property'
-// import image1 from '../../assets/images/property.png'
-// import location from '../../assets/images/location.png'
+
 import Button from '../../utilities/Button'
 import HelpDetails from '../../utilities/HelpDetails'
 import AboutProletCard from '../../utilities/AboutProletCard'
@@ -13,6 +12,7 @@ import search from '../../assets/images/search.png'
 import virtualhome from '../../assets/images/virtual-home.png'
 import bestdeal from '../../assets/images/best-deal.png'
 import getready from '../../assets/images/get-ready.png'
+import aboutheaderimg from '../../assets/images/about-property.png'
 
 import './About.css'
 
@@ -29,19 +29,22 @@ const About = () => {
           <h1 className='about-header-header'>
             Helping you find the property and Tenant of your dream
           </h1>
-          <p>
-            A great platform to rent or lease your properties <br /> without
+          <p className='about-header-desc'>
+            A great platform to rent or lease your properties without
             landlord/tenant palava
           </p>
-          <Button
-            text={`Explore Properties`}
-            bgcolor={`#3357d0`}
-            color={`#fff`}
-            borderColor={`#375ad1`}
-            width={`15rem`}
-          />
+          <div className='about-header-btn'>
+            <Button
+              text={`Explore Properties`}
+              bgcolor={`#3357d0`}
+              color={`#fff`}
+              borderColor={`#375ad1`}
+              width={`15rem`}
+            />
+          </div>
         </div>
         <div className='about-header-right'>
+          <img src={aboutheaderimg} alt='About Header Image' />
           <div className='about-section-stat'>
             <div className='about-section-stat-item'>
               <h3>50k+</h3>
@@ -67,29 +70,34 @@ const About = () => {
             Ensuring a smooth and efficient process for both parties through
             personalized guidance and support.
           </p>
-
-          <HelpDetails
-            cardBgColor={`#fff`}
-            img={octagon}
-            imgBgColor={`#fff`}
-            header={'Personalized Matching'}
-            headerColor={'#4361ee'}
-            text={
-              'We go beyond basic listings by carefully understanding the needs and preferences of both homeowners and tenants to ensure the perfect fit.'
-            }
-            textColor={'#989898'}
-          />
-          <HelpDetails
-            cardBgColor={`#fff`}
-            img={decagon}
-            imgBgColor={`#fff`}
-            header={'Seamless Experience'}
-            headerColor={'#4361ee'}
-            text={
-              'We provide hands-on guidance and support throughout the entire process making it easier and more efficient for both parties to find the right match.'
-            }
-            textColor={'#989898'}
-          />
+          <div className='about-content-help-details'>
+            <div>
+              <HelpDetails
+                cardBgColor={`#fff`}
+                img={octagon}
+                imgBgColor={`#fff`}
+                header={'Personalized Matching'}
+                headerColor={'#4361ee'}
+                text={
+                  'We go beyond basic listings by carefully understanding the needs and preferences of both homeowners and tenants to ensure the perfect fit.'
+                }
+                textColor={'#989898'}
+              />
+            </div>
+            <div>
+              <HelpDetails
+                cardBgColor={`#fff`}
+                img={decagon}
+                imgBgColor={`#fff`}
+                header={'Seamless Experience'}
+                headerColor={'#4361ee'}
+                text={
+                  'We provide hands-on guidance and support throughout the entire process making it easier and more efficient for both parties to find the right match.'
+                }
+                textColor={'#989898'}
+              />
+            </div>
+          </div>
         </div>
         <div className='about-content-right'>
           <div className='about-content-right-1'>
@@ -107,26 +115,37 @@ const About = () => {
       <div className='about-services'>
         <h3 className='about-services-header1'>Our Services</h3>
         <h2>Finding the right home, connecting the right tenants</h2>
-        <div className='about-services-cards'>
-          <AboutProletCard img={bed} heading={'Rent a House'} text={text[0]} />
-          <AboutProletCard
-            img={home}
-            heading={'Lease a Property'}
-            text={text[1]}
-          />
-          <AboutProletCard
-            img={search}
-            heading={'Get a Shortlet'}
-            text={text[2]}
-          />
+        <div className='about-services-cards services-cards-grid'>
+          <div>
+            <AboutProletCard
+              img={bed}
+              heading={'Rent a House'}
+              text={text[0]}
+            />
+          </div>
+          <div>
+            {' '}
+            <AboutProletCard
+              img={home}
+              heading={'Lease a Property'}
+              text={text[1]}
+            />
+          </div>
+          <div>
+            <AboutProletCard
+              img={search}
+              heading={'Get a Shortlet'}
+              text={text[2]}
+            />
+          </div>
         </div>
       </div>
 
-      <div className='about-statistics'>
-        <div className='about-statistics-item top'>
+      <div className=''>
+        <div className='about-statistics-item-top'>
           <h1 className='about-statistics-header'>
-            We make it easy for <br />{' '}
-            <span className='blue-text'>tenants</span> and &nbsp;
+            We make it easy for &nbsp;
+            <span className='blue-text'>tenants</span>&nbsp; and &nbsp;
             <span className='blue-text'>landlords</span>.
           </h1>
           <div className='about-statistics-description'>
@@ -135,60 +154,74 @@ const About = () => {
             save a bunch of money and time with our services.
           </div>
         </div>
-        <div className='about-statistics-item middle'>
-          <HelpDetails
-            cardBgColor={`#403b77`}
-            img={virtualhome}
-            imgBgColor={``}
-            header={'Virtual Home Tour'}
-            headerColor={'#fff'}
-            text={
-              'You can communicate directly with landlords and we provide you with virtual tour before you rent the property.'
-            }
-            textColor={'#8380a7'}
-          />
-          <HelpDetails
-            cardBgColor={`#fff`}
-            img={bestdeal}
-            imgBgColor={``}
-            header={'Find the best deal'}
-            headerColor={'#000929'}
-            text={
-              'Browse thousands of properties, save your favorites and set up search alerts so you dont miss the best home deal!'
-            }
-            textColor={'#8380a7'}
-          />
-          <HelpDetails
-            cardBgColor={`#4e91ff`}
-            img={getready}
-            imgBgColor={``}
-            header={'Get ready to apply'}
-            headerColor={'#fff'}
-            text={
-              'Find your dream house. You just need to do a little or no effort and you can start moving into your new dream home.'
-            }
-            textColor={'#a3c6ff'}
-          />
+
+        <div className='about-statistics-grid'>
+          <div>
+            <HelpDetails
+              cardBgColor={`#403b77`}
+              img={virtualhome}
+              imgBgColor={``}
+              header={'Virtual Home Tour'}
+              headerColor={'#fff'}
+              text={
+                'You can communicate directly with landlords and we provide you with virtual tour before you rent the property.'
+              }
+              textColor={'#8380a7'}
+            />
+          </div>
+          <div>
+            <HelpDetails
+              cardBgColor={`#fff`}
+              img={bestdeal}
+              imgBgColor={``}
+              header={'Find the best deal'}
+              headerColor={'#000929'}
+              text={
+                'Browse thousands of properties, save your favorites and set up search alerts so you dont miss the best home deal!'
+              }
+              textColor={'#8380a7'}
+            />
+          </div>
+          <div>
+            <HelpDetails
+              cardBgColor={`#4e91ff`}
+              img={getready}
+              imgBgColor={``}
+              header={'Get ready to apply'}
+              headerColor={'#fff'}
+              text={
+                'Find your dream house. You just need to do a little or no effort and you can start moving into your new dream home.'
+              }
+              textColor={'#a3c6ff'}
+            />
+          </div>
         </div>
-        <div className='about-statistics-item bottom'>
-          <StatCard
-            textColor={'#fff'}
-            header={'7.4%'}
-            content={'Property return rate'}
-            borderRightColor={'#fff'}
-          />
-          <StatCard
-            textColor={'#fff'}
-            header={'3,856'}
-            content={'Properties in rent'}
-            borderRightColor={'#fff'}
-          />
-          <StatCard
-            textColor={'#fff'}
-            header={'2,540'}
-            content={'Daily completed transactions'}
-            borderRightColor={'none'}
-          />
+
+        <div className='about-statistics-item '>
+          <div>
+            <StatCard
+              textColor={'#fff'}
+              header={'7.4%'}
+              content={'Property return rate'}
+              borderRightColor={'#fff'}
+            />
+          </div>
+          <div>
+            <StatCard
+              textColor={'#fff'}
+              header={'3,856'}
+              content={'Properties in rent'}
+              borderRightColor={'#fff'}
+            />
+          </div>
+          <div>
+            <StatCard
+              textColor={'#fff'}
+              header={'2,540'}
+              content={'Daily completed transactions'}
+              borderRightColor={'none'}
+            />
+          </div>
         </div>
       </div>
     </>

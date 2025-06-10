@@ -31,7 +31,7 @@ const HomePage = () => {
           </div>
           <div className='left-section-footer-browse'>
             <div className='left-section-footer-browse-left'>
-              <h4>Location</h4>
+              <h5>Location</h5>
               <input
                 className='footer-search'
                 type='text'
@@ -42,10 +42,6 @@ const HomePage = () => {
               <button>Browse Properties</button>
             </div>
           </div>
-          {/* <div className='left-section-footer-browse'>
-              <div>Left</div>
-              <div>Right</div>
-            </div> */}
         </div>
       </div>
       <div className='main-content-right'>

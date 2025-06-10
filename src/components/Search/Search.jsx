@@ -20,12 +20,14 @@ function Search() {
       {/* Layer 1 */}
       <div className='search-content-1'>
         <h2>Based on your search</h2>
-        <Button
-          text={`Browse more properties`}
-          bgcolor={`#f3f4f4`}
-          color={`#375ad1`}
-          borderColor={`#375ad1`}
-        />
+        <div>
+          <Button
+            text={`Browse more properties`}
+            bgcolor={`#f3f4f4`}
+            color={`#375ad1`}
+            borderColor={`#375ad1`}
+          />
+        </div>
       </div>
 
       {/* Layer 2  */}
@@ -71,6 +73,45 @@ function Search() {
 
       {/* Layer 3 */}
       <div className='search-content-3'>
+        <div>
+          <Property img={property1} />
+        </div>
+        <div>
+          <Property img={property2} />
+        </div>
+        <div>
+          <Property img={property3} />
+        </div>
+        <div>
+          <Property img={property4} />
+        </div>
+        <div>
+          <Property img={property5} />
+        </div>
+        <div>
+          <Property img={property6} />
+        </div>
+        <div>
+          <Property img={property7} />
+        </div>
+        <div>
+          <Property img={property8} />
+        </div>
+        <div>
+          <Property img={property9} />
+        </div>
+
+        <div>
+          <Property img={property10} />
+        </div>
+        <div>
+          <Property img={property11} />
+        </div>
+        <div>
+          <Property img={property12} />
+        </div>
+
+        {/* 
         <Property img={property1} />
         <Property img={property2} />
         <Property img={property3} />
@@ -82,7 +123,7 @@ function Search() {
         <Property img={property9} />
         <Property img={property10} />
         <Property img={property11} />
-        <Property img={property12} />
+        <Property img={property12} /> */}
       </div>
     </div>
   )
