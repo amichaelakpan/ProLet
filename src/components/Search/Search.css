@@ -60,8 +60,8 @@
 select {
   padding: 10px 20px;
   font-size: 16px;
-  border: 2px solid #375ad1;
-  border-radius: 15px;
+  border: 1.5px solid #375ad1;
+  border-radius: 10px;
   background-color: #fff;
   appearance: none;
   -webkit-appearance: none;

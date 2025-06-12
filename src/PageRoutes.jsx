@@ -4,6 +4,7 @@ import About from './components/About/About'
 import Search from './components/Search/Search'
 import Services from './components/Services/Services'
 import Dashboard from './components/Dashboard/Dashboard'
+import RenterReg from './components/RenterReg/RenterReg'
 
 const PageRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const PageRoutes = () => {
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/dashboard/renter-reg' element={<RenterReg />} />
         {/* <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} /> */}
       </Routes>

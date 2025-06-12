@@ -9,6 +9,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  background-color: #e5ebff;
 
   & > h5 {
     align-self: flex-start;
@@ -17,7 +18,7 @@
 }
 
 .dashboard-main {
-  /* background-color: lightblue; */
+  /* background-color: #fff; */
 }
 
 .sidebar-header {
@@ -54,7 +55,7 @@
     margin-right: auto;
   }
   & > p {
-    margin-right: 18px;
+    margin-right: 2rem;
   }
   & > img {
     height: 36px;
@@ -65,19 +66,87 @@
 }
 
 .dashboard-main-header {
-  background-color: cyan;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: flex-start;
+  padding: 1.5rem;
 }
 
 .dashboard-main-header-message {
   display: flex;
+  background-color: #fff3f3;
+  padding: 1.5rem 1rem;
+
   gap: 1.5rem;
+  align-items: center;
+
+  width: 100%;
+
+  & > img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+
+  & .dashboard-main-header-text {
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.8;
+    display: inline-block;
+  }
+
+  & .dashboard-main-header-btn {
+    justify-self: right;
+  }
 }
 
-.dashboard-main-header-text {
-  margin-right: auto;
-  color: blue;
+/* Main Content Section  */
+.dashboard-main-content {
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.dashboard-main-content-message {
+  display: flex;
+  background-color: #f2f4f7;
+  padding: 1.5rem 1rem;
+
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: right;
+  width: 100%;
+
+  & .dashboard-main-content-text {
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.5;
+    display: inline-block;
+
+    & > h5 {
+      margin-bottom: 0.9rem;
+    }
+
+    & > ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      & > li {
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+      }
+
+      & > li input {
+        margin-right: 5px;
+      }
+    }
+  }
 }

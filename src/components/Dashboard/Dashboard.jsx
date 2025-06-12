@@ -5,6 +5,12 @@ import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import redalert from '../../assets/images/redalert.png'
 import Button from '../../utilities/Button'
+import dashboard from '../../assets/images/dashboard.png'
+import market from '../../assets/images/market.png'
+import estate from '../../assets/images/estate.png'
+import agreement from '../../assets/images/agreement.png'
+import information from '../../assets/images/information.png'
+import chat from '../../assets/images/chat.png'
 
 import SidebarMenu from '../../utilities/SidebarMenu'
 
@@ -23,22 +29,22 @@ function Dashboard() {
         <h5>Menu</h5>
         <menu>
           <div>
-            <SidebarMenu />
+            <SidebarMenu img={dashboard} text={'Dashboard'} />
           </div>
           <div>
-            <SidebarMenu />
+            <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu />
+            <SidebarMenu img={estate} text={'Manage Agents'} />
           </div>
           <div>
-            <SidebarMenu />
+            <SidebarMenu img={agreement} text={'Agreement'} />
           </div>
           <div>
-            <SidebarMenu />
+            <SidebarMenu img={information} text={'Check Request'} />
           </div>
           <div>
-            <SidebarMenu />
+            <SidebarMenu img={chat} text={'Chat'} />
           </div>
         </menu>
       </div>
@@ -64,7 +70,7 @@ function Dashboard() {
             <div className='ashboard-main-header-btn'>
               <Button
                 text='Complete Now'
-                bgcolor='#e66c'
+                bgcolor='#465dcb'
                 color='#fff'
                 borderColor='none'
                 width=''
@@ -72,7 +78,31 @@ function Dashboard() {
             </div>
           </div>
         </section>
-        <section className='dashboard-main-content'>Content</section>
+
+        {/* Content Section  */}
+        <section className='dashboard-main-content'>
+          {' '}
+          <h3>Type of User</h3>
+          <div className='dashboard-main-content-message'>
+            <div className='dashboard-main-content-text'>
+              <h5>Select a user type</h5>
+              <ul>
+                <li>
+                  <input type='radio' />
+                  Renter
+                </li>
+                <li>
+                  <input type='radio' />
+                  Landlord
+                </li>
+                <li>
+                  <input type='radio' />
+                  Agent
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )

@@ -1,11 +1,11 @@
 import './SidebarMenu.css'
-import dashboard from '../../src/assets/images/dashboard.png'
 
-function SidebarMenu() {
+function SidebarMenu({ img, text }) {
   return (
     <div className='menu-container'>
-      <img src={dashboard} alt='Dashboard image' />
-      <span>Dashboard</span>
+      <img src={img} alt={`${img} image`} />
+
+      <span>{text}</span>
     </div>
   )
 }

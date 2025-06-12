@@ -9,6 +9,7 @@ import Search from './components/Search/Search'
 import About from './components/About/About'
 import Services from './components/Services/Services'
 import Dashboard from './components/Dashboard/Dashboard'
+import RenterReg from './components/RenterReg/RenterReg'
 
 // function App() {
 //   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/dashboard/renter-reg' element={<RenterReg />} />
         </Routes>
       </BrowserRouter>
 
