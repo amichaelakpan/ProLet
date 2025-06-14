@@ -112,7 +112,10 @@ function RenterReg() {
             {/* Home Address  */}
             <div className='reg-data-div'>
               <h5>Current Home Address</h5>
-              <textarea className='textarea'></textarea>
+              <textarea
+                className='textarea'
+                placeholder='Enter your current address'
+              ></textarea>
             </div>
 
             {/* Employment Status  */}

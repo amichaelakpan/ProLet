@@ -1,20 +1,26 @@
-import './Dashboard.css'
+import './EnterBVN.css'
 import Logo from '../Header/Logo'
+import SidebarMenu from '../../utilities/SidebarMenu'
+import Button from '../../utilities/Button'
+
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
-import redalert from '../../assets/images/redalert.png'
-import Button from '../../utilities/Button'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
 import information from '../../assets/images/information.png'
+
 import chat from '../../assets/images/chat.png'
+import settings from '../../assets/images/settings.png'
+import logout from '../../assets/images/logout.png'
 
-import SidebarMenu from '../../utilities/SidebarMenu'
+import '../CompDashRenter/CompDashRenter.css'
 
-function Dashboard() {
+function Wallet() {
+  // Code Block to handle File Upload
+
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -47,59 +53,56 @@ function Dashboard() {
             <SidebarMenu img={chat} text={'Chat'} />
           </div>
         </menu>
+
+        <h5>Others</h5>
+        <menu>
+          <div>
+            <SidebarMenu img={dashboard} text={'Wallet'} />
+          </div>
+          <div>
+            <SidebarMenu img={market} text={'Help'} />
+          </div>
+          <div>
+            <SidebarMenu img={settings} text={'Advance Settings'} />
+          </div>
+          <div>
+            <SidebarMenu img={logout} text={'Log Out'} />
+          </div>
+        </menu>
       </div>
 
-      <div className='dashboard-main'>
+      <div className='comp-reg-main'>
         {/* Title Section  */}
-        <section className='dashboard-main-titlebar'>
+        <section className='comp-main-titlebar'>
           <h3>Dashboard</h3>
           <img src={dashboardimg} alt='Dashboard image' />
           <p>Uwem Stack</p>
           <img src={bell} alt='Bell Icon' />
         </section>
 
-        {/* Header Section  */}
-        <section className='dashboard-main-header'>
-          <h3>Please complete your registration</h3>
-          <div className='dashboard-main-header-message'>
-            <img src={redalert} alt='Red Alert' />
-            <div className='dashboard-main-header-text'>
-              <h5>Your're almost there</h5>
-              <p>Please complete your profile setup</p>
-            </div>
-            <div className='ashboard-main-header-btn'>
-              <Button
-                text='Complete Now'
-                bgcolor='#465dcb'
-                color='#fff'
-                borderColor='none'
-                width=''
-              />{' '}
-            </div>
-          </div>
-        </section>
-
         {/* Content Section  */}
-        <section className='dashboard-main-content'>
-          {' '}
-          <h3>Type of User</h3>
-          <div className='dashboard-main-content-message'>
-            <div className='dashboard-main-content-text'>
-              <h5>Select a user type</h5>
-              <ul>
-                <li>
-                  <input type='radio' name='user-type' />
-                  Renter
-                </li>
-                <li>
-                  <input type='radio' name='user-type' />
-                  Landlord
-                </li>
-                <li>
-                  <input type='radio' name='user-type' />
-                  Agent
-                </li>
-              </ul>
+        <section className='comp-main-content'>
+          <div className='wallet-container'>
+            <h2>Enter your BVN</h2>
+            <p className='bvn-prompt-text'>
+              Enter your BVN to create a new wallet
+            </p>
+            {/* NIN Verification */}
+            <div className='reg-data-div'>
+              <input
+                type='number'
+                className='textbox enter-bvn'
+                placeholder='1234567890'
+              />
+            </div>
+            <div>
+              <Button
+                text={`Create Wallet`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width=''
+              />
             </div>
           </div>
         </section>
@@ -108,4 +111,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default Wallet

@@ -148,11 +148,6 @@
     display: flex;
     gap: 1rem;
   }
-
-  & > p {
-    font-size: 0.9rem;
-    color: #0077ff;
-  }
 }
 
 /* Textarea Style */
@@ -236,10 +231,6 @@
 .upload-div {
   display: flex;
   align-items: center;
-
-  & > Section {
-    opacity: 70%;
-  }
 }
 
 .reg-submit-div {
