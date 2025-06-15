@@ -1,0 +1,29 @@
+.wallet-actions-card-container {
+  background-color: #e5ebff;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  border-radius: 0.6rem;
+
+  & .wallet-actions-card-container-content {
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem;
+
+    & > img {
+      display: inline-block;
+    }
+
+    & > p {
+      display: inline-block;
+      font-weight: 600;
+      width: 60%;
+
+      text-align: left;
+    }
+  }
+}

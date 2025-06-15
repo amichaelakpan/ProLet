@@ -1,0 +1,29 @@
+.records-container {
+  /* border: 1px solid #3357d0; */
+
+  & .record-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1rem;
+    justify-items: start;
+    align-items: center;
+  }
+
+  & .record-items-row {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #3357d0;
+    text-align: left;
+  }
+}
+
+.record-items-header {
+  background-color: #3357d0;
+  color: #fff;
+  padding: 1.5rem 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1rem;
+  justify-items: start;
+  align-items: center;
+}

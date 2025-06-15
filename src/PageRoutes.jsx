@@ -12,6 +12,8 @@ import EditPost from './components/EditPost/EditPost'
 import Wallet from './components/Wallet/Wallet'
 import EnterBVN from './components/EnterBVN/EnterBVN'
 import VerifyInfo from './components/VerifyInfo/VerifyInfo'
+import MainWallet from './components/MainWallet/MainWallet'
+import TransHistory from './components/TransHistory/TransHistory'
 
 const PageRoutes = () => {
   return (
@@ -47,6 +49,15 @@ const PageRoutes = () => {
 
         {/* Verify Info  */}
         <Route path='/dashboard/verify-info' element={<VerifyInfo />}></Route>
+
+        {/* Main Wallet  */}
+        <Route path='/dashboard/main-wallet' element={<MainWallet />}></Route>
+
+        {/* Transaction History */}
+        <Route
+          path='/dashboard/transation-history'
+          element={<TransHistory />}
+        ></Route>
       </Routes>
     </Router>
   )

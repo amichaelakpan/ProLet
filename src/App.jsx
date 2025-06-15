@@ -17,6 +17,8 @@ import EditPost from './components/EditPost/EditPost'
 import Wallet from './components/Wallet/Wallet'
 import EnterBVN from './components/EnterBVN/EnterBVN'
 import VerifyInfo from './components/VerifyInfo/VerifyInfo'
+import MainWallet from './components/MainWallet/MainWallet'
+import TransHistory from './components/TransHistory/TransHistory'
 
 function App() {
   return (
@@ -58,6 +60,15 @@ function App() {
 
           {/* Verify Info  */}
           <Route path='/dashboard/verify-info' element={<VerifyInfo />}></Route>
+
+          {/* MainWallet  */}
+          <Route path='/dashboard/main-wallet' element={<MainWallet />}></Route>
+
+          {/* Transaction History  */}
+          <Route
+            path='/dashboard/transaction-history'
+            element={<TransHistory />}
+          ></Route>
         </Routes>
       </BrowserRouter>
 

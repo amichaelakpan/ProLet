@@ -216,13 +216,9 @@ select:focus {
   margin: 5rem auto;
   border-radius: 20px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1085px) {
     width: 80%;
-    padding: 6rem 4rem;
-  }
-
-  @media screen and (max-width: 1000px) {
-    width: 80%;
+    padding: 6rem 2rem;
   }
 
   @media screen and (max-width: 800px) {
