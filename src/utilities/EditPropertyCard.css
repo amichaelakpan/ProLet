@@ -1,0 +1,111 @@
+.edit-card {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #fff; */
+  height: 25rem;
+  width: 18rem;
+  text-transform: none;
+  border: 1px solid none;
+}
+
+.edit-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: blue;
+
+  /* background-image: url('../assets/images/property.png'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.edit-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #0d59bf;
+  background-color: #fff;
+}
+
+.edit-card-details-price {
+  flex: 1;
+  align-content: start;
+  color: #3357d0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  & .price {
+    display: inline-block;
+  }
+
+  & .bin {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #0d59bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.per-month {
+  font-weight: 300;
+  text-transform: lowercase;
+  font-size: 0.7rem;
+  color: black;
+}
+
+.edit-card-details-location {
+  flex: 1;
+  border-bottom: 1px solid #0d59bf;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.edit-card-details-location h3 {
+  justify-self: left;
+  margin-bottom: 6px;
+  margin-top: 5px;
+
+  /* align-self: center; */
+}
+
+.edit-card-details-specs {
+  flex: 1;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  & .dimensions {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 8px;
+  }
+}
+
+.view-edit-btn-div {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

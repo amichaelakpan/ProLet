@@ -14,6 +14,9 @@ import EnterBVN from './components/EnterBVN/EnterBVN'
 import VerifyInfo from './components/VerifyInfo/VerifyInfo'
 import MainWallet from './components/MainWallet/MainWallet'
 import TransHistory from './components/TransHistory/TransHistory'
+import DashLandlord1 from './components/DashLandlord1/DashLandlord1'
+import AddProperty from './components/AddProperty/AddProperty'
+import ActiveDashboard from './components/ActiveDashboard/ActiveDashboard'
 
 const PageRoutes = () => {
   return (
@@ -57,6 +60,21 @@ const PageRoutes = () => {
         <Route
           path='/dashboard/transation-history'
           element={<TransHistory />}
+        ></Route>
+
+        {/* Dashboard Landlord-1  */}
+        <Route
+          path='/dashboard/dash-landlord-1'
+          element={<DashLandlord1 />}
+        ></Route>
+
+        {/* Add Property  */}
+        <Route path='/dashboard/add-property' element={<AddProperty />}></Route>
+
+        {/* Active Dashboard  */}
+        <Route
+          path='/dashboard/active-dashboard'
+          element={<ActiveDashboard />}
         ></Route>
       </Routes>
     </Router>

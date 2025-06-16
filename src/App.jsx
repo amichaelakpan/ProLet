@@ -19,6 +19,9 @@ import EnterBVN from './components/EnterBVN/EnterBVN'
 import VerifyInfo from './components/VerifyInfo/VerifyInfo'
 import MainWallet from './components/MainWallet/MainWallet'
 import TransHistory from './components/TransHistory/TransHistory'
+import DashLandlord1 from './components/DashLandlord1/DashLandlord1'
+import AddProperty from './components/AddProperty/AddProperty'
+import ActiveDashboard from './components/ActiveDashboard/ActiveDashboard'
 
 function App() {
   return (
@@ -31,7 +34,6 @@ function App() {
           <Route path='/search' element={<Search />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
-
           {/* Renters  */}
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/dashboard/renter-reg' element={<RenterReg />} />
@@ -39,35 +41,46 @@ function App() {
             path='/dashboard/comp-dash-renter'
             element={<CompDashRenter />}
           />
-
           {/* Agents  */}
           <Route path='/dashboard/agent-reg' element={<AgentReg />}></Route>
-
           {/* Landlords  */}
           <Route
             path='/dashboard/landlord-reg'
             element={<LandlordReg />}
           ></Route>
-
           {/* Edit Post  */}
           <Route path='/dashboard/edit-post' element={<EditPost />}></Route>
-
           {/* Wallet  */}
           <Route path='/dashboard/wallet' element={<Wallet />}></Route>
-
           {/* EnterBVN  */}
           <Route path='/dashboard/enter-bvn' element={<EnterBVN />}></Route>
-
           {/* Verify Info  */}
           <Route path='/dashboard/verify-info' element={<VerifyInfo />}></Route>
-
           {/* MainWallet  */}
           <Route path='/dashboard/main-wallet' element={<MainWallet />}></Route>
-
           {/* Transaction History  */}
           <Route
             path='/dashboard/transaction-history'
             element={<TransHistory />}
+          ></Route>
+
+          {/* Dashboard Landlord 1 */}
+          <Route
+            path='/dashboard/dash-landlord-1'
+            element={<DashLandlord1 />}
+          ></Route>
+
+          {/* Add Property  */}
+          <Route
+            path='/dashboard/add-property'
+            element={<AddProperty />}
+          ></Route>
+
+          {/* Active Dashboard  */}
+          {/* Active Dashboard  */}
+          <Route
+            path='/dashboard/active-dashboard'
+            element={<ActiveDashboard />}
           ></Route>
         </Routes>
       </BrowserRouter>

@@ -110,20 +110,6 @@ function Search() {
         <div>
           <Property img={property12} />
         </div>
-
-        {/* 
-        <Property img={property1} />
-        <Property img={property2} />
-        <Property img={property3} />
-        <Property img={property4} />
-        <Property img={property5} />
-        <Property img={property6} />
-        <Property img={property7} />
-        <Property img={property8} />
-        <Property img={property9} />
-        <Property img={property10} />
-        <Property img={property11} />
-        <Property img={property12} /> */}
       </div>
     </div>
   )
