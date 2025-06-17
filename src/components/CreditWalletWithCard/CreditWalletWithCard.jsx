@@ -1,4 +1,4 @@
-import './EnterBVN.css'
+import './CreditWalletWithCard.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -15,10 +15,11 @@ import information from '../../assets/images/information.png'
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
+import infoalert from '../../assets/images/info-alert.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function EnterBVN() {
+function CreditWalletWithCard() {
   // Code Block to handle File Upload
 
   return (
@@ -80,28 +81,72 @@ function EnterBVN() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        {/* Fund Wallet Header  */}
+        <div className='fund-wallet-header'>
+          <div className='transaction-history-title'>Add money to wallet</div>
+          <div className='back-to-wallet-div'>
+            <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
+          </div>
+        </div>
+
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='wallet-container'>
-            <h2>Enter your BVN</h2>
-            <p className='bvn-prompt-text'>
-              Enter your BVN to create a new wallet
-            </p>
-            {/* NIN Verification */}
-            <div className='reg-data-div'>
-              <input
-                type='number'
-                className='textbox enter-bvn'
-                placeholder='1234567890'
-              />
+          <div className='wallet-container credit-wallet-container'>
+            <div className='reg-data-div '>
+              <section className='header-info-icon'>
+                <h5>Name on card</h5>
+                <figure>
+                  <img src={infoalert} alt='Info Icon' />{' '}
+                </figure>
+              </section>
+
+              <input type='text' className='textbox' placeholder='Uwem Stack' />
             </div>
-            <div>
+            <div className='reg-data-div'>
+              <section className='header-info-icon'>
+                <h5>Card Number</h5>
+                <figure>
+                  <img src={infoalert} alt='Info Icon' />{' '}
+                </figure>
+              </section>
+
+              <input type='number' className='textbox' placeholder='1 2 3 4' />
+            </div>
+
+            <div className='cvv-exp-date'>
+              <div className='reg-data-div'>
+                <section className='header-info-icon'>
+                  <h5>CCV</h5>
+                  <figure>
+                    <img src={infoalert} alt='Info Icon' />
+                  </figure>
+                </section>
+
+                <input type='number' className='textbox' placeholder='999' />
+              </div>
+
+              <div className='reg-data-div'>
+                <section className='header-info-icon'>
+                  <h5>Exp. Date</h5>
+                  <figure>
+                    <img src={infoalert} alt='Info Icon' />
+                  </figure>
+                </section>
+
+                <input
+                  type='number'
+                  className='textbox'
+                  placeholder='MM / YYYY'
+                />
+              </div>
+            </div>
+
+            <div className='reg-data-div pay-btn'>
               <Button
-                text={`Create Wallet`}
-                bgcolor={'#3357D0'}
-                color='#fff'
-                borderColor={'#fff'}
-                width=''
+                text={'Pay'}
+                bgcolor={'#3357d0'}
+                color={'#fff'}
+                width='100%'
               />
             </div>
           </div>
@@ -111,4 +156,4 @@ function EnterBVN() {
   )
 }
 
-export default EnterBVN
+export default CreditWalletWithCard

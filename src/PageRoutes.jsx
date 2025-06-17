@@ -17,6 +17,9 @@ import TransHistory from './components/TransHistory/TransHistory'
 import DashLandlord1 from './components/DashLandlord1/DashLandlord1'
 import AddProperty from './components/AddProperty/AddProperty'
 import ActiveDashboard from './components/ActiveDashboard/ActiveDashboard'
+import FundWallet from './components/FundWallet/FundWallet'
+import CreditWalletWithCard from './components/CreditWalletWithCard/CreditWalletWithCard'
+import PaymentSuccessful from './components/PaymentSuccessful/PaymentSuccessful'
 
 const PageRoutes = () => {
   return (
@@ -26,7 +29,6 @@ const PageRoutes = () => {
         <Route path='/search' element={<Search />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
-
         {/* Renters */}
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/dashboard/renter-reg' element={<RenterReg />} />
@@ -34,47 +36,51 @@ const PageRoutes = () => {
           path='/dashboard/comp-dash-renter'
           element={<CompDashRenter />}
         />
-
         {/* Agents  */}
         <Route path='/dashboard/agent-reg' element={<AgentReg />}></Route>
-
         {/* Landlords  */}
         <Route path='/dashboard/landlord-reg' element={<LandlordReg />}></Route>
-
         {/* Edit Post  */}
         <Route path='/dashboard/edit-post' element={<EditPost />}></Route>
-
         {/* Wallet  */}
         <Route path='/dashboard/wallet' element={<Wallet />}></Route>
-
         {/* Enter BVN  */}
         <Route path='/dashboard/enter-bvn' element={<EnterBVN />}></Route>
-
         {/* Verify Info  */}
         <Route path='/dashboard/verify-info' element={<VerifyInfo />}></Route>
-
         {/* Main Wallet  */}
         <Route path='/dashboard/main-wallet' element={<MainWallet />}></Route>
-
         {/* Transaction History */}
         <Route
           path='/dashboard/transation-history'
           element={<TransHistory />}
         ></Route>
-
         {/* Dashboard Landlord-1  */}
         <Route
           path='/dashboard/dash-landlord-1'
           element={<DashLandlord1 />}
         ></Route>
-
         {/* Add Property  */}
         <Route path='/dashboard/add-property' element={<AddProperty />}></Route>
-
         {/* Active Dashboard  */}
         <Route
           path='/dashboard/active-dashboard'
           element={<ActiveDashboard />}
+        ></Route>
+
+        {/* FundWallet */}
+        <Route path='/dashboard/fund-wallet' element={<FundWallet />}></Route>
+
+        {/* Credit Wallet With Card  */}
+        <Route
+          path='/dashboard/creditwallet-with-card'
+          element={<CreditWalletWithCard />}
+        ></Route>
+
+        {/* Payment Successful */}
+        <Route
+          path='/dashboard/payment-successful'
+          element={<PaymentSuccessful />}
         ></Route>
       </Routes>
     </Router>

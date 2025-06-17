@@ -22,6 +22,9 @@ import TransHistory from './components/TransHistory/TransHistory'
 import DashLandlord1 from './components/DashLandlord1/DashLandlord1'
 import AddProperty from './components/AddProperty/AddProperty'
 import ActiveDashboard from './components/ActiveDashboard/ActiveDashboard'
+import FundWallet from './components/FundWallet/FundWallet'
+import CreditWalletWithCard from './components/CreditWalletWithCard/CreditWalletWithCard'
+import PaymentSuccessful from './components/PaymentSuccessful/PaymentSuccessful'
 
 function App() {
   return (
@@ -77,10 +80,24 @@ function App() {
           ></Route>
 
           {/* Active Dashboard  */}
-          {/* Active Dashboard  */}
           <Route
             path='/dashboard/active-dashboard'
             element={<ActiveDashboard />}
+          ></Route>
+
+          {/* Fund Wallet  */}
+          <Route path='/dashboard/fund-wallet' element={<FundWallet />}></Route>
+
+          {/* Credit Wallet With Card  */}
+          <Route
+            path='/dashboard/creditwallet-with-card'
+            element={<CreditWalletWithCard />}
+          ></Route>
+
+          {/* Payment Successful  */}
+          <Route
+            path='/dashboard/payment-successful'
+            element={<PaymentSuccessful />}
           ></Route>
         </Routes>
       </BrowserRouter>

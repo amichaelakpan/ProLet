@@ -1,4 +1,4 @@
-import './EnterBVN.css'
+import './FundWallet.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -18,7 +18,7 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function EnterBVN() {
+function FundWallet() {
   // Code Block to handle File Upload
 
   return (
@@ -80,24 +80,31 @@ function EnterBVN() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        {/* Fund Wallet Header  */}
+        <div className='fund-wallet-header'>
+          <div className='transaction-history-title'>Add money to wallet</div>
+          <div className='back-to-wallet-div'>
+            <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
+          </div>
+        </div>
+
         {/* Content Section  */}
         <section className='comp-main-content'>
           <div className='wallet-container'>
-            <h2>Enter your BVN</h2>
             <p className='bvn-prompt-text'>
-              Enter your BVN to create a new wallet
+              Enter the amount you wish to add to your wallet
             </p>
             {/* NIN Verification */}
             <div className='reg-data-div'>
               <input
                 type='number'
                 className='textbox enter-bvn'
-                placeholder='1234567890'
+                placeholder='₦ 0.00'
               />
             </div>
             <div>
               <Button
-                text={`Create Wallet`}
+                text={`Continue`}
                 bgcolor={'#3357D0'}
                 color='#fff'
                 borderColor={'#fff'}
@@ -111,4 +118,4 @@ function EnterBVN() {
   )
 }
 
-export default EnterBVN
+export default FundWallet

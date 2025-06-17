@@ -1,4 +1,4 @@
-import './EnterBVN.css'
+import './PaymentSuccessful.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -15,10 +15,11 @@ import information from '../../assets/images/information.png'
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
+import successful from '../../assets/images/successful.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function EnterBVN() {
+function PaymentSuccessful() {
   // Code Block to handle File Upload
 
   return (
@@ -82,26 +83,24 @@ function EnterBVN() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='wallet-container'>
-            <h2>Enter your BVN</h2>
-            <p className='bvn-prompt-text'>
-              Enter your BVN to create a new wallet
-            </p>
-            {/* NIN Verification */}
-            <div className='reg-data-div'>
-              <input
-                type='number'
-                className='textbox enter-bvn'
-                placeholder='1234567890'
-              />
+          <div className='wallet-container wallet-container-successful'>
+            <div className='payment-successful-div'>
+              <figure className='payment-successful-container'>
+                <img src={successful} alt='Payment Successful' />
+              </figure>
             </div>
-            <div>
+            <p className='payment-successful-text'>
+              Your wallet has been successfully credited. Please proceed to your
+              wallet to see your balance
+            </p>
+
+            <div className='go-to-wallet'>
               <Button
-                text={`Create Wallet`}
+                text={`Go to Wallet`}
                 bgcolor={'#3357D0'}
                 color='#fff'
                 borderColor={'#fff'}
-                width=''
+                width='40%'
               />
             </div>
           </div>
@@ -111,4 +110,4 @@ function EnterBVN() {
   )
 }
 
-export default EnterBVN
+export default PaymentSuccessful
