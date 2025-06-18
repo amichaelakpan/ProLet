@@ -23,6 +23,8 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
+import { ChatItemSender, ChatItemReceiver } from '../../utilities/ChatItem'
+import ChatMessageBox from '../../utilities/ChatMessageBox'
 
 function MessageMe() {
   // Code Block to handle File Upload
@@ -89,7 +91,20 @@ function MessageMe() {
         {/* Content Section  */}
         <section className='comp-main-content'>
           <div className='comp-dash-renter-container'>
-            <section className='reg-main-content'>Chat Section</section>
+            <section className='reg-main-content chat-message-container'>
+              <div className='move-left'>
+                <ChatItemSender />
+              </div>
+              <div>
+                <ChatItemReceiver />
+              </div>{' '}
+              <div>
+                <ChatItemReceiver />
+              </div>
+              <div className='message-box-container'>
+                <ChatMessageBox />
+              </div>
+            </section>
           </div>
         </section>
       </div>

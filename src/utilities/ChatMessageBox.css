@@ -1,0 +1,33 @@
+.chatbox-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 100%; */
+  background-color: #fff;
+  border: 1px solid red;
+  margin-top: 4rem;
+  border-radius: 2.5rem;
+  border: none;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+
+  & > input {
+    background-color: #fff;
+    border: none;
+    border-radius: none;
+    margin-right: -15rem;
+
+    &:focus {
+      border: none !important;
+      border-radius: 2.5rem;
+      outline: none;
+    }
+  }
+
+  & > img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
