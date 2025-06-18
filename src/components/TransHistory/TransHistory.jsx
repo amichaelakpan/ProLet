@@ -24,7 +24,7 @@ import logout from '../../assets/images/logout.png'
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function AgentReg() {
+function TransHistory() {
   // Code Block to handle File Upload
 
   return (
@@ -170,4 +170,4 @@ function AgentReg() {
   )
 }
 
-export default AgentReg
+export default TransHistory

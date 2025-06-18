@@ -31,7 +31,7 @@ import addbank from '../../assets/images/add-bank.png'
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function AgentReg() {
+function MainWallet() {
   // Code Block to handle File Upload
 
   return (
@@ -237,4 +237,4 @@ function AgentReg() {
   )
 }
 
-export default AgentReg
+export default MainWallet

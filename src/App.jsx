@@ -25,6 +25,9 @@ import ActiveDashboard from './components/ActiveDashboard/ActiveDashboard'
 import FundWallet from './components/FundWallet/FundWallet'
 import CreditWalletWithCard from './components/CreditWalletWithCard/CreditWalletWithCard'
 import PaymentSuccessful from './components/PaymentSuccessful/PaymentSuccessful'
+import LandlordViewProperty from './components/LandlordViewProperty/LandlordViewProperty'
+import PreviewLandlordAgreement from './components/PreviewLandlordAgreement/PreviewLandlordAgreement'
+import MessageMe from './components/MessageMe/MessageMe'
 
 function App() {
   return (
@@ -99,6 +102,21 @@ function App() {
             path='/dashboard/payment-successful'
             element={<PaymentSuccessful />}
           ></Route>
+
+          {/* Landlord View Property  */}
+          <Route
+            path='/dashboard/landlord-view-property'
+            element={<LandlordViewProperty />}
+          ></Route>
+
+          {/* Preview Landlord Agreement  */}
+          <Route
+            path='/dashboard/preview-landlord-agreement'
+            element={<PreviewLandlordAgreement />}
+          ></Route>
+
+          {/* Message Me  */}
+          <Route path='/dashboard/messageme' element={<MessageMe />}></Route>
         </Routes>
       </BrowserRouter>
 

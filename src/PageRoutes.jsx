@@ -20,6 +20,9 @@ import ActiveDashboard from './components/ActiveDashboard/ActiveDashboard'
 import FundWallet from './components/FundWallet/FundWallet'
 import CreditWalletWithCard from './components/CreditWalletWithCard/CreditWalletWithCard'
 import PaymentSuccessful from './components/PaymentSuccessful/PaymentSuccessful'
+import LandlordViewProperty from './components/LandlordViewProperty/LandlordViewProperty'
+import PreviewLandlordAgreement from './components/PreviewLandlordAgreement/PreviewLandlordAgreement'
+import MessageMe from './components/MessageMe/MessageMe'
 
 const PageRoutes = () => {
   return (
@@ -67,21 +70,32 @@ const PageRoutes = () => {
           path='/dashboard/active-dashboard'
           element={<ActiveDashboard />}
         ></Route>
-
         {/* FundWallet */}
         <Route path='/dashboard/fund-wallet' element={<FundWallet />}></Route>
-
         {/* Credit Wallet With Card  */}
         <Route
           path='/dashboard/creditwallet-with-card'
           element={<CreditWalletWithCard />}
         ></Route>
-
         {/* Payment Successful */}
         <Route
           path='/dashboard/payment-successful'
           element={<PaymentSuccessful />}
         ></Route>
+        {/* Landlord View Property  */}
+        <Route
+          path='/dashboard/landlord-view-property'
+          element={<LandlordViewProperty />}
+        ></Route>
+
+        {/* Preview Agreement Landlord */}
+        <Route
+          path='/dashboard/preview-landlord-agreement'
+          element={<PreviewLandlordAgreement />}
+        ></Route>
+
+        {/* Message Me  */}
+        <Route path='/dashboard/messageme' element={<MessageMe />}></Route>
       </Routes>
     </Router>
   )
