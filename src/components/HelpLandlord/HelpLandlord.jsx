@@ -1,12 +1,9 @@
-import React from 'react'
+import ReactS from 'react'
 
-import './MessageMe.css'
-import '../RenterReg/RenterReg.css'
+import './HelpLandlord.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
-import { Records } from '../../utilities/Records'
-import { RecordsHeader } from '../../utilities/Records'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
@@ -22,11 +19,9 @@ import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
-import WalletActionsCard from '../../utilities/WalletActionsCard'
-import { ChatItemSender, ChatItemReceiver } from '../../utilities/ChatItem'
-import ChatMessageBox from '../../utilities/ChatMessageBox'
+import Property from '../../utilities/Property'
 
-function MessageMe() {
+function HelpLandlord() {
   // Code Block to handle File Upload
 
   return (
@@ -90,22 +85,63 @@ function MessageMe() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='comp-dash-renter-container'>
-            <section className='reg-main-content chat-message-container'>
-              <div className='move-left'>
-                <ChatItemSender />
-              </div>
-              <div>
-                <ChatItemReceiver />
-              </div>{' '}
-              <div>
-                <ChatItemReceiver />
-              </div>
-              <div className='move-left'>
-                <ChatItemSender />
-              </div>
-              <div className='message-box-container'>
-                <ChatMessageBox />
+          <div className='comp-dash-renter-container '>
+            {/* Helper Header */}
+            <section className='reg-main-content landlord-helper-container'>
+              <section className='comp-get-started helper-header-text'>
+                <h3>CONTACT US </h3>
+                <p>Let's get in touch</p>
+              </section>
+
+              {/* Helper Form  */}
+              <div className='renter-reg-main landlord-help-text-opacity'>
+                {/* Name */}
+                <div className='reg-data-div '>
+                  <h5>Name</h5>
+                  <input
+                    type='text'
+                    className='textbox'
+                    placeholder='Enter your name'
+                  />
+                </div>
+
+                {/* Email Address */}
+                <div className='reg-data-div'>
+                  <h5>Email Address</h5>
+                  <input
+                    type='text'
+                    className='textbox'
+                    placeholder='Enter your email address'
+                  />
+                </div>
+                {/* Message  */}
+                <div className='reg-data-div'>
+                  <h5>Message</h5>
+                  <textarea
+                    className='textarea'
+                    placeholder='Type your message here...'
+                  ></textarea>
+                </div>
+
+                <div className='reg-submit-div help-landlord-btn-div'>
+                  <Button
+                    text={`Send Message`}
+                    bgcolor={'#100A55'}
+                    color='#fff'
+                    borderColor={'#fff'}
+                    width='100%'
+                  />
+                </div>
+
+                {/* NIN Verification */}
+                <div className='help-landlord-footer-message'>
+                  <p>
+                    All fields are required. We'll get back to you as soon as
+                    possible
+                  </p>
+                </div>
+
+                {/* End of Div  */}
               </div>
             </section>
           </div>
@@ -115,4 +151,4 @@ function MessageMe() {
   )
 }
 
-export default MessageMe
+export default HelpLandlord

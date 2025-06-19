@@ -1,0 +1,33 @@
+.settings-container {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-gap: 0.25rem;
+  align-items: center;
+  justify-items: start;
+  border-bottom: 1px solid #000;
+  padding: 1.5rem 1rem;
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 85%;
+  }
+
+  & > .settings-container-image,
+  & > .settings-container-arrow {
+    display: flex;
+    align-items: center;
+  }
+
+  & .settings-container-title {
+    font-weight: 400;
+    margin-right: auto;
+  }
+
+  & .settings-container-arrow {
+    cursor: pointer;
+  }
+}

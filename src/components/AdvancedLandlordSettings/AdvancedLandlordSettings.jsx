@@ -1,12 +1,7 @@
-import React from 'react'
-
-import './MessageMe.css'
-import '../RenterReg/RenterReg.css'
+import './AdvancedLandlordSettings.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
-import { Records } from '../../utilities/Records'
-import { RecordsHeader } from '../../utilities/Records'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
@@ -16,19 +11,19 @@ import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
 import information from '../../assets/images/information.png'
+import personalinfo from '../../assets/images/personal-info.png'
+import settings2 from '../../assets/images/settings-2.png'
+import lock from '../../assets/images/lock.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
-import WalletActionsCard from '../../utilities/WalletActionsCard'
-import { ChatItemSender, ChatItemReceiver } from '../../utilities/ChatItem'
-import ChatMessageBox from '../../utilities/ChatMessageBox'
 
-function MessageMe() {
-  // Code Block to handle File Upload
+import Settings from '../../utilities/Settings'
 
+function AdvancedLandlordSettings() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -88,26 +83,21 @@ function MessageMe() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        <section className='comp-get-started'>
+          <h3>Advanced Settings</h3>
+          <p>Customize Preferences and manage advanced options.</p>
+        </section>
+
         {/* Content Section  */}
-        <section className='comp-main-content'>
-          <div className='comp-dash-renter-container'>
-            <section className='reg-main-content chat-message-container'>
-              <div className='move-left'>
-                <ChatItemSender />
-              </div>
-              <div>
-                <ChatItemReceiver />
-              </div>{' '}
-              <div>
-                <ChatItemReceiver />
-              </div>
-              <div className='move-left'>
-                <ChatItemSender />
-              </div>
-              <div className='message-box-container'>
-                <ChatMessageBox />
-              </div>
-            </section>
+        <section className='comp-main-content advanced-settings-container'>
+          <div>
+            <Settings img={personalinfo} title={'Personal Information'} />
+          </div>
+          <div>
+            <Settings img={settings2} title={'Delete Account'} />
+          </div>
+          <div>
+            <Settings img={lock} title={'Change Password'} />{' '}
           </div>
         </section>
       </div>
@@ -115,4 +105,4 @@ function MessageMe() {
   )
 }
 
-export default MessageMe
+export default AdvancedLandlordSettings

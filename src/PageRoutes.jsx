@@ -23,6 +23,8 @@ import PaymentSuccessful from './components/PaymentSuccessful/PaymentSuccessful'
 import LandlordViewProperty from './components/LandlordViewProperty/LandlordViewProperty'
 import PreviewLandlordAgreement from './components/PreviewLandlordAgreement/PreviewLandlordAgreement'
 import MessageMe from './components/MessageMe/MessageMe'
+import AdvancedLandlordSettings from './components/AdvancedLandlordSettings/AdvancedLandlordSettings'
+import HelpLandlord from './components/HelpLandlord/HelpLandlord'
 
 const PageRoutes = () => {
   return (
@@ -96,6 +98,18 @@ const PageRoutes = () => {
 
         {/* Message Me  */}
         <Route path='/dashboard/messageme' element={<MessageMe />}></Route>
+
+        {/* Advanced Landlord Settings */}
+        <Route
+          path='/dashboard/advanced-landlord-settings'
+          element={<AdvancedLandlordSettings />}
+        ></Route>
+
+        {/* Help Landlord  */}
+        <Route
+          path='/dashboard/help-landlord'
+          element={<HelpLandlord />}
+        ></Route>
       </Routes>
     </Router>
   )
