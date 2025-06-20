@@ -30,6 +30,7 @@ import PreviewLandlordAgreement from './components/PreviewLandlordAgreement/Prev
 import MessageMe from './components/MessageMe/MessageMe'
 import AdvancedLandlordSettings from './components/AdvancedLandlordSettings/AdvancedLandlordSettings'
 import HelpLandlord from './components/HelpLandlord/HelpLandlord'
+import ManageTenants from './components/ManageTenants/ManageTenants'
 
 function App() {
   return (
@@ -130,6 +131,12 @@ function App() {
           <Route
             path='/dashboard/help-landlord'
             element={<HelpLandlord />}
+          ></Route>
+
+          {/* Manage Tenants */}
+          <Route
+            path='/dashboard/manage-tenants'
+            element={<ManageTenants />}
           ></Route>
         </Routes>
       </BrowserRouter>

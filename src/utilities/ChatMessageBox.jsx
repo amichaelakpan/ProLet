@@ -6,7 +6,7 @@ import smile from '../assets/images/smile-emoji.png'
 
 function ChatMessageBox() {
   return (
-    <div className='reg-data-div chatbox-div'>
+    <div className='chatbox-div'>
       <input
         type='text'
         className='textbox'

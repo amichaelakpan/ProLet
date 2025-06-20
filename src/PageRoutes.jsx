@@ -25,6 +25,7 @@ import PreviewLandlordAgreement from './components/PreviewLandlordAgreement/Prev
 import MessageMe from './components/MessageMe/MessageMe'
 import AdvancedLandlordSettings from './components/AdvancedLandlordSettings/AdvancedLandlordSettings'
 import HelpLandlord from './components/HelpLandlord/HelpLandlord'
+import ManageTenants from './components/ManageTenants/ManageTenants'
 
 const PageRoutes = () => {
   return (
@@ -111,6 +112,11 @@ const PageRoutes = () => {
           element={<HelpLandlord />}
         ></Route>
       </Routes>
+      {/* Manage Tenants */}
+      <Route
+        path='/dashboard/manage-tenants'
+        element={<ManageTenants />}
+      ></Route>
     </Router>
   )
 }

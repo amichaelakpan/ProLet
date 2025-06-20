@@ -91,7 +91,7 @@ function MessageMe() {
         {/* Content Section  */}
         <section className='comp-main-content'>
           <div className='comp-dash-renter-container'>
-            <section className='reg-main-content chat-message-container'>
+            <section className='chat-message-container'>
               <div className='move-left'>
                 <ChatItemSender />
               </div>
