@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Tenantschats.css'
+import './TenantsChats.css'
 import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
@@ -24,7 +24,7 @@ import logout from '../../assets/images/logout.png'
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function Tenantschats() {
+function TenantsChats() {
   // Code Block to handle File Upload
 
   return (
@@ -259,4 +259,4 @@ function Tenantschats() {
   )
 }
 
-export default Tenantschats
+export default TenantsChats
