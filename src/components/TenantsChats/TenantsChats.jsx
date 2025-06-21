@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './ManageTenants.css'
+import './Tenantschats.css'
 import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
@@ -20,12 +20,11 @@ import information from '../../assets/images/information.png'
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
-import plus from '../../assets/images/plus.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function ManageTenants() {
+function Tenantschats() {
   // Code Block to handle File Upload
 
   return (
@@ -57,7 +56,7 @@ function ManageTenants() {
             <SidebarMenu img={information} text={'Check Request'} />
           </div>
           <div>
-            <SidebarMenu img={chat} text={'Chat'} />
+            <SidebarMenu img={chat} text={'chat'} />
           </div>
         </menu>
 
@@ -88,11 +87,13 @@ function ManageTenants() {
         </section>
 
         <section className='comp-get-started manage-tenants-header-text'>
-          <h2>Manage Tenants</h2>
+          <h2>Request for repair on apartment</h2>
           <p>
-            Manage Tenants allows you to oversee and organize tenant information
-            efficiently. Add, edit and track tenant details, lease agreements
-            and payment records in one place for seamless property management
+            This section is for tenants to report any maintenance or repair
+            issues in their apartment. It includes details such as the problem
+            description, location, urgency level, and contact information.
+            Prompt reporting ensures timely repairs and a well-maintained living
+            environment.
           </p>
         </section>
 
@@ -120,6 +121,13 @@ function ManageTenants() {
                   <div className='transaction-history-title tenant-prop-options'>
                     <div>
                       <Button
+                        text={'Homes'}
+                        bgcolor={'#e5ebff'}
+                        color={'#3357d0'}
+                      />
+                    </div>
+                    <div>
+                      <Button
                         text={'Apartments'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
@@ -127,9 +135,10 @@ function ManageTenants() {
                     </div>
                     <div>
                       <Button
-                        text={'Shortlet'}
+                        text={'Rooms'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
+                        width='100%'
                       />
                     </div>
                     <div>
@@ -149,15 +158,6 @@ function ManageTenants() {
                       />
                     </div>
                   </div>
-                  <div className='back-to-wallet-div'>
-                    <Button
-                      text={'Add a New Tenant'}
-                      bgcolor={'#fff'}
-                      color={'#3357d0'}
-                      img={plus}
-                      borderColor={'#3357d0'}
-                    />
-                  </div>
                 </div>
 
                 {/* Transactions Section  */}
@@ -176,7 +176,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'chat'}
                     />
                     <TenantRecords
                       name={'Isaac Newton'}
@@ -190,7 +190,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 month'}
-                      pytstatus={'Due'}
+                      pytstatus={'chat'}
                     />
                     <TenantRecords
                       name={'Mark Zuckerberg'}
@@ -204,7 +204,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'chat'}
                     />
                     <TenantRecords
                       name={'Donald Trump'}
@@ -218,7 +218,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Due'}
+                      pytstatus={'chat'}
                     />
                     <TenantRecords
                       name={'Baba Ijebu'}
@@ -232,7 +232,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'chat'}
                     />
                     <TenantRecords
                       name={'Razak Akanji'}
@@ -246,7 +246,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'chat'}
                     />
                   </div>
                 </div>
@@ -259,4 +259,4 @@ function ManageTenants() {
   )
 }
 
-export default ManageTenants
+export default Tenantschats

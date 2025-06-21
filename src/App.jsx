@@ -31,6 +31,13 @@ import MessageMe from './components/MessageMe/MessageMe'
 import AdvancedLandlordSettings from './components/AdvancedLandlordSettings/AdvancedLandlordSettings'
 import HelpLandlord from './components/HelpLandlord/HelpLandlord'
 import ManageTenants from './components/ManageTenants/ManageTenants'
+import RequestRepair from './components/RequestRepair/RequestRepair'
+import RequestRepairMessage from './components/RequestRepairMessage/RequestRepairMessage'
+import TenantsChats from './components/TenantsChats/TenantsChats'
+import ChatsLog from './components/ChatsLog/ChatsLog'
+import GetAgreement from './components/GetAgreement/GetAgreement'
+import ViewLandlordAgreement from './components/ViewLandlordAgreement/ViewLandlordAgreement'
+import TerminateRent from './components/TerminateRent/TerminateRent'
 
 function App() {
   return (
@@ -72,71 +79,97 @@ function App() {
             path='/dashboard/transaction-history'
             element={<TransHistory />}
           ></Route>
-
           {/* Dashboard Landlord 1 */}
           <Route
             path='/dashboard/dash-landlord-1'
             element={<DashLandlord1 />}
           ></Route>
-
           {/* Add Property  */}
           <Route
             path='/dashboard/add-property'
             element={<AddProperty />}
           ></Route>
-
           {/* Active Dashboard  */}
           <Route
             path='/dashboard/active-dashboard'
             element={<ActiveDashboard />}
           ></Route>
-
           {/* Fund Wallet  */}
           <Route path='/dashboard/fund-wallet' element={<FundWallet />}></Route>
-
           {/* Credit Wallet With Card  */}
           <Route
             path='/dashboard/creditwallet-with-card'
             element={<CreditWalletWithCard />}
           ></Route>
-
           {/* Payment Successful  */}
           <Route
             path='/dashboard/payment-successful'
             element={<PaymentSuccessful />}
           ></Route>
-
           {/* Landlord View Property  */}
           <Route
             path='/dashboard/landlord-view-property'
             element={<LandlordViewProperty />}
           ></Route>
-
           {/* Preview Landlord Agreement  */}
           <Route
             path='/dashboard/preview-landlord-agreement'
             element={<PreviewLandlordAgreement />}
           ></Route>
-
           {/* Message Me  */}
           <Route path='/dashboard/messageme' element={<MessageMe />}></Route>
-
           {/* Advanced landlord Settings  */}
           <Route
             path='/dashboard/advanced-landlord-settings'
             element={<AdvancedLandlordSettings />}
           ></Route>
-
           {/* Help Landlord  */}
           <Route
             path='/dashboard/help-landlord'
             element={<HelpLandlord />}
           ></Route>
-
           {/* Manage Tenants */}
           <Route
             path='/dashboard/manage-tenants'
             element={<ManageTenants />}
+          ></Route>
+          {/* Request Repair */}
+          <Route
+            path='/dashboard/request-repair'
+            element={<RequestRepair />}
+          ></Route>
+
+          {/* Request Repair Message */}
+          <Route
+            path='/dashboard/request-repair-message'
+            element={<RequestRepairMessage />}
+          ></Route>
+
+          {/* Tenants Chats  */}
+          <Route
+            path='/dashboard/tenants-chats'
+            element={<TenantsChats />}
+          ></Route>
+
+          {/* Chats Log  */}
+          <Route path='/dashboard/chats-log' element={<ChatsLog />}></Route>
+
+          {/* Get Agreement */}
+          <Route
+            path='/dashboard/get-agreement'
+            element={<GetAgreement />}
+          ></Route>
+
+          {/* View Landlord Agreement  */}
+          <Route
+            path='/dashboard/view-signed-agreement'
+            element={<ViewLandlordAgreement />}
+          ></Route>
+
+          {/* Terminate Rent  */}
+          <Route
+            path='/dashboard/terminate-rent'
+            element={<TerminateRent />}
           ></Route>
         </Routes>
       </BrowserRouter>

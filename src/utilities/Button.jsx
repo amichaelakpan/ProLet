@@ -8,6 +8,7 @@ const Button = ({
   width = '',
   onClick,
   img = '',
+  fontSize = '1rem',
 }) => {
   return (
     <button
@@ -18,6 +19,7 @@ const Button = ({
         color: color,
         border: `1px solid ${borderColor}`,
         width,
+        fontSize,
       }}
     >
       {/* <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded'></button> */}

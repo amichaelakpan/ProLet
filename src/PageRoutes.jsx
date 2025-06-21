@@ -26,6 +26,13 @@ import MessageMe from './components/MessageMe/MessageMe'
 import AdvancedLandlordSettings from './components/AdvancedLandlordSettings/AdvancedLandlordSettings'
 import HelpLandlord from './components/HelpLandlord/HelpLandlord'
 import ManageTenants from './components/ManageTenants/ManageTenants'
+import RequestRepair from './components/RequestRepair/RequestRepair'
+import RequestRepairMessage from './components/RequestRepairMessage/RequestRepairMessage'
+import TenantsChats from './components/TenantsChats/TenantsChats'
+import ChatsLog from './components/ChatsLog/ChatsLog'
+import GetAgreement from './components/GetAgreement/GetAgreement'
+import ViewLandlordAgreement from './components/ViewLandlordAgreement/ViewLandlordAgreement'
+import TerminateRent from './components/TerminateRent/TerminateRent'
 
 const PageRoutes = () => {
   return (
@@ -116,6 +123,35 @@ const PageRoutes = () => {
       <Route
         path='/dashboard/manage-tenants'
         element={<ManageTenants />}
+      ></Route>
+      {/* Request Repair */}
+      <Route
+        path='/dashboard/request-repair'
+        element={<RequestRepair />}
+      ></Route>
+      {/* Request Repair Message */}
+      <Route
+        path='/dashboard/request-repair-message'
+        element={<RequestRepairMessage />}
+      ></Route>
+      {/* Tenants Chats  */}
+      <Route path='/dashboard/tenants-chats' element={<TenantsChats />}></Route>
+      {/* Chats Log */}
+      <Route path='/dashboard/chats-log' element={<ChatsLog />}></Route>
+
+      {/* Get Agreement */}
+      <Route path='/dashboard/get-agreement' element={<GetAgreement />}></Route>
+
+      {/* View Landlord Agreement  */}
+      <Route
+        path='/dashboard/view-signed-agreement'
+        element={<ViewLandlordAgreement />}
+      ></Route>
+
+      {/* Terminate Rent  */}
+      <Route
+        path='/dashboard/terminate-rent'
+        element={<TerminateRent />}
       ></Route>
     </Router>
   )

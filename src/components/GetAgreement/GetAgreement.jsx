@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './ManageTenants.css'
+import './GetAgreement.css'
 import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
@@ -20,12 +20,11 @@ import information from '../../assets/images/information.png'
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
-import plus from '../../assets/images/plus.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function ManageTenants() {
+function GetAgreement() {
   // Code Block to handle File Upload
 
   return (
@@ -57,7 +56,7 @@ function ManageTenants() {
             <SidebarMenu img={information} text={'Check Request'} />
           </div>
           <div>
-            <SidebarMenu img={chat} text={'Chat'} />
+            <SidebarMenu img={chat} text={'chat'} />
           </div>
         </menu>
 
@@ -88,11 +87,10 @@ function ManageTenants() {
         </section>
 
         <section className='comp-get-started manage-tenants-header-text'>
-          <h2>Manage Tenants</h2>
+          <h2>Get Agreement</h2>
           <p>
-            Manage Tenants allows you to oversee and organize tenant information
-            efficiently. Add, edit and track tenant details, lease agreements
-            and payment records in one place for seamless property management
+            Get Agreement simplifies the rental process by helping landlords and
+            tenants create, review, and sign rental agreements seamlessly.
           </p>
         </section>
 
@@ -103,7 +101,7 @@ function ManageTenants() {
               {/* Tenants info  */}
               <div className='fund-wallet-header tenants-info-search'>
                 <div className='transaction-history-title tenants-info-search-text'>
-                  Tenants Information
+                  Generate an Agreement
                 </div>
                 <div className='back-to-wallet-div'>
                   <input
@@ -120,18 +118,19 @@ function ManageTenants() {
                   <div className='transaction-history-title tenant-prop-options'>
                     <div>
                       <Button
-                        text={'Apartments'}
+                        text={'Homes'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
                       />
                     </div>
                     <div>
                       <Button
-                        text={'Shortlet'}
+                        text={'Apartments'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
                       />
                     </div>
+
                     <div>
                       <Button
                         text={'Studios'}
@@ -149,21 +148,12 @@ function ManageTenants() {
                       />
                     </div>
                   </div>
-                  <div className='back-to-wallet-div'>
-                    <Button
-                      text={'Add a New Tenant'}
-                      bgcolor={'#fff'}
-                      color={'#3357d0'}
-                      img={plus}
-                      borderColor={'#3357d0'}
-                    />
-                  </div>
                 </div>
 
                 {/* Transactions Section  */}
                 <div className='transactions'>
                   <div className='transactions-records'>
-                    <TenantRecordsHeader />
+                    <TenantRecordsHeader pytstatus='Issue Agreement' />
                     <TenantRecords
                       name={'John Doe'}
                       ID={43384}
@@ -176,7 +166,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'issueagreement'}
                     />
                     <TenantRecords
                       name={'Isaac Newton'}
@@ -190,7 +180,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 month'}
-                      pytstatus={'Due'}
+                      pytstatus={'issueagreement'}
                     />
                     <TenantRecords
                       name={'Mark Zuckerberg'}
@@ -204,7 +194,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'issueagreement'}
                     />
                     <TenantRecords
                       name={'Donald Trump'}
@@ -218,7 +208,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Due'}
+                      pytstatus={'issueagreement'}
                     />
                     <TenantRecords
                       name={'Baba Ijebu'}
@@ -232,7 +222,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'issueagreement'}
                     />
                     <TenantRecords
                       name={'Razak Akanji'}
@@ -246,7 +236,7 @@ function ManageTenants() {
                       sdate={'6th June 2025'}
                       edate={'6th July 2025'}
                       duration={'1 year'}
-                      pytstatus={'Paid'}
+                      pytstatus={'issueagreement'}
                     />
                   </div>
                 </div>
@@ -259,4 +249,4 @@ function ManageTenants() {
   )
 }
 
-export default ManageTenants
+export default GetAgreement

@@ -21,7 +21,6 @@ export function TenantRecords({
   sdate,
   edate,
   duration,
-  status,
   pytstatus,
 }) {
   return (
@@ -43,19 +42,58 @@ export function TenantRecords({
           <div className='tenant-records-item-header'>{amount}</div>
           <div className='tenant-records-item-content'>{type}</div>
         </div>
-        <div className='tenant-record-item'>
+        <div
+          className={`tenant-record-item ${
+            pytstatus === 'Due' ? 'red-text' : ''
+          }`}
+        >
           <div className='tenant-records-item-header'>{sdate}</div>
           <div className='tenant-records-item-content'>{edate}</div>
         </div>
         <div className='tenant-record-item'>
           <div className='tenant-records-item-header'>{duration}</div>
-          <div className='tenant-records-item-content'>{status}</div>
+          <div
+            className={`tenant-records-item-content ${
+              pytstatus === 'Paid' ||
+              pytstatus === 'check' ||
+              pytstatus === 'chat' ||
+              pytstatus === 'issueagreement'
+                ? ''
+                : 'red-text'
+            }`}
+          >
+            {pytstatus === 'Paid' ||
+            pytstatus === 'check' ||
+            pytstatus === 'chat' ||
+            pytstatus === 'issueagreement'
+              ? 'Active'
+              : 'Expired'}
+          </div>
         </div>
 
         <div>
           <Button
-            text={pytstatus === 'Paid' ? 'Paid' : 'Due'}
-            bgcolor={pytstatus === 'Paid' ? '#15a85a' : '#c9184a'}
+            text={
+              pytstatus === 'Paid'
+                ? 'Paid'
+                : pytstatus === 'check'
+                ? 'Check'
+                : pytstatus === 'chat'
+                ? 'Chat'
+                : pytstatus === 'issueagreement'
+                ? 'Issue Agreement'
+                : 'Due'
+            }
+            bgcolor={
+              pytstatus === 'Paid'
+                ? '#15a85a'
+                : pytstatus === 'check'
+                ? '#15a85a'
+                : pytstatus === 'chat' || pytstatus === 'issueagreement'
+                ? '#3357d0'
+                : '#c9184a'
+            }
+            color={'#fff'}
           />
         </div>
       </div>
@@ -63,16 +101,24 @@ export function TenantRecords({
   )
 }
 
-export function TenantRecordsHeader() {
+export function TenantRecordsHeader({
+  name = 'Name/ID',
+  email = 'Email/Phone Number',
+  propAddress = 'Property Address',
+  amount = 'Amount Paid/Type',
+  sedate = 'Start - End Date',
+  duration = 'Duration/Status',
+  pytstatus = 'Payment Status',
+}) {
   return (
     <div className='tenant-record-items tenant-record-items-header'>
-      <div>Name/ID</div>
-      <div>Email/Phone Number</div>
-      <div>Property Address</div>
-      <div>Amount Paid/Type</div>
-      <div>Start - End Date</div>
-      <div>Duration/Status</div>
-      <div>Payment Status</div>
+      <div>{name}</div>
+      <div>{email}</div>
+      <div>{propAddress}</div>
+      <div>{amount} </div>
+      <div>{sedate} </div>
+      <div>{duration}</div>
+      <div>{pytstatus}</div>
     </div>
   )
 }
