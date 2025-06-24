@@ -33,6 +33,8 @@ import ChatsLog from './components/ChatsLog/ChatsLog'
 import GetAgreement from './components/GetAgreement/GetAgreement'
 import ViewLandlordAgreement from './components/ViewLandlordAgreement/ViewLandlordAgreement'
 import TerminateRent from './components/TerminateRent/TerminateRent'
+import TerminateRentSuccessful from './components/TerminateRentSuccessful/TerminateRentSuccessful'
+import PayRenterSuccessful from './components/PayRenterSuccessful/PayRenterSuccessful'
 
 const PageRoutes = () => {
   return (
@@ -138,20 +140,29 @@ const PageRoutes = () => {
       <Route path='/dashboard/tenants-chats' element={<TenantsChats />}></Route>
       {/* Chats Log */}
       <Route path='/dashboard/chats-log' element={<ChatsLog />}></Route>
-
       {/* Get Agreement */}
       <Route path='/dashboard/get-agreement' element={<GetAgreement />}></Route>
-
       {/* View Landlord Agreement  */}
       <Route
         path='/dashboard/view-signed-agreement'
         element={<ViewLandlordAgreement />}
       ></Route>
-
       {/* Terminate Rent  */}
       <Route
         path='/dashboard/terminate-rent'
         element={<TerminateRent />}
+      ></Route>
+
+      {/* Terminate Rent Successful */}
+      <Route
+        path='/dashboard/terminate-rent-successful'
+        element={<TerminateRentSuccessful />}
+      ></Route>
+
+      {/* Pay Renter Successful  */}
+      <Route
+        path='/dashboard/pay-renter-successful'
+        element={<PayRenterSuccessful />}
       ></Route>
     </Router>
   )

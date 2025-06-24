@@ -38,6 +38,8 @@ import ChatsLog from './components/ChatsLog/ChatsLog'
 import GetAgreement from './components/GetAgreement/GetAgreement'
 import ViewLandlordAgreement from './components/ViewLandlordAgreement/ViewLandlordAgreement'
 import TerminateRent from './components/TerminateRent/TerminateRent'
+import TerminateRentSuccessful from './components/TerminateRentSuccessful/TerminateRentSuccessful'
+import PayRenterSuccessful from './components/PayRenterSuccessful/PayRenterSuccessful'
 
 function App() {
   return (
@@ -170,6 +172,18 @@ function App() {
           <Route
             path='/dashboard/terminate-rent'
             element={<TerminateRent />}
+          ></Route>
+
+          {/* Terminate Rent Successful  */}
+          <Route
+            path='/dashboard/terminate-rent-successful'
+            element={<TerminateRentSuccessful />}
+          ></Route>
+
+          {/* Pay Renter Successful  */}
+          <Route
+            path='/dashboard/pay-renter-successful'
+            element={<PayRenterSuccessful />}
           ></Route>
         </Routes>
       </BrowserRouter>
