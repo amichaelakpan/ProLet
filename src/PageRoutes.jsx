@@ -35,6 +35,9 @@ import ViewLandlordAgreement from './components/ViewLandlordAgreement/ViewLandlo
 import TerminateRent from './components/TerminateRent/TerminateRent'
 import TerminateRentSuccessful from './components/TerminateRentSuccessful/TerminateRentSuccessful'
 import PayRenterSuccessful from './components/PayRenterSuccessful/PayRenterSuccessful'
+import ChangePasswordLandlord from './components/ChangePasswordLandlord/ChangePasswordLandlord'
+import ChangePasswordLandlordSuccessful from './components/ChangePasswordLandlordSuccessful/ChangePasswordLandlordSuccessful'
+import ManageAgents from './components/ManageAgents/ManageAgents'
 
 const PageRoutes = () => {
   return (
@@ -152,18 +155,31 @@ const PageRoutes = () => {
         path='/dashboard/terminate-rent'
         element={<TerminateRent />}
       ></Route>
-
       {/* Terminate Rent Successful */}
       <Route
         path='/dashboard/terminate-rent-successful'
         element={<TerminateRentSuccessful />}
       ></Route>
-
       {/* Pay Renter Successful  */}
       <Route
         path='/dashboard/pay-renter-successful'
         element={<PayRenterSuccessful />}
       ></Route>
+
+      {/* Change Password Landlord  */}
+      <Route
+        path='/dashboard/change-password-landlord'
+        element={<ChangePasswordLandlord />}
+      ></Route>
+
+      {/* Change Password Landlord Successful  */}
+      <Route
+        path='/dashboard/change-password-landlord-successful'
+        element={<ChangePasswordLandlordSuccessful />}
+      ></Route>
+
+      {/* Manage Agents  */}
+      <Route path='/dashboard/manage-agents' element={<ManageAgents />}></Route>
     </Router>
   )
 }

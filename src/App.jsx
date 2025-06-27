@@ -40,6 +40,9 @@ import ViewLandlordAgreement from './components/ViewLandlordAgreement/ViewLandlo
 import TerminateRent from './components/TerminateRent/TerminateRent'
 import TerminateRentSuccessful from './components/TerminateRentSuccessful/TerminateRentSuccessful'
 import PayRenterSuccessful from './components/PayRenterSuccessful/PayRenterSuccessful'
+import ChangePasswordLandlord from './components/ChangePasswordLandlord/ChangePasswordLandlord'
+import ChangePasswordLandlordSuccessful from './components/ChangePasswordLandlordSuccessful/ChangePasswordLandlordSuccessful'
+import ManageAgents from './components/ManageAgents/ManageAgents'
 
 function App() {
   return (
@@ -184,6 +187,24 @@ function App() {
           <Route
             path='/dashboard/pay-renter-successful'
             element={<PayRenterSuccessful />}
+          ></Route>
+
+          {/* Change Password Landlord  */}
+          <Route
+            path='/dashboard/change-password-landlord'
+            element={<ChangePasswordLandlord />}
+          ></Route>
+
+          {/* Change Password Landlord Successful  */}
+          <Route
+            path='/dashboard/change-password-landlord-successful'
+            element={<ChangePasswordLandlordSuccessful />}
+          ></Route>
+
+          {/*Manage Agents */}
+          <Route
+            path='/dashboard/manage-agents'
+            element={<ManageAgents />}
           ></Route>
         </Routes>
       </BrowserRouter>
