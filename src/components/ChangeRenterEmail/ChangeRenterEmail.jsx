@@ -1,4 +1,4 @@
-import './AdvancedLandlordSettings.css'
+import './ChangeRenterEmail.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -11,9 +11,6 @@ import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
 import information from '../../assets/images/information.png'
-import personalinfo from '../../assets/images/personal-info.png'
-import settings2 from '../../assets/images/settings-2.png'
-import lock from '../../assets/images/lock.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -21,9 +18,9 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-import Settings from '../../utilities/Settings'
+function ChangeRenterEmail() {
+  // Code Block to handle File Upload
 
-function AdvancedLandlordSettings() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -83,21 +80,35 @@ function AdvancedLandlordSettings() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
-        <section className='comp-get-started'>
-          <h3>Advanced Landlord Settings</h3>
-          <p>Customize Preferences and manage advanced options.</p>
-        </section>
+        {/* Fund Wallet Header  */}
+        <div className='fund-wallet-header'>
+          <div className='transaction-history-title'>Edit Email</div>
+          <div className='back-to-wallet-div'>
+            <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
+          </div>
+        </div>
 
         {/* Content Section  */}
-        <section className='comp-main-content advanced-settings-container'>
-          <div>
-            <Settings img={personalinfo} title={'Personal Information'} />
-          </div>
-          <div>
-            <Settings img={settings2} title={'Delete Account'} />
-          </div>
-          <div>
-            <Settings img={lock} title={'Change Password'} />{' '}
+        <section className='comp-main-content'>
+          <div className='wallet-container change-email-container'>
+            <p className='bvn-prompt-text'>Email</p>
+            {/* NIN Verification */}
+            <div className='reg-data-div'>
+              <input
+                type='text'
+                className='textbox'
+                placeholder='Enter new email address'
+              />
+            </div>
+            <div className='change-email-save-btn-container'>
+              <Button
+                text={`Save Changes`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width='100%'
+              />
+            </div>
           </div>
         </section>
       </div>
@@ -105,4 +116,4 @@ function AdvancedLandlordSettings() {
   )
 }
 
-export default AdvancedLandlordSettings
+export default ChangeRenterEmail

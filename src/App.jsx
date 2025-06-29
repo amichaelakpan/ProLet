@@ -29,6 +29,7 @@ import LandlordViewProperty from './components/LandlordViewProperty/LandlordView
 import PreviewLandlordAgreement from './components/PreviewLandlordAgreement/PreviewLandlordAgreement'
 import MessageMe from './components/MessageMe/MessageMe'
 import AdvancedLandlordSettings from './components/AdvancedLandlordSettings/AdvancedLandlordSettings'
+import AdvancedRenterSettings from './components/AdvancedRenterSettings/AdvancedRenterSettings'
 import HelpLandlord from './components/HelpLandlord/HelpLandlord'
 import ManageTenants from './components/ManageTenants/ManageTenants'
 import RequestRepair from './components/RequestRepair/RequestRepair'
@@ -43,6 +44,14 @@ import PayRenterSuccessful from './components/PayRenterSuccessful/PayRenterSucce
 import ChangePasswordLandlord from './components/ChangePasswordLandlord/ChangePasswordLandlord'
 import ChangePasswordLandlordSuccessful from './components/ChangePasswordLandlordSuccessful/ChangePasswordLandlordSuccessful'
 import ManageAgents from './components/ManageAgents/ManageAgents'
+import AgentAppointmentLetter from './components/AgentAppointmentLetter/AgentAppointmentLetter'
+import FireAgent from './components/FireAgent/FireAgent'
+import FireAgentLetter from './components/FireAgentLetter/FIreAgentLetter'
+import ReplaceAgent from './components/ReplaceAgent/ReplaceAgent'
+import AppointAgentProperty from './components/AppointAgentProperty/AppointAgentProperty'
+import Notification from './components/Notification/Notification'
+import PersonalInfoRenterSettings from './components/PersonalInfoRenterSettings/PersonalInfoRenterSettings'
+import ChangeRenterEmail from './components/ChangeRenterEmail/ChangeRenterEmail'
 
 function App() {
   return (
@@ -205,6 +214,57 @@ function App() {
           <Route
             path='/dashboard/manage-agents'
             element={<ManageAgents />}
+          ></Route>
+
+          {/* Agent Appointment Letter */}
+          <Route
+            path='/dashboard/agent-appointment-letter'
+            element={<AgentAppointmentLetter />}
+          ></Route>
+
+          {/* Fire Agent */}
+          <Route path='/dashboard/fire-agent' element={<FireAgent />}></Route>
+
+          {/* Fire Agent Letter*/}
+          <Route
+            path='/dashboard/fire-agent-letter'
+            element={<FireAgentLetter />}
+          ></Route>
+
+          {/* Replace Agent*/}
+          <Route
+            path='/dashboard/replace-agent'
+            element={<ReplaceAgent />}
+          ></Route>
+
+          {/* Appoint Agent Property*/}
+          <Route
+            path='/dashboard/appoint-agent-property'
+            element={<AppointAgentProperty />}
+          ></Route>
+
+          {/* Notifications */}
+          <Route
+            path='/dashboard/notification'
+            element={<Notification />}
+          ></Route>
+
+          {/* Advanced Renter Settings */}
+          <Route
+            path='/dashboard/advanced-renter-settings'
+            element={<AdvancedRenterSettings />}
+          ></Route>
+
+          {/* Personal Info Renter Settings */}
+          <Route
+            path='/dashboard/renter-info-settings'
+            element={<PersonalInfoRenterSettings />}
+          ></Route>
+
+          {/* Change Renter Email  */}
+          <Route
+            path='/dashboard/change-renter-email'
+            element={<ChangeRenterEmail />}
           ></Route>
         </Routes>
       </BrowserRouter>

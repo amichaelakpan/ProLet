@@ -1,4 +1,4 @@
-import './AdvancedLandlordSettings.css'
+import './AdvancedRenterSettings.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -23,7 +23,7 @@ import '../CompDashRenter/CompDashRenter.css'
 
 import Settings from '../../utilities/Settings'
 
-function AdvancedLandlordSettings() {
+function AdvancedRenterSettings() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -84,7 +84,7 @@ function AdvancedLandlordSettings() {
         </section>
 
         <section className='comp-get-started'>
-          <h3>Advanced Landlord Settings</h3>
+          <h3>Advanced Renter Settings</h3>
           <p>Customize Preferences and manage advanced options.</p>
         </section>
 
@@ -105,4 +105,4 @@ function AdvancedLandlordSettings() {
   )
 }
 
-export default AdvancedLandlordSettings
+export default AdvancedRenterSettings

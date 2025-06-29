@@ -13,6 +13,7 @@ import property9 from '../../assets/images/property-9.jpg'
 import property10 from '../../assets/images/property-10.jpg'
 import property11 from '../../assets/images/property-11.jpg'
 import property12 from '../../assets/images/property-12.jpg'
+import heart from '../../assets/images/heart.png'
 
 function Search() {
   return (
@@ -74,41 +75,41 @@ function Search() {
       {/* Layer 3 */}
       <div className='search-content-3'>
         <div>
-          <Property img={property1} />
+          <Property img={property1} icon={heart} />
         </div>
         <div>
-          <Property img={property2} />
+          <Property img={property2} icon={heart} />
         </div>
         <div>
-          <Property img={property3} />
+          <Property img={property3} icon={heart} />
         </div>
         <div>
-          <Property img={property4} />
+          <Property img={property4} icon={heart} />
         </div>
         <div>
-          <Property img={property5} />
+          <Property img={property5} icon={heart} />
         </div>
         <div>
-          <Property img={property6} />
+          <Property img={property6} icon={heart} />
         </div>
         <div>
-          <Property img={property7} />
+          <Property img={property7} icon={heart} />
         </div>
         <div>
-          <Property img={property8} />
+          <Property img={property8} icon={heart} />
         </div>
         <div>
-          <Property img={property9} />
+          <Property img={property9} icon={heart} />
         </div>
 
         <div>
-          <Property img={property10} />
+          <Property img={property10} icon={heart} />
         </div>
         <div>
-          <Property img={property11} />
+          <Property img={property11} icon={heart} />
         </div>
         <div>
-          <Property img={property12} />
+          <Property img={property12} icon={heart} />
         </div>
       </div>
     </div>

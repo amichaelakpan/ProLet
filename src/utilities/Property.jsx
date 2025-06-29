@@ -3,16 +3,23 @@ import seats from '../assets/images/seats.png'
 import bedroom from '../assets/images/bedroom.png'
 import floorspace from '../assets/images/floorspace.png'
 
-function Property({ img }) {
+function Property({ img, icon = '', handleClick = () => {} }) {
   return (
-    <div className='card'>
+    <div className='card' onClick={handleClick}>
       <div
         className='card-image'
         style={{ backgroundImage: `url(${img})` }}
       ></div>
       <div className='card-details'>
         <div className='card-details-price'>
-          ₦170,000 <span className='per-month'>/month</span>{' '}
+          <div>
+            ₦170,000 <span className='per-month'>/month</span>
+          </div>
+          {icon && (
+            <section className='bin'>
+              <img src={icon} alt='Bin Image' />{' '}
+            </section>
+          )}
         </div>
         <div className='card-details-location'>
           <h3>Gwarinpa Estate</h3>

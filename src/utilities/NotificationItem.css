@@ -1,0 +1,62 @@
+.notification-log-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1rem 1fr repeat(2, 8rem) 4rem;
+  grid-gap: 0.25rem;
+  align-items: center;
+  justify-items: start;
+  border-bottom: 1px solid #000;
+  padding: 0.4rem 1rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  margin-top: 0.3rem;
+
+  &:hover {
+    border-left: 5px solid #082567;
+    transform: translateY(-4px);
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 85%;
+  }
+
+  & > .notification-log-container-image,
+  & > .notification-log-container-arrow {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  & .notification-log-container-title {
+    font-weight: 600;
+    margin-right: auto;
+  }
+
+  & .notification-log-container-arrow {
+    cursor: pointer;
+  }
+
+  & > div {
+    text-align: left;
+  }
+}
+
+/* New Styles  */
+.notification-log-container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: left;
+  gap: 0.5rem;
+  margin-left: 1.2rem;
+
+  & > p {
+    font-weight: 300;
+  }
+}

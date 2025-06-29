@@ -7,6 +7,7 @@ import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
 import { AgentRecords } from '../../utilities/AgentRecords'
 import { AgentRecordsHeader } from '../../utilities/AgentRecords'
+import AgentListing from '../../utilities/AgentListing'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
@@ -172,9 +173,11 @@ function ManageAgents() {
                       city={'Ikeja'}
                       commission={4500000}
                       comm_date={'6th June 2025'}
-                      comm_balance={'6th June 2025'}
-                      duration={'1 year'}
-                      pytstatus={'View Appointment'}
+                      comm_balance={45000}
+                      renter_name={'Kola Adeyemi'}
+                      renter_email={'kola.adeyemi@gmail.com'}
+                      renter_phone={'+234 803 123 4567'}
+                      pytstatus={'viewappointment'}
                     />
                     <AgentRecords
                       name={'Isaac Newton'}
@@ -185,9 +188,11 @@ function ManageAgents() {
                       city={'Alabama'}
                       commission={2500000}
                       comm_date={'6th June 2025'}
-                      comm_balance={'6th June 2025'}
-                      duration={'1 month'}
-                      pytstatus={'View Appointment'}
+                      comm_balance={'---'}
+                      renter_name={'Jude Montgomery'}
+                      renter_email={'jude.montgomery@gmail.com'}
+                      renter_phone={'+234 803 333 4567'}
+                      pytstatus={'viewappointment'}
                     />
                     <AgentRecords
                       name={'Mark Zuckerberg'}
@@ -198,9 +203,11 @@ function ManageAgents() {
                       city={'Ohio'}
                       commission={4500000}
                       comm_date={'6th June 2025'}
-                      comm_balance={'6th June 2025'}
-                      duration={'1 year'}
-                      pytstatus={'View Appointment'}
+                      comm_balance={'---'}
+                      renter_name={'Titus Abalaka'}
+                      renter_email={'titus.abalaka@gmail.com'}
+                      renter_phone={'+234 803 123 4567'}
+                      pytstatus={'viewappointment'}
                     />
                     <AgentRecords
                       name={'Donald Trump'}
@@ -211,9 +218,11 @@ function ManageAgents() {
                       city={'Illinois'}
                       commission={2500000}
                       comm_date={'6th June 2025'}
-                      comm_balance={'6th June 2025'}
-                      duration={'1 year'}
-                      pytstatus={'View Appointment'}
+                      comm_balance={150000}
+                      renter_name={'Spruce Woods'}
+                      renter_email={'spruce.woods@yahoo.com'}
+                      renter_phone={'+234 803 123 7867'}
+                      pytstatus={'viewappointment'}
                     />
                     <AgentRecords
                       name={'Baba Ijebu'}
@@ -222,11 +231,13 @@ function ManageAgents() {
                       phone={'+234 803 123 4567'}
                       state={'Ondo'}
                       city={'Akure'}
-                      commission={4500000}
-                      comm_date={'6th June 2025'}
-                      comm_balance={'6th June 2025'}
-                      duration={'1 year'}
-                      pytstatus={'View Appointment'}
+                      commission={'---'}
+                      comm_date={'---'}
+                      comm_balance={'---'}
+                      renter_name={'Theresa Brainard'}
+                      renter_email={'theresa.brainard@gmail.com'}
+                      renter_phone={'+234 803 123 4567'}
+                      pytstatus={'viewappointment'}
                     />
                     <AgentRecords
                       name={'Razak Akanji'}
@@ -235,14 +246,21 @@ function ManageAgents() {
                       phone={'+234 803 123 4567'}
                       state={'Bayelsa'}
                       city={'Ikoli'}
-                      commission={4500000}
-                      comm_date={'6th June 2025'}
-                      comm_balance={'6th June 2025'}
-                      duration={'1 year'}
-                      pytstatus={'View Appointment'}
+                      commission={'---'}
+                      comm_date={'---'}
+                      comm_balance={'---'}
+                      renter_name={'---'}
+                      renter_email={'---'}
+                      renter_phone={'---'}
+                      pytstatus={'viewappointment'}
                     />
                   </div>
                 </div>
+
+                {/* Agent Listing Section */}
+                <section className='agent-listing-section'>
+                  <AgentListing />
+                </section>
               </section>
             </section>
           </div>

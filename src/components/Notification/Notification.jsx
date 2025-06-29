@@ -1,4 +1,4 @@
-import './AdvancedLandlordSettings.css'
+import './Notification.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -11,9 +11,6 @@ import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
 import information from '../../assets/images/information.png'
-import personalinfo from '../../assets/images/personal-info.png'
-import settings2 from '../../assets/images/settings-2.png'
-import lock from '../../assets/images/lock.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -21,9 +18,9 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-import Settings from '../../utilities/Settings'
+import NotificationItem from '../../utilities/NotificationItem'
 
-function AdvancedLandlordSettings() {
+function Notification() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -84,20 +81,51 @@ function AdvancedLandlordSettings() {
         </section>
 
         <section className='comp-get-started'>
-          <h3>Advanced Landlord Settings</h3>
-          <p>Customize Preferences and manage advanced options.</p>
+          <h3>Notifications Page</h3>
+          <p>
+            The Notifications Page keeps you informed about important updates,
+            reminders and alerts
+          </p>
         </section>
 
         {/* Content Section  */}
-        <section className='comp-main-content advanced-settings-container'>
+        <section className='comp-main-content chat-log-settings-container'>
           <div>
-            <Settings img={personalinfo} title={'Personal Information'} />
+            <NotificationItem
+              message={
+                'Good day Alhaji, please the power source to the generator is faulty, kindly fix it.'
+              }
+              time={'1:30pm'}
+              date={'06-11-2024'}
+            />
           </div>
           <div>
-            <Settings img={settings2} title={'Delete Account'} />
+            <NotificationItem
+              message={
+                'Hello Musa, kindly fix the leaking pipe in the kitchen.'
+              }
+              time={'2:50pm'}
+              date={'06-11-2024'}
+            />
           </div>
           <div>
-            <Settings img={lock} title={'Change Password'} />{' '}
+            <NotificationItem
+              message={
+                'Good day Ikechukwu, the AC in my room is not working, please fix it.'
+              }
+              time={'3:05pm'}
+              date={'06-11-2024'}
+            />
+          </div>
+
+          <div>
+            <NotificationItem
+              message={
+                'Good day Landlord, I am yet to receive refunds of the repairs  I made on the door.'
+              }
+              time={'9:05pm'}
+              date={'05-05-2024'}
+            />
           </div>
         </section>
       </div>
@@ -105,4 +133,4 @@ function AdvancedLandlordSettings() {
   )
 }
 
-export default AdvancedLandlordSettings
+export default Notification

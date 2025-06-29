@@ -1,4 +1,5 @@
-import './AdvancedLandlordSettings.css'
+import React, { useState } from 'react'
+import './ReplaceAgent.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -11,9 +12,6 @@ import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
 import information from '../../assets/images/information.png'
-import personalinfo from '../../assets/images/personal-info.png'
-import settings2 from '../../assets/images/settings-2.png'
-import lock from '../../assets/images/lock.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -21,9 +19,28 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-import Settings from '../../utilities/Settings'
+import { SuccessfulPrompt } from '../../utilities/ConfirmationPrompt'
 
-function AdvancedLandlordSettings() {
+function ReplaceAgent() {
+  // Code Block to handle File Upload
+
+  const [showSuccess, setShowSuccess] = useState(false)
+  const closeModal = () => setShowSuccess(false)
+
+  const handleCloseDialog = (e) => {
+    e.preventDefault()
+    closeModal() // if the dialog is open, close it
+
+    showSuccess && setShowSuccess(false)
+  }
+
+  const handleSuccessClick = () => {
+    setShowSuccess(true)
+    setTimeout(() => {
+      setShowSuccess(false)
+    }, 3000)
+  }
+
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -83,21 +100,40 @@ function AdvancedLandlordSettings() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
-        <section className='comp-get-started'>
-          <h3>Advanced Landlord Settings</h3>
-          <p>Customize Preferences and manage advanced options.</p>
-        </section>
-
         {/* Content Section  */}
-        <section className='comp-main-content advanced-settings-container'>
-          <div>
-            <Settings img={personalinfo} title={'Personal Information'} />
-          </div>
-          <div>
-            <Settings img={settings2} title={'Delete Account'} />
-          </div>
-          <div>
-            <Settings img={lock} title={'Change Password'} />{' '}
+        <section className='comp-main-content'>
+          <div className='wallet-container'>
+            {/* Prompt to show success message  */}
+            {showSuccess && (
+              <SuccessfulPrompt
+                message={'Your agent has been successfully fired.'}
+                handleCloseModal={handleCloseDialog}
+                btnText={'Return to Dashboard'}
+              />
+            )}
+
+            <h2>Replace Agent</h2>
+            <p className='bvn-prompt-text'>
+              Enter another agent ID to replace the one you are about to fire.
+            </p>
+            {/* NIN Verification */}
+            <div className='reg-data-div'>
+              <input
+                type='number'
+                className='textbox enter-bvn'
+                placeholder='47633'
+              />
+            </div>
+            <div>
+              <Button
+                text={`Confirm`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width='12rem'
+                onClick={handleSuccessClick}
+              />
+            </div>
           </div>
         </section>
       </div>
@@ -105,4 +141,4 @@ function AdvancedLandlordSettings() {
   )
 }
 
-export default AdvancedLandlordSettings
+export default ReplaceAgent

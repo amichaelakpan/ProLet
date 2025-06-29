@@ -6,6 +6,7 @@
   width: 24rem;
   text-transform: none;
   border: 1px solid none;
+  cursor: pointer;
 }
 
 .card-image {
@@ -42,6 +43,22 @@
   color: #3357d0;
   font-weight: 700;
   font-size: 1.8rem;
+  width: inherit;
+
+  display: flex;
+  justify-content: space-between;
+
+  & .bin {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #0d59bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
 }
 .per-month {
   font-weight: 300;

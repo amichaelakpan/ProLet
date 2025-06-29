@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './TerminateRent.css'
+import './FireAgent.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -21,7 +21,7 @@ import logout from '../../assets/images/logout.png'
 import '../CompDashRenter/CompDashRenter.css'
 import Property from '../../utilities/Property'
 
-function TerminateRent() {
+function FireAgent() {
   // Code Block to handle File Upload
 
   return (
@@ -86,7 +86,7 @@ function TerminateRent() {
         {/* Content Section  */}
         <section className='comp-main-content'>
           <div className='terminate-rent-header'>
-            <div className='transaction-history-title'>Terminate Rent </div>
+            <div className='transaction-history-title'>Fire Agent </div>
             <div className='cancel-agreement-btn'>
               <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
             </div>
@@ -109,21 +109,21 @@ function TerminateRent() {
 
                 {/* Tenant Name*/}
                 <div className='reg-data-div'>
-                  <h5>Tenant Name</h5>
+                  <h5>Agent Name</h5>
                   <input
                     type='text'
                     className='textbox'
-                    placeholder='Enter Tenant Name'
+                    placeholder='Enter Agent Name'
                   />
                 </div>
 
                 {/* Tenant ID*/}
                 <div className='reg-data-div'>
-                  <h5>Tenant ID</h5>
+                  <h5>Agent ID</h5>
                   <input
                     type='number'
                     className='textbox'
-                    placeholder='Enter Tenant ID'
+                    placeholder='Enter Agent ID'
                   />
                 </div>
 
@@ -131,15 +131,6 @@ function TerminateRent() {
                 <div className='reg-data-div'>
                   <h5>Date of Fire</h5>
                   <input type='date' className='date-picker' />
-                </div>
-
-                {/* Home or Office Address  */}
-                <div className='reg-data-div'>
-                  <h5>Reply Message Tenant</h5>
-                  <textarea
-                    className='textarea'
-                    placeholder='Enter your message here'
-                  ></textarea>
                 </div>
 
                 <div className='reg-submit-div'>
@@ -162,4 +153,4 @@ function TerminateRent() {
   )
 }
 
-export default TerminateRent
+export default FireAgent

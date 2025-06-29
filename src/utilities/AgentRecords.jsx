@@ -5,12 +5,15 @@ import Button from './Button'
 import edit from '../assets/images/edit.png'
 
 // Acion Menu Component
-const ActionMenu = ({ openModal }) => {
+const AgentActionMenu = () => {
   return (
     <div className='popup-menu'>
       <ul>
-        <li>Terminate Rent</li>
-        <li onClick={openModal}>Pay Renter </li>
+        <li>Appoint Agent</li>
+        <li>Pay Agent</li>
+        <li>Message Agent</li>
+        <li>Fire Agent</li>
+        <li>Rate Agent</li>
       </ul>
     </div>
   )
@@ -95,8 +98,10 @@ export function AgentRecords({
   commission,
   comm_date,
   comm_balance,
+  renter_name,
+  renter_email,
+  renter_phone,
 
-  duration,
   pytstatus,
 }) {
   // show action menu for agent records
@@ -110,7 +115,7 @@ export function AgentRecords({
 
   // Modal state management
   const [isOpen, setIsOpen] = useState(false)
-  const openModal = () => setIsOpen(true)
+  // const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
   const modalRef = useRef()
 
@@ -147,9 +152,7 @@ export function AgentRecords({
             {/* Show Action Menu  */}
             {
               showMenu &&
-                ActionMenu({
-                  openModal,
-                }) /* Render the action menu when showMenu is true */
+                AgentActionMenu() /* Render the action menu when showMenu is true */
             }
             {/* Open modal dialog to pay renter */}
             {isOpen &&
@@ -181,24 +184,21 @@ export function AgentRecords({
           <div className='agent-records-item-content'>{comm_date}</div>
         </div>
         <div className='agent-record-item'>
-          <div className='agent-records-item-header'>{duration}</div>
+          <div className='agent-records-item-header'>{renter_name}</div>
           <div
             className={`agent-records-item-content ${
               pytstatus === 'Paid' ||
               pytstatus === 'check' ||
               pytstatus === 'chat' ||
-              pytstatus === 'issueagreement'
+              pytstatus === 'issueagreement' ||
+              pytstatus === 'viewappointment'
                 ? ''
                 : 'red-text'
             }`}
           >
-            {pytstatus === 'Paid' ||
-            pytstatus === 'check' ||
-            pytstatus === 'chat' ||
-            pytstatus === 'issueagreement'
-              ? 'Active'
-              : 'Expired'}
+            {renter_email}
           </div>
+          <div className='agent-records-item-header'>{renter_phone}</div>
         </div>
 
         <div>
@@ -212,6 +212,8 @@ export function AgentRecords({
                 ? 'Chat'
                 : pytstatus === 'issueagreement'
                 ? 'Issue Agreement'
+                : pytstatus === 'viewappointment'
+                ? 'View Appointment'
                 : 'Due'
             }
             bgcolor={
@@ -219,7 +221,9 @@ export function AgentRecords({
                 ? '#15a85a'
                 : pytstatus === 'check'
                 ? '#15a85a'
-                : pytstatus === 'chat' || pytstatus === 'issueagreement'
+                : pytstatus === 'chat' ||
+                  pytstatus === 'issueagreement' ||
+                  pytstatus === 'viewappointment'
                 ? '#3357d0'
                 : '#c9184a'
             }
