@@ -41,7 +41,7 @@ import ChangePasswordLandlordSuccessful from './components/ChangePasswordLandlor
 import ManageAgents from './components/ManageAgents/ManageAgents'
 import AgentAppointmentLetter from './components/AgentAppointmentLetter/AgentAppointmentLetter'
 import FireAgent from './components/FireAgent/FireAgent'
-import FireAgentLetter from './components/FireAgentLetter/FIreAgentLetter'
+import FireAgentLetter from './components/FireAgentLetter/FireAgentLetter'
 import ReplaceAgent from './components/ReplaceAgent/ReplaceAgent'
 import AppointAgentProperty from './components/AppointAgentProperty/AppointAgentProperty'
 import Notification from './components/Notification/Notification'

@@ -53,7 +53,7 @@ import AppointAgentProperty from './components/AppointAgentProperty/AppointAgent
 import Notification from './components/Notification/Notification'
 import PersonalInfoRenterSettings from './components/PersonalInfoRenterSettings/PersonalInfoRenterSettings'
 import ChangeRenterEmail from './components/ChangeRenterEmail/ChangeRenterEmail'
-     
+
 function App() {
   return (
     <>
