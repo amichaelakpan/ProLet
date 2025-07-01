@@ -53,6 +53,9 @@ import AppointAgentProperty from './components/AppointAgentProperty/AppointAgent
 import Notification from './components/Notification/Notification'
 import PersonalInfoRenterSettings from './components/PersonalInfoRenterSettings/PersonalInfoRenterSettings'
 import ChangeRenterEmail from './components/ChangeRenterEmail/ChangeRenterEmail'
+import LandlordNotification from './components/LandlordNotification/LandlordNotification'
+import LandlordProfile from './components/LandlordProfile/LandlordProfile'
+import ViewAgentAppointmentLetter from './components/ViewAgentAppointmentLetter/ViewAgentAppointmentLetter'
 
 function App() {
   return (
@@ -266,6 +269,24 @@ function App() {
           <Route
             path='/dashboard/change-renter-email'
             element={<ChangeRenterEmail />}
+          ></Route>
+
+          {/* Landlord Notification  */}
+          <Route
+            path='/dashboard/landlord-notification'
+            element={<LandlordNotification />}
+          ></Route>
+
+          {/* Landlord Profile  */}
+          <Route
+            path='/dashboard/landlord-profile'
+            element={<LandlordProfile />}
+          ></Route>
+
+          {/* View Agent Appointment Letter  */}
+          <Route
+            path='/dashboard/view-agent-appointment-letter'
+            element={<ViewAgentAppointmentLetter />}
           ></Route>
         </Routes>
       </BrowserRouter>

@@ -101,7 +101,7 @@ function ManageAgents() {
           <div className='comp-dash-renter-container'>
             <section className='reg-main-content'>
               {/* Tenants info  */}
-              <div className='fund-wallet-header tenants-info-search'>
+              <div className='tenants-info-search'>
                 <div className='transaction-history-title tenants-info-search-text'>
                   Agents Information
                 </div>
@@ -149,7 +149,7 @@ function ManageAgents() {
                       />
                     </div>
                   </div>
-                  <div className='back-to-wallet-div'>
+                  <div className='back-to-wallet-div manage-agents-add-btn-div'>
                     <Button
                       text={'Add a New Agent'}
                       bgcolor={'#fff'}

@@ -5,12 +5,12 @@ import Button from './Button'
 import edit from '../assets/images/edit.png'
 
 // Acion Menu Component
-const AgentActionMenu = () => {
+const AgentActionMenu = ({ openModal }) => {
   return (
     <div className='popup-menu'>
       <ul>
         <li>Appoint Agent</li>
-        <li>Pay Agent</li>
+        <li onClick={openModal}>Pay Agent</li>
         <li>Message Agent</li>
         <li>Fire Agent</li>
         <li>Rate Agent</li>
@@ -20,13 +20,13 @@ const AgentActionMenu = () => {
 }
 
 // Pay Renter Modal Dialog Form Component
-const PayRenterForm = ({ handleSubmit, closeModal }) => {
+const PayAgentForm = ({ handleSubmit, closeModal }) => {
   return (
     <div className='modal-overlay'>
       <div className='modal-content'>
         <div className='terminate-rent-header pay-renter-header'>
           <div className='transaction-history-title pay-renter-title'>
-            Pay Renter
+            Pay Agent
           </div>
           <div className='cancel-agreement-btn'>
             <Button
@@ -115,7 +115,7 @@ export function AgentRecords({
 
   // Modal state management
   const [isOpen, setIsOpen] = useState(false)
-  // const openModal = () => setIsOpen(true)
+  const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
   const modalRef = useRef()
 
@@ -152,11 +152,13 @@ export function AgentRecords({
             {/* Show Action Menu  */}
             {
               showMenu &&
-                AgentActionMenu() /* Render the action menu when showMenu is true */
+                AgentActionMenu({
+                  openModal,
+                }) /* Render the action menu when showMenu is true */
             }
             {/* Open modal dialog to pay renter */}
             {isOpen &&
-              PayRenterForm({
+              PayAgentForm({
                 handleSubmit,
                 closeModal,
                 modalRef,

@@ -1,4 +1,4 @@
-import './Notification.css'
+import './LandlordNotification.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -20,7 +20,7 @@ import '../CompDashRenter/CompDashRenter.css'
 
 import NotificationItem from '../../utilities/NotificationItem'
 
-function Notification() {
+function LandlordNotification() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -80,8 +80,8 @@ function Notification() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
-        <section className='comp-get-started'>
-          <h3>Agents Notifications Page</h3>
+        <section className='comp-get-started landlord-notification-header'>
+          <h3>Landlord Notifications Page</h3>
           <p>
             The Notifications Page keeps you informed about important updates,
             reminders and alerts
@@ -133,4 +133,4 @@ function Notification() {
   )
 }
 
-export default Notification
+export default LandlordNotification
