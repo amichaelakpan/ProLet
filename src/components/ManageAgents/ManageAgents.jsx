@@ -259,7 +259,13 @@ function ManageAgents() {
 
                 {/* Agent Listing Section */}
                 <section className='agent-listing-section'>
-                  <AgentListing />
+                  <AgentListing
+                    headerText={'Agents Listing'}
+                    bodyText={
+                      'showcases all available agents, providing essential details such as names, photos, contact information, and areas of expertise. It allows users to search, filter, and explore agents efficiently, making it easier to find the right professional for their needs'
+                    }
+                    btnText={'Browse Agents'}
+                  />
                 </section>
               </section>
             </section>

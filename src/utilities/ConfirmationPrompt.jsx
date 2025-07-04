@@ -6,16 +6,24 @@ export function ConfirmationPrompt({
   message,
   handleCloseModal,
   handleSuccessClick,
+  img = { handprompt },
+  messageColor = '#fff',
+  headerText = '',
+  yes = 'Yes',
+  no = 'No',
 }) {
   return (
     <div className='appoint-agent-modal-overlay'>
       <div className='appoint-agent-modal-content'>
-        <img src={handprompt} alt='Hand prompt' />
-        <p>{message}</p>
+        {img === '' ? '' : <img src={img} alt='Hand prompt' />}
+        <h2>{headerText}</h2>
+        <p style={{ color: `${messageColor === '' ? '#eee' : messageColor}` }}>
+          {message}
+        </p>
         <div className='verify-btn-container'>
           <div className='go-back-div'>
             <Button
-              text={`Yes`}
+              text={yes}
               bgcolor={'#3357D0'}
               color='#fff'
               borderColor={'#fff'}
@@ -25,9 +33,9 @@ export function ConfirmationPrompt({
           </div>
           <div className='create-wallet-div'>
             <Button
-              text={`No`}
-              bgcolor={'#3357D0'}
-              color='#fff'
+              text={no}
+              bgcolor={'#e5ebff'}
+              color='#3357D0'
               borderColor={'#fff'}
               width='100%'
               onClick={handleCloseModal}
@@ -43,11 +51,12 @@ export function SuccessfulPrompt({
   message,
   handleCloseModal,
   btnText = 'Ok',
+  img = handprompt,
 }) {
   return (
     <div className='appoint-agent-modal-overlay'>
       <div className='appoint-agent-modal-content'>
-        <img src={handprompt} alt='Hand prompt' />
+        <img src={img} alt='Hand prompt' />
         <p>{message}</p>
         <div className='verify-btn-container'>
           <div className='go-back-div'>

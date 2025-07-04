@@ -44,11 +44,11 @@ const PayRenterForm = ({ handleSubmit, closeModal }) => {
         <form onSubmit={handleSubmit}>
           {/* Agent ID*/};
           <div className='reg-data-div pay-renter-item'>
-            <h5>Agent ID</h5>
+            <h5>Renter ID</h5>
             <input
               type='number'
               className='textbox'
-              placeholder='Enter Agent ID'
+              placeholder='Enter Renter ID'
             />
           </div>
           {/* Amount*/}

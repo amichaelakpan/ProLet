@@ -1,0 +1,6 @@
+1. Password must be mininum of 10 characters
+Lower case, Upper Case, Number inclusive
+
+2. Notification on password change
+
+3. 

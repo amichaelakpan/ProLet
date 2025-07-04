@@ -50,6 +50,9 @@ import ChangeRenterEmail from './components/ChangeRenterEmail/ChangeRenterEmail'
 import LandlordNotification from './components/LandlordNotification/LandlordNotification'
 import LandlordProfile from './components/LandlordProfile/LandlordProfile'
 import ViewAgentAppointmentLetter from './components/ViewAgentAppointmentLetter/ViewAgentAppointmentLetter'
+import MessageAgent from './components/MessageAgent/MessageAgent'
+import AgentPropertyListing from './components/AgentPropertyListing/AgentPropertyListing'
+import AgentOverview from './components/AgentOverview/AgentOverview'
 
 const PageRoutes = () => {
   return (
@@ -250,6 +253,21 @@ const PageRoutes = () => {
       <Route
         path='/dashboard/view-agent-appointment-letter'
         alement={<ViewAgentAppointmentLetter />}
+      ></Route>
+
+      {/* Message Agent  */}
+      <Route path='/dashboard/message-agent' element={<MessageAgent />}></Route>
+
+      {/* Agent Listing  */}
+      <Route
+        path='/dashboard/agent-listing'
+        element={<AgentPropertyListing />}
+      ></Route>
+
+      {/* Agent Overview  */}
+      <Route
+        path='/dashboard/agent-overview'
+        element={<AgentOverview />}
       ></Route>
     </Router>
   )
