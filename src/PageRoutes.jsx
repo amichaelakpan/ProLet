@@ -53,6 +53,28 @@ import ViewAgentAppointmentLetter from './components/ViewAgentAppointmentLetter/
 import MessageAgent from './components/MessageAgent/MessageAgent'
 import AgentPropertyListing from './components/AgentPropertyListing/AgentPropertyListing'
 import AgentOverview from './components/AgentOverview/AgentOverview'
+import MessageAgentRenters from './components/MessageAgentRenters/MessageAgentRenters'
+import MyApartment from './components/MyApartment/MyApartment'
+import TerminationLease from './components/TerminationLease/TerminationLease'
+import TerminationSentSuccessful from './components/TerminationSentSuccessful/TerminationRentSuccessful'
+import RentPaymentSuccessful from './components/RentPaymentSuccessful/RentPaymentSuccessful'
+import ChatTenantAgent from './components/ChatTenantAgent/ChatTenantAgent'
+import ViewMessageAgent from './components/ViewMessageAgent/ViewMessageAgent'
+import TenantRequestRepair from './components/TenantRequestRepair/TenantRequestRepair'
+import RenterAgreementList from './components/RenterAgreementList/RenterAgreementList'
+import SignAgreement from './components/SignAgreement/SignAgreement'
+import TenantWallet from './components/TenantWallet/TenantWallet'
+import RejectRenterAgreementSuccess from './components/RejectRenterAgreementSuccess/RejectRenterAgreementSuccess'
+import NotificationRenter from './components/NotificationRenter/NotificationRenter'
+import FavoriteRenterProperties from './components/FavoriteRenterProperties/FavoriteRenterProperties'
+import DashboardRenter from './components/DashboardRenter/DashboardRenter'
+import RenterPropertyPreview from './components/RenterPropertyPreview/RenterPropertyPreview'
+import ResetRenterPassword from './components/ResetRenterPassword/ResetRenterPassword'
+import ResetRenterPasswordSuccessful from './components/ResetRenterPasswordSuccessful/ResetRenterPasswordSuccessful'
+import HelpRenter from './components/HelpRenter/HelpRenter'
+import EnterRenterBVN from './components/EnterRenterBVN/EnterRenterBVN'
+import VerifyRenterInfo from './components/VerifyRenterInfo/VerifyRenterInfo'
+import RenterMainWallet from './components/RenterMainWallet/RenterMainWallet'
 
 const PageRoutes = () => {
   return (
@@ -268,6 +290,129 @@ const PageRoutes = () => {
       <Route
         path='/dashboard/agent-overview'
         element={<AgentOverview />}
+      ></Route>
+
+      {/* Message Agent Renters  */}
+      <Route
+        path='/dashboard/message-agent-renters'
+        element={<MessageAgentRenters />}
+      ></Route>
+
+      {/* My Apartment  */}
+      <Route path='/dashboard/my-apartment' element={<MyApartment />}></Route>
+
+      {/* Termination Lease  */}
+      <Route
+        path='/dashboard/termination-lease'
+        element={<TerminationLease />}
+      ></Route>
+
+      {/* Termination Successful  */}
+      <Route
+        path='/dashboard/termination-sent-successful'
+        element={<TerminationSentSuccessful />}
+      ></Route>
+
+      {/* Rent Payment Successful  */}
+      <Route
+        path='/dashboard/rent-payment-successful'
+        element={<RentPaymentSuccessful />}
+      ></Route>
+
+      {/* Chat Tenant Agent  */}
+      <Route
+        path='/dashboard/chat-tenant-agent'
+        element={<ChatTenantAgent />}
+      ></Route>
+
+      {/* View Message Agent  */}
+      <Route
+        path='/dashboard/view-tenant-agent-message'
+        element={<ViewMessageAgent />}
+      ></Route>
+
+      {/* Tenant Request Repair  */}
+      <Route
+        path='/dashboard/tenant-request-repair'
+        element={<TenantRequestRepair />}
+      ></Route>
+
+      {/* Renter Agreement List  */}
+      <Route
+        path='/dashboard/renter-agreement-list'
+        element={<RenterAgreementList />}
+      ></Route>
+
+      {/* Sign Agreement  */}
+      <Route
+        path='/dashboard/sign-agreement'
+        element={<SignAgreement />}
+      ></Route>
+
+      {/* Tenant Wallet  */}
+      <Route path='/dashboard/tenant-wallet' element={<TenantWallet />}></Route>
+
+      {/* Reject Renter Agreement Successful  */}
+      <Route
+        path='/dashboard/reject-renter-agreement-successful'
+        element={<RejectRenterAgreementSuccess />}
+      ></Route>
+
+      {/* Renter Notification Page  */}
+      <Route
+        path='/dashboard/renter-notification'
+        element={<NotificationRenter />}
+      ></Route>
+
+      {/* Favorite Properties Renters  */}
+      <Route
+        path='/dashboard/favorite-renter-properties'
+        element={<FavoriteRenterProperties />}
+      ></Route>
+
+      {/* Dashboard Renter  */}
+      <Route
+        path='/dashboard/dashboard-renter'
+        element={<DashboardRenter />}
+      ></Route>
+
+      {/* Renter Property Preview  */}
+      <Route
+        path='/dashboard/renter-property-preview'
+        element={<RenterPropertyPreview />}
+      ></Route>
+
+      {/* Reset Renter Password  */}
+      <Route
+        path='/dashboard/reset-renter-password'
+        element={<ResetRenterPassword />}
+      ></Route>
+
+      {/* Reset Renter Password Successful  */}
+      <Route
+        path='/dashboard/reset-renter-password-successful'
+        element={<ResetRenterPasswordSuccessful />}
+      ></Route>
+
+      {/* Help Renter  */}
+      <Route path='/dashboard/help-renter' element={<HelpRenter />}></Route>
+
+      {/* Enter Renter BVN  */}
+      <Route
+        path='/dashboard/enter-renter-bvn'
+        element={<EnterRenterBVN />}
+      ></Route>
+
+      {/* Verify Renter Info  */}
+      <Route
+        path='/dashboard/verify-renter-info'
+        element={<VerifyRenterInfo />}
+      ></Route>
+
+      {/* Renter Main Wallet  */}
+      <Route
+        path='/dashboard/renter-main-wallet'
+        element={<RenterMainWallet />}
       ></Route>
     </Router>
   )

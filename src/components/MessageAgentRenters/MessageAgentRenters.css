@@ -302,146 +302,168 @@ select:focus {
   font-weight: 600;
 }
 
-/* New Styles  */
-.landlord-view-prop {
-  width: 100%;
-  /* background-color: yellow; */
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-
-  & .landlord-image-main {
-    & .main-image {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
+/* New styles  */
+.manage-tenants-header-text {
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    text-align: justify;
   }
 
-  & .landlord-image-collection {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 0rem;
+  & > p {
+    color: #4361ee;
+    width: 80%;
+    margin-top: 0.8rem;
+    line-height: 1.5;
 
-    & > img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
     @media screen and (max-width: 900px) {
-      padding: 0 0.3rem;
-    }
-  }
-  & .landlord-map-section {
-    display: grid;
-    /* background-color: lightgreen; */
-    width: 100%;
-    padding: 1.5rem;
-    grid-gap: 1rem;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    @media screen and (max-width: 1260px) {
-      grid-template-columns: repeat(4, 1fr);
+      width: 90%;
+      text-align: justify;
     }
 
-    @media screen and (max-width: 1000px) {
-      grid-template-columns: 1fr;
-    }
-
-    & > img {
-      grid-column: 1 / 3;
-      display: block;
+    @media screen and (max-width: 800px) {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-
-      @media screen and (max-width: 1260px) {
-        grid-column: 1 / 3;
-      }
-
-      @media screen and (max-width: 1000px) {
-        grid-column: 1 /2;
-        grid-row: 1 /2;
-      }
-    }
-
-    & > div {
-      grid-column: 3 / 4;
-
-      @media screen and (max-width: 1260px) {
-        grid-column: 3 / 5;
-      }
-
-      @media screen and (max-width: 1000px) {
-        grid-column: 1 /2;
-        grid-row: 2 /3;
-      }
-    }
-
-    @media screen and (max-width: 1260px) {
-    }
-  }
-
-  & .landlord-prop-details {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 1rem 0;
-    justify-items: start;
-    grid-row-gap: 1rem;
-    border: none;
-    background-color: #f2f4f7;
-
-    & > h4 {
-      text-align: left;
-    }
-
-    .prop-details-desciption {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-
-      & > p {
-        margin-top: 1rem;
-        text-align: left;
-        font-size: 0.8rem;
-        font-weight: 400;
-        line-height: 1.6;
-        opacity: 0.6;
-        width: 90%;
-      }
+      text-align: justify;
     }
   }
 }
 
-.landlord-prop-details-btn-div {
+.tenant-prop-options {
+  display: flex;
+  gap: 1rem;
+
+  @media screen and (max-width: 740px) {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 1rem;
+  }
+}
+
+.manage-tenants-header-section {
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.tenants-info-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  & .tenants-info-search-text {
+    color: #000;
+    font-size: 1.5rem;
+  }
+
+  & > h3 {
+    color: #4361ee;
+    font-weight: 600;
+    margin-right: auto;
+  }
+
+  & > input {
+    width: 300px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #3357d0;
+    outline: none;
+    font-size: 1rem;
+  }
+}
+
+/* New Styles  */
+.request-repair-message-from-tenant {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 2rem;
 
-.property-for-rent-header {
-  display: flex;
-  justify-content: start;
-  padding-left: 1.5rem;
-}
-
-/* new styles  */
-.landlord-prop-details-price {
-  display: flex;
-  gap: 0.1rem;
-  justify-content: start !important;
-  align-items: end;
-  padding-bottom: 0;
-
-  & .prop-details-per-mont {
-    font-size: 0.8rem;
+  & > h3 {
     color: #000;
-    opacity: 0.6;
-    padding-bottom: 0.4rem;
-    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  & > p {
+    color: #000;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #fff;
+    width: 70%;
+    line-height: 1.8;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
+  }
+}
+
+.request-repair-images {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  & > p {
+    color: #3357d0;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  & .repair-images-collection {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-gap: 1rem;
+
+    @media screen and (max-width: 1150px) {
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    & > img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      cursor: pointer;
+
+      @media screen and (max-width: 600px) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+.request-repair-reply-to-tenant {
+  & .reply-tenant-textarea {
+    width: 70%;
+
+    @media screen and (max-width: 1150px) {
+      width: 100%;
+    }
+  }
+  & .reply-tenant-btn {
+    width: 20rem;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
   }
 }

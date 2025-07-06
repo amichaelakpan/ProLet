@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './LandlordViewProperty.css'
+import './RenterPropertyPreview.css'
 import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
@@ -28,7 +28,7 @@ import landlordmapimage from '../../assets/images/landlord-map-image.png'
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function LandlordViewProperty() {
+function RenterPropertyPreview() {
   // Code Block to handle File Upload
 
   return (
@@ -148,16 +148,7 @@ function LandlordViewProperty() {
                       <div className='verify-btn-container landlord-prop-details-btn-div'>
                         <div className='go-back-div'>
                           <Button
-                            text={`Chat Agent`}
-                            bgcolor={'#3357D0'}
-                            color='#fff'
-                            borderColor={'#fff'}
-                            width='100%'
-                          />
-                        </div>
-                        <div className='create-wallet-div'>
-                          <Button
-                            text={`Fire Agent`}
+                            text={`Get`}
                             bgcolor={'#3357D0'}
                             color='#fff'
                             borderColor={'#fff'}
@@ -177,4 +168,4 @@ function LandlordViewProperty() {
   )
 }
 
-export default LandlordViewProperty
+export default RenterPropertyPreview

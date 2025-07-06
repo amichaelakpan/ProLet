@@ -12,13 +12,24 @@ import Button from './Button'
 import edit from '../assets/images/edit.png'
 
 // Acion Menu Component
-const ActionMenu = ({ openModal }) => {
+const ActionMenu = ({ openModal, myApartment = false }) => {
   return (
     <div className='popup-menu'>
-      <ul>
-        <li>Terminate Rent</li>
-        <li onClick={openModal}>Pay Renter </li>
-      </ul>
+      {!myApartment ? (
+        <ul>
+          <li>Terminate Rent</li>
+          <li onClick={openModal}>Pay Renter </li>
+        </ul>
+      ) : (
+        <ul>
+          <li>Terminate Lease</li>
+          <li onClick={openModal}>Pay Owner </li>
+          <li>Message Agent </li>
+          <li>Rate Agent </li>
+          <li>Request for repair </li>
+          <li>Report Agent </li>
+        </ul>
+      )}
     </div>
   )
 }
@@ -92,6 +103,74 @@ const PayRenterForm = ({ handleSubmit, closeModal }) => {
   )
 }
 
+const PayLandlordForm = ({ handleSubmit, closeModal }) => {
+  return (
+    <div className='modal-overlay'>
+      <div className='modal-content'>
+        <div className='terminate-rent-header pay-renter-header'>
+          <div className='transaction-history-title pay-renter-title'>
+            Pay Landlord
+          </div>
+          <div className='cancel-agreement-btn'>
+            <Button
+              text={'Cancel'}
+              bgcolor={'#e5ebff'}
+              color={'#3357d0'}
+              onClick={closeModal}
+            />
+          </div>
+        </div>
+        <form onSubmit={handleSubmit}>
+          {/* Agent ID*/};
+          <div className='reg-data-div pay-renter-item'>
+            <h5>Agent ID</h5>
+            <input
+              type='number'
+              className='textbox'
+              placeholder='Enter Renter ID'
+            />
+          </div>
+          {/* Amount*/}
+          <div className='reg-data-div pay-renter-item'>
+            <h5>Amount</h5>
+            <input
+              type='number'
+              className='textbox'
+              placeholder='Enter Amount'
+            />
+          </div>
+          {/* Purpose  */}
+          <div className='reg-data-div pay-renter-item'>
+            <h5>Purpose</h5>
+            <select name='gender' id=''>
+              <option value='1'>--Purpose--</option>
+              <option value='1'>Compensation</option>
+              <option value='2'>Refund</option>
+              <option value='2'>Court Order</option>
+              <option value='2'>Unauthenticated</option>
+            </select>
+          </div>
+          <div className='go-to-wallet pay-renter-action-btns'>
+            <Button
+              text={`Pay`}
+              bgcolor={'#3357D0'}
+              color='#fff'
+              borderColor={'#fff'}
+              width='100%'
+            />
+          </div>
+          {/* <div className='modal-actions  pay-renter-action-btns'>
+            <button type='submit'>Submit</button>
+            <button type='button' onClick={closeModal}>
+              Cancel
+            </button>
+          </div> */}
+        </form>
+      </div>
+    </div>
+  )
+}
+
 export function TenantRecords({
   name,
   ID,
@@ -105,6 +184,7 @@ export function TenantRecords({
   edate,
   duration,
   pytstatus,
+  myApartment,
 }) {
   // show action menu for tenant records
   const [showMenu, setShowMenu] = useState(false)
@@ -156,11 +236,19 @@ export function TenantRecords({
               showMenu &&
                 ActionMenu({
                   openModal,
+                  myApartment,
                 }) /* Render the action menu when showMenu is true */
             }
             {/* Open modal dialog to pay renter */}
             {isOpen &&
               PayRenterForm({
+                handleSubmit,
+                closeModal,
+                modalRef,
+              })}
+            {/* Open modal dialog to pay landlord */}
+            {isOpen &&
+              PayLandlordForm({
                 handleSubmit,
                 closeModal,
                 modalRef,

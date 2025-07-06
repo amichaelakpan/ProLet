@@ -38,7 +38,7 @@ function Property({ img, icon = '', handleClick = () => {} }) {
             </div>
             <div>2</div>
           </div>
-          <div className='dimensions'>
+          <div className='dimensions  dimensions-move-right'>
             <div>
               <img src={floorspace} alt='Floor space' />
             </div>

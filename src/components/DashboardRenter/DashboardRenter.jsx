@@ -1,3 +1,4 @@
+import './DashboardRenter.css'
 import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
@@ -10,10 +11,11 @@ import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
+import favorite from '../../assets/images/favorite.png'
 import heart from '../../assets/images/heart.png'
+import redalert from '../../assets/images/redalert.png'
+import message from '../../assets/images/message.png'
 
-import './CompDashRenter.css'
 import Property from '../../utilities/Property'
 import property1 from '../../assets/images/property-1.jpg'
 import property2 from '../../assets/images/property-2.jpg'
@@ -28,7 +30,7 @@ import property10 from '../../assets/images/property-10.jpg'
 import property11 from '../../assets/images/property-11.jpg'
 import property12 from '../../assets/images/property-12.jpg'
 
-function CompDashRenter() {
+function DashboardRenter() {
   // Code Block to handle File Upload
 
   return (
@@ -54,10 +56,10 @@ function CompDashRenter() {
             <SidebarMenu img={estate} text={'Sign Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Chat'} />
+            <SidebarMenu img={message} text={'Message Owner'} />
           </div>
           <div>
-            <SidebarMenu img={information} text={'Favorite'} />
+            <SidebarMenu img={favorite} text={'Favorite'} />
           </div>
         </menu>
 
@@ -98,49 +100,30 @@ function CompDashRenter() {
         {/* Content Section  */}
         <section className='comp-main-content'>
           <div className='comp-dash-renter-container'>
-            {/* Layer 2  */}
-            <div className='comp-dash-renter-content-2'>
-              <select name='' id=''>
-                <option value='' disabled selected hidden>
-                  Select property type...
-                </option>
-                <option value='1'>first</option>
-                <option value='2'>second</option>
-                <option value='3'>third</option>
-                <option value='4'>fourth</option>
-              </select>
-              <select name='' id=''>
-                <option value='' disabled selected hidden>
-                  Select Rooms...
-                </option>
-                <option value='1'>first</option>
-                <option value='2'>second</option>
-                <option value='3'>third</option>
-                <option value='4'>fourth</option>
-              </select>
-              <select name='' id=''>
-                <option value='' disabled selected hidden>
-                  Furnished Apartments...
-                </option>
-                <option value='1'>first</option>
-                <option value='2'>second</option>
-                <option value='3'>third</option>
-                <option value='4'>fourth</option>
-              </select>
+            {/* Header Section  */}
 
-              <div className='comp-dash-renter-button'>
-                <Button
-                  text={`Search`}
-                  bgcolor={`#3357d0`}
-                  color={`#fff`}
-                  borderColor={`#fff`}
-                  width={`15rem`}
-                />
+            <section className='dashboard-main-header dashboard-renter-header-section '>
+              <h3>Please complete your registration</h3>
+              <div className='dashboard-main-header-message dashboard-renter-complete-section'>
+                <img src={redalert} alt='Red Alert' />
+                <div className='dashboard-main-header-text'>
+                  <h5>Your're almost there</h5>
+                  <p>Please complete your profile setup</p>
+                </div>
+                <div className='dashboard-main-header-btn'>
+                  <Button
+                    text='Complete Now'
+                    bgcolor='#465dcb'
+                    color='#fff'
+                    borderColor='none'
+                    width=''
+                  />{' '}
+                </div>
               </div>
-            </div>
+            </section>
 
             {/* Layer 1 */}
-            <div className='comp-dash-renter-content-1'>
+            <div className='comp-dash-renter-content-1 dashboard-renter-based-on-location'>
               <div>
                 <h2>Based on your location</h2>
                 <p>Some of our picked properties near your location</p>
@@ -203,4 +186,4 @@ function CompDashRenter() {
   )
 }
 
-export default CompDashRenter
+export default DashboardRenter

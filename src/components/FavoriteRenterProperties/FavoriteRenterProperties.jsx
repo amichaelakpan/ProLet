@@ -10,10 +10,11 @@ import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
+import chat from '../../assets/images/chat.png'
+import favorite from '../../assets/images/favorite.png'
 import heart from '../../assets/images/heart.png'
 
-import './CompDashRenter.css'
+import './FavoriteRenterProperties.css'
 import Property from '../../utilities/Property'
 import property1 from '../../assets/images/property-1.jpg'
 import property2 from '../../assets/images/property-2.jpg'
@@ -22,13 +23,13 @@ import property4 from '../../assets/images/property-4.jpg'
 import property5 from '../../assets/images/property-5.jpg'
 import property6 from '../../assets/images/property-6.jpg'
 import property7 from '../../assets/images/property-7.jpg'
-import property8 from '../../assets/images/property-8.jpg'
-import property9 from '../../assets/images/property-9.jpg'
-import property10 from '../../assets/images/property-10.jpg'
-import property11 from '../../assets/images/property-11.jpg'
-import property12 from '../../assets/images/property-12.jpg'
+// import property8 from '../../assets/images/property-8.jpg'
+// import property9 from '../../assets/images/property-9.jpg'
+// import property10 from '../../assets/images/property-10.jpg'
+// import property11 from '../../assets/images/property-11.jpg'
+// import property12 from '../../assets/images/property-12.jpg'
 
-function CompDashRenter() {
+function FavoriteRenterProperties() {
   // Code Block to handle File Upload
 
   return (
@@ -50,14 +51,15 @@ function CompDashRenter() {
           <div>
             <SidebarMenu img={market} text={'My Apartment'} />
           </div>
+
           <div>
-            <SidebarMenu img={estate} text={'Sign Agreement'} />
+            <SidebarMenu img={agreement} text={'Sign Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Chat'} />
+            <SidebarMenu img={chat} text={'Chat'} />
           </div>
           <div>
-            <SidebarMenu img={information} text={'Favorite'} />
+            <SidebarMenu img={favorite} text={'Favorite'} />
           </div>
         </menu>
 
@@ -88,74 +90,18 @@ function CompDashRenter() {
         </section>
 
         <section className='comp-get-started'>
-          <h3>Let's get you started</h3>
+          <h1>Favorites</h1>
           <p>
-            Navigate through your account and start browsing your dream
-            properties
+            With this page, you revisit through your records—simply visit your
+            Favorites to find everything you’ve selected for later action. You
+            can remove, or review these items at any time, making it easier to
+            stay organized.
           </p>
         </section>
 
         {/* Content Section  */}
         <section className='comp-main-content'>
           <div className='comp-dash-renter-container'>
-            {/* Layer 2  */}
-            <div className='comp-dash-renter-content-2'>
-              <select name='' id=''>
-                <option value='' disabled selected hidden>
-                  Select property type...
-                </option>
-                <option value='1'>first</option>
-                <option value='2'>second</option>
-                <option value='3'>third</option>
-                <option value='4'>fourth</option>
-              </select>
-              <select name='' id=''>
-                <option value='' disabled selected hidden>
-                  Select Rooms...
-                </option>
-                <option value='1'>first</option>
-                <option value='2'>second</option>
-                <option value='3'>third</option>
-                <option value='4'>fourth</option>
-              </select>
-              <select name='' id=''>
-                <option value='' disabled selected hidden>
-                  Furnished Apartments...
-                </option>
-                <option value='1'>first</option>
-                <option value='2'>second</option>
-                <option value='3'>third</option>
-                <option value='4'>fourth</option>
-              </select>
-
-              <div className='comp-dash-renter-button'>
-                <Button
-                  text={`Search`}
-                  bgcolor={`#3357d0`}
-                  color={`#fff`}
-                  borderColor={`#fff`}
-                  width={`15rem`}
-                />
-              </div>
-            </div>
-
-            {/* Layer 1 */}
-            <div className='comp-dash-renter-content-1'>
-              <div>
-                <h2>Based on your location</h2>
-                <p>Some of our picked properties near your location</p>
-              </div>
-
-              <div>
-                <Button
-                  text={`Browse more properties`}
-                  bgcolor={`#3357d0`}
-                  color={`#fff`}
-                  borderColor={`#375ad1`}
-                />
-              </div>
-            </div>
-
             {/* Layer 3 */}
             <div className='comp-dash-renter-content-3'>
               <div>
@@ -179,22 +125,7 @@ function CompDashRenter() {
               <div>
                 <Property img={property7} icon={heart} />
               </div>
-              <div>
-                <Property img={property8} icon={heart} />
-              </div>
-              <div>
-                <Property img={property9} icon={heart} />
-              </div>
-
-              <div>
-                <Property img={property10} icon={heart} />
-              </div>
-              <div>
-                <Property img={property11} icon={heart} />
-              </div>
-              <div>
-                <Property img={property12} icon={heart} />
-              </div>
+              <div></div>
             </div>
           </div>
         </section>
@@ -203,4 +134,4 @@ function CompDashRenter() {
   )
 }
 
-export default CompDashRenter
+export default FavoriteRenterProperties
