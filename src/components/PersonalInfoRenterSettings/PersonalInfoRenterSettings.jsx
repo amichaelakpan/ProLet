@@ -13,9 +13,8 @@ import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
-import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
+import favorite from '../../assets/images/favorite.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -45,19 +44,17 @@ function PersonalInfoRenterSettings() {
             <SidebarMenu img={dashboard} text={'Dashboard'} />
           </div>
           <div>
-            <SidebarMenu img={market} text={'Manage Tenants'} />
+            <SidebarMenu img={market} text={'My Apartment'} />
           </div>
+
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
-          </div>
-          <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
-          </div>
-          <div>
-            <SidebarMenu img={information} text={'Check Request'} />
+            <SidebarMenu img={agreement} text={'Sign Agreement'} />
           </div>
           <div>
             <SidebarMenu img={chat} text={'Chat'} />
+          </div>
+          <div>
+            <SidebarMenu img={favorite} text={'Favorite'} />
           </div>
         </menu>
 
@@ -100,7 +97,7 @@ function PersonalInfoRenterSettings() {
                   <form>
                     {/* Agent ID*/};
                     <div className='reg-data-div'>
-                      <h5>Email</h5>
+                      <h5>Renter Email</h5>
                       <div className='renter-settings-item'>
                         <input
                           type='text'

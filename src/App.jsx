@@ -85,6 +85,7 @@ import RenterTransactionHistory from './components/RenterTransactionHistory/Rent
 import FundRenterWallet from './components/FundRenterWallet/FundRenterWallet'
 import FundRenterWalletWithCard from './components/FundRenterWalletWithCard/FundRenterWalletWithCard'
 import RenterPaymentSuccessful from './components/RenterPaymentSuccessful/RenterPaymentSuccessful'
+import ReportAgent from './components/ReportAgent/ReportAgent'
 
 function App() {
   return (
@@ -443,6 +444,12 @@ function App() {
           <Route
             path='/dashboard/renter-payment-successful'
             element={<RenterPaymentSuccessful />}
+          ></Route>
+
+          {/* Report Agent  */}
+          <Route
+            path='/dashboard/report-agent'
+            element={<ReportAgent />}
           ></Route>
         </Routes>
       </BrowserRouter>

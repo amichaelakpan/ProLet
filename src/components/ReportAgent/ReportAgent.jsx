@@ -1,7 +1,12 @@
-import './AdvancedRenterSettings.css'
+import React from 'react'
+
+import './ReportAgent.css'
+import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
+import { TenantRecords } from '../../utilities/TenantRecords'
+import { TenantRecordsHeader } from '../../utilities/TenantRecords'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
@@ -10,19 +15,17 @@ import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
 import agreement from '../../assets/images/agreement.png'
 import favorite from '../../assets/images/favorite.png'
-import personalinfo from '../../assets/images/personal-info.png'
-import settings2 from '../../assets/images/settings-2.png'
-import lock from '../../assets/images/lock.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
+import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-import Settings from '../../utilities/Settings'
+function ReportAgent() {
+  // Code Block to handle File Upload
 
-function AdvancedRenterSettings() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -80,21 +83,42 @@ function AdvancedRenterSettings() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
-        <section className='comp-get-started'>
-          <h3>Advanced Renter Settings</h3>
-          <p>Customize Preferences and manage advanced options.</p>
+        <section className='comp-get-started manage-tenants-header-text'>
+          <h2>Report</h2>
+          <p>
+            With this page, renters can submit complaints about an agent
+            directly to the landlord.
+          </p>
         </section>
 
         {/* Content Section  */}
-        <section className='comp-main-content advanced-settings-container'>
-          <div>
-            <Settings img={personalinfo} title={'Personal Information'} />
-          </div>
-          <div>
-            <Settings img={settings2} title={'Delete Account'} />
-          </div>
-          <div>
-            <Settings img={lock} title={'Change Password'} />{' '}
+        <section className='comp-main-content'>
+          <div className='comp-dash-renter-container'>
+            <section className='reg-main-content'>
+              <section className='comp-main-content'>
+                {/* Transactions Section  */}
+
+                <div className='request-repair-reply-to-tenant'>
+                  <div className='reg-data-div'>
+                    <h3>Message Landlord</h3>
+                    <textarea
+                      className='textarea reply-tenant-textarea'
+                      placeholder='Enter your message here...'
+                    ></textarea>
+                  </div>
+
+                  <div className='reg-submit-div reply-tenant-btn'>
+                    <Button
+                      text={`Send Message`}
+                      bgcolor={'#3357D0'}
+                      color='#fff'
+                      borderColor={'#fff'}
+                      width='100%'
+                    />
+                  </div>
+                </div>
+              </section>
+            </section>
           </div>
         </section>
       </div>
@@ -102,4 +126,4 @@ function AdvancedRenterSettings() {
   )
 }
 
-export default AdvancedRenterSettings
+export default ReportAgent
