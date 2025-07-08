@@ -81,6 +81,10 @@ import HelpRenter from './components/HelpRenter/HelpRenter'
 import EnterRenterBVN from './components/EnterRenterBVN/EnterRenterBVN'
 import VerifyRenterInfo from './components/VerifyRenterInfo/VerifyRenterInfo'
 import RenterMainWallet from './components/RenterMainWallet/RenterMainWallet'
+import RenterTransactionHistory from './components/RenterTransactionHistory/RenterTransactionHistory'
+import FundRenterWallet from './components/FundRenterWallet/FundRenterWallet'
+import FundRenterWalletWithCard from './components/FundRenterWalletWithCard/FundRenterWalletWithCard'
+import RenterPaymentSuccessful from './components/RenterPaymentSuccessful/RenterPaymentSuccessful'
 
 function App() {
   return (
@@ -415,6 +419,30 @@ function App() {
           <Route
             path='/dashboard/renter-main-wallet'
             element={<RenterMainWallet />}
+          ></Route>
+
+          {/* Renter Transaction History  */}
+          <Route
+            path='/dashboard/renter-transaction-history'
+            element={<RenterTransactionHistory />}
+          ></Route>
+
+          {/* Fund Renter Wallet   */}
+          <Route
+            path='/dashboard/fund-renter-wallet'
+            element={<FundRenterWallet />}
+          ></Route>
+
+          {/* Fund Renter Wallet With Card  */}
+          <Route
+            path='/dashboard/fund-renter-wallet-with-card'
+            element={<FundRenterWalletWithCard />}
+          ></Route>
+
+          {/* Renter Payment Successful  */}
+          <Route
+            path='/dashboard/renter-payment-successful'
+            element={<RenterPaymentSuccessful />}
           ></Route>
         </Routes>
       </BrowserRouter>

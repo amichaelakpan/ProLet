@@ -12,6 +12,7 @@ import market from '../../assets/images/market.png'
 import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
 import information from '../../assets/images/information.png'
+import handprompt from '../../assets/images/handprompt.png'
 
 import './AppointAgentProperty.css'
 import Property from '../../utilities/Property'
@@ -175,6 +176,8 @@ function AppointAgentProperty() {
                   handleCloseModal={handleCloseDialog}
                   handleClick={handlePropertyClick}
                   handleSuccessClick={handleSuccessClick}
+                  img={handprompt}
+                  messageColor='#000'
                 />
               )}
 

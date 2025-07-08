@@ -254,7 +254,6 @@ select:focus {
   margin-bottom: -4rem;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
 
   @media screen and (max-width: 1100px) {
     grid-column-gap: 0rem;
@@ -269,4 +268,47 @@ select:focus {
   @media screen and (max-width: 700px) {
     width: 100%;
   }
+}
+
+/* New Styles  */
+.wallet-container {
+  & .payment-successful-text {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: 50%;
+
+    @media screen and (max-width: 1650px) {
+      width: 80%;
+    }
+  }
+
+  & .go-to-wallet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.wallet-container-successful {
+  @media screen and (max-width: 1150px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+}
+
+.payment-successful-div {
+  height: 6.8rem;
+  width: 6.8rem;
+  background: #e8f4ee;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
