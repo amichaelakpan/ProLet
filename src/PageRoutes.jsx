@@ -8,7 +8,7 @@ import RenterReg from './components/RenterReg/RenterReg'
 import CompDashRenter from './components/CompDashRenter/CompDashRenter'
 import AgentReg from './components/AgentReg/AgentReg'
 import LandlordReg from './components/LandlordReg/LandlordReg'
-import EditPost from './components/EditPost/EditPost'
+import EditPost from './components/EditPost/EditPostAgent'
 import Wallet from './components/Wallet/Wallet'
 import EnterBVN from './components/EnterBVN/EnterBVN'
 import VerifyInfo from './components/VerifyInfo/VerifyInfo'
@@ -80,6 +80,14 @@ import FundRenterWallet from './components/FundRenterWallet/FundRenterWallet'
 import FundRenterWalletWithCard from './components/FundRenterWalletWithCard/FundRenterWalletWithCard'
 import RenterPaymentSuccessful from './components/RenterPaymentSuccessful/RenterPaymentSuccessful'
 import ReportAgent from './components/ReportAgent/ReportAgent'
+import AgentDashboard from './components/AgentDashboard/AgentDashboard'
+import MessageOwnerAgent from './components/MessageOwnerAgent/MessageOwnerAgent'
+import EditPostAgent from './components/EditPost/EditPostAgent'
+import AgentPropertyApproval from './components/AgentPropertyApproval/AgentPropertyApproval'
+import MessageRenterAgent from './components/MessageRenterAgent/MessageRenterAgent'
+import ManageAgentProperty from './components/ManageAgentProperty/ManageAgentProperty'
+import ViewAgentProperty from './components/ViewAgentProperty/ViewAgentProperty'
+import AgentApprovalPreview from './components/AgentApprovalPreview/AgentApprovalPreview'
 
 const PageRoutes = () => {
   return (
@@ -446,6 +454,51 @@ const PageRoutes = () => {
 
       {/* Report Agent  */}
       <Route path='/dashboard/report-agent' element={<ReportAgent />}></Route>
+
+      {/* Agent Dashboard  */}
+      <Route path='/agent-dashboard' element={<AgentDashboard />}></Route>
+
+      {/* Message Owner Agent  */}
+      <Route
+        path='/dashboard/message-owner-agent'
+        element={<MessageOwnerAgent />}
+      ></Route>
+
+      {/* Edit Property posted by Agent  */}
+      <Route
+        path='/agent-dashboard/edit-property'
+        element={<EditPostAgent />}
+      ></Route>
+
+      {/* Agent Property Approval  */}
+      <Route
+        path='/agent-dashboard/property-approval'
+        element={<AgentPropertyApproval />}
+      ></Route>
+
+      {/* Message  Renter  Agent*/}
+      <Route
+        path='/agent-dashboard/message-renter-agent'
+        element={<MessageRenterAgent />}
+      ></Route>
+
+      {/* Manage Agent Property  */}
+      <Route
+        path='/agent-dashboard/manage-agent-property'
+        element={<ManageAgentProperty />}
+      ></Route>
+
+      {/* View Agent Property  */}
+      <Route
+        path='/agent-dashboard/view-agent-property'
+        element={<ViewAgentProperty />}
+      ></Route>
+
+      {/* Agent Approval Preview  */}
+      <Route
+        path='/agent-dashboard/agent-approval-preview'
+        element={<AgentApprovalPreview />}
+      ></Route>
     </Router>
   )
 }
