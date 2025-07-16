@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './AgentChatList.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -8,9 +8,7 @@ import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
-import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -18,9 +16,9 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
-  // Code Block to handle File Upload
+import ChatLogItem from '../../utilities/ChatLogItem'
 
+function AgentChatList() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -41,13 +39,13 @@ function Wallet() {
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={market} text={'See Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={agreement} text={'Approvals'} />
           </div>
           <div>
-            <SidebarMenu img={information} text={'Check Request'} />
+            <SidebarMenu img={agreement} text={'Check Request'} />
           </div>
           <div>
             <SidebarMenu img={chat} text={'Chat'} />
@@ -80,38 +78,60 @@ function Wallet() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        <section className='comp-get-started manage-tenants-header-text'>
+          <h2>Agent Chats</h2>
+          <p>
+            This section contains conversations between the agent and the tenant
+            regarding property management. It may include discussions about
+            tenant issues, rent collection, maintenance requests, lease
+            agreements, and other important matters related to the property.
+            Effective communication ensures smooth operations and timely
+            resolutions.
+          </p>
+        </section>
+
+        <section className='comp-get-started'>
+          <h3>All Chats</h3>
+        </section>
+
         {/* Content Section  */}
-        <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
-            {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
-            </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-            </div>
+        <section className='comp-main-content chat-log-settings-container'>
+          <div>
+            <ChatLogItem
+              name={'Uwem Stack'}
+              message={
+                'Good day Alhaji, please the power source to the generator is faulty, kindly fix it.'
+              }
+              time={'2:30am'}
+            />
+          </div>
+          <div>
+            <ChatLogItem
+              name={'John Doe'}
+              message={
+                'Hello Musa, kindly fix the leaking pipe in the kitchen.'
+              }
+              time={'Friday'}
+            />
+          </div>
+          <div>
+            <ChatLogItem
+              name={'Mary Jane'}
+              message={
+                'Good day Ikechukwu, the AC in my room is not working, please fix it.'
+              }
+              time={'9:00pm'}
+            />
+          </div>
+
+          <div>
+            <ChatLogItem
+              name={'Julius Baker'}
+              message={
+                'Hi Landlord, ps I need a repair of ACs in my living room.'
+              }
+              time={'Sunday'}
+            />
           </div>
         </section>
       </div>
@@ -119,4 +139,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default AgentChatList

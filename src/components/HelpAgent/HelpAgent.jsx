@@ -1,4 +1,6 @@
-import './VerifyInfo.css'
+import ReactS from 'react'
+
+import './HelpAgent.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -17,8 +19,9 @@ import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
+import Property from '../../utilities/Property'
 
-function Wallet() {
+function HelpAgent() {
   // Code Block to handle File Upload
 
   return (
@@ -41,10 +44,10 @@ function Wallet() {
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={estate} text={'See Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={agreement} text={'Approvals'} />
           </div>
           <div>
             <SidebarMenu img={information} text={'Check Request'} />
@@ -82,36 +85,65 @@ function Wallet() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
-            {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
-            </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
+          <div className='comp-dash-renter-container '>
+            {/* Helper Header */}
+            <section className='reg-main-content landlord-helper-container'>
+              <section className='comp-get-started helper-header-text'>
+                <h3>CONTACT US </h3>
+                <p>Hi Agent 👍, Let's get in touch</p>
+              </section>
+
+              {/* Helper Form  */}
+              <div className='renter-reg-main landlord-help-text-opacity'>
+                {/* Name */}
+                <div className='reg-data-div '>
+                  <h5>Name</h5>
+                  <input
+                    type='text'
+                    className='textbox'
+                    placeholder='Enter your name'
+                  />
+                </div>
+
+                {/* Email Address */}
+                <div className='reg-data-div'>
+                  <h5>Email Address</h5>
+                  <input
+                    type='text'
+                    className='textbox'
+                    placeholder='Enter your email address'
+                  />
+                </div>
+                {/* Message  */}
+                <div className='reg-data-div'>
+                  <h5>Message</h5>
+                  <textarea
+                    className='textarea'
+                    placeholder='Type your message here...'
+                  ></textarea>
+                </div>
+
+                <div className='reg-submit-div help-landlord-btn-div'>
+                  <Button
+                    text={`Send Message`}
+                    bgcolor={'#100A55'}
+                    color='#fff'
+                    borderColor={'#fff'}
+                    width='100%'
+                  />
+                </div>
+
+                {/* NIN Verification */}
+                <div className='help-landlord-footer-message'>
+                  <p>
+                    All fields are required. We'll get back to you as soon as
+                    possible
+                  </p>
+                </div>
+
+                {/* End of Div  */}
               </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-            </div>
+            </section>
           </div>
         </section>
       </div>
@@ -119,4 +151,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default HelpAgent

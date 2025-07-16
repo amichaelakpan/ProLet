@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './AgentWalletPaymentSuccessful.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -15,10 +15,11 @@ import information from '../../assets/images/information.png'
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
+import successful from '../../assets/images/successful.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
+function AgentWalletPaymentSuccessful() {
   // Code Block to handle File Upload
 
   return (
@@ -82,35 +83,25 @@ function Wallet() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
-            {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
+          <div className='wallet-container wallet-container-successful'>
+            <div className='payment-successful-div'>
+              <figure className='payment-successful-container'>
+                <img src={successful} alt='Payment Successful' />
+              </figure>
             </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
+            <p className='payment-successful-text'>
+              Your wallet has been successfully credited. Please proceed to your
+              agent wallet to see your balance 👍
+            </p>
+
+            <div className='go-to-wallet'>
+              <Button
+                text={`Go to Wallet`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width='40%'
+              />
             </div>
           </div>
         </section>
@@ -119,4 +110,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default AgentWalletPaymentSuccessful

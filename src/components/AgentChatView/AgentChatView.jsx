@@ -1,24 +1,30 @@
-import './VerifyInfo.css'
+import React from 'react'
+
+import './AgentChatView.css'
+import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
+import { Records } from '../../utilities/Records'
+import { RecordsHeader } from '../../utilities/Records'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
-import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
+import WalletActionsCard from '../../utilities/WalletActionsCard'
+import { ChatItemSender, ChatItemReceiver } from '../../utilities/ChatItem'
+import ChatMessageBox from '../../utilities/ChatMessageBox'
 
-function Wallet() {
+function AgentChatView() {
   // Code Block to handle File Upload
 
   return (
@@ -41,13 +47,13 @@ function Wallet() {
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={market} text={'See Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={agreement} text={'Approvals'} />
           </div>
           <div>
-            <SidebarMenu img={information} text={'Check Request'} />
+            <SidebarMenu img={agreement} text={'Check Request'} />
           </div>
           <div>
             <SidebarMenu img={chat} text={'Chat'} />
@@ -74,7 +80,7 @@ function Wallet() {
       <div className='comp-reg-main'>
         {/* Title Section  */}
         <section className='comp-main-titlebar'>
-          <h3>Dashboard</h3>
+          <h3>Dashboard - Agent Chat View</h3>
           <img src={dashboardimg} alt='Dashboard image' />
           <p>Uwem Stack</p>
           <img src={bell} alt='Bell Icon' />
@@ -82,36 +88,25 @@ function Wallet() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
-            {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
-            </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
+          <div className='comp-dash-renter-container'>
+            <section className='chat-message-container'>
+              <div className='move-left'>
+                <ChatItemSender />
               </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
+              <div>
+                <ChatItemReceiver />
+              </div>{' '}
+              <div className='move-left'>
+                <ChatItemSender />
               </div>
-            </div>
+              <div>
+                <ChatItemReceiver />
+              </div>
+              {/* Mesage Box container  */}
+              <div className='message-box-container'>
+                <ChatMessageBox />
+              </div>
+            </section>
           </div>
         </section>
       </div>
@@ -119,4 +114,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default AgentChatView

@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './ChangeAgentEmail.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -18,7 +18,7 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
+function ChangeAgentEmail() {
   // Code Block to handle File Upload
 
   return (
@@ -80,37 +80,34 @@ function Wallet() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        {/* Fund Wallet Header  */}
+        <div className='fund-wallet-header'>
+          <div className='transaction-history-title'>Edit Agent Email</div>
+          <div className='back-to-wallet-div'>
+            <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
+          </div>
+        </div>
+
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
+          <div className='wallet-container change-email-container'>
+            <p className='bvn-prompt-text'>Email</p>
             {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
+            <div className='reg-data-div'>
+              <input
+                type='text'
+                className='textbox'
+                placeholder='Enter new email address'
+              />
             </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
+            <div className='change-email-save-btn-container'>
+              <Button
+                text={`Save Changes`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width='100%'
+              />
             </div>
           </div>
         </section>
@@ -119,4 +116,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default ChangeAgentEmail

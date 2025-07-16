@@ -204,7 +204,7 @@ select:focus {
   }
 }
 
-.verify-info-container {
+.wallet-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -216,12 +216,16 @@ select:focus {
   margin: 5rem auto;
   border-radius: 20px;
 
-  @media screen and (max-width: 1085px) {
+  @media screen and (max-width: 1000px) {
     width: 80%;
-    padding: 6rem 2rem;
+    padding: 6rem 4rem;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 700px) {
     width: 95%;
     padding: 3rem 1rem;
   }
@@ -237,41 +241,4 @@ select:focus {
 
 .bvn-prompt-text {
   color: #000 !important;
-}
-
-/* New Styles  */
-.verify-btn-container {
-  display: flex;
-  margin-top: 2rem;
-  gap: 1.5rem;
-  width: 100%;
-  justify-items: center;
-
-  & .go-back-div {
-    flex: 1;
-  }
-
-  & .create-wallet-div {
-    flex: 1;
-  }
-
-  @media screen and (max-width: 1150px) {
-    width: 100%;
-  }
-}
-
-.verify-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  background-color: #e5ebff;
-  padding: 1rem 2rem;
-  width: 80%;
-
-  & .verify-name {
-    color: #000;
-    font-weight: 500;
-    flex: 1;
-  }
 }

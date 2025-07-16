@@ -88,6 +88,25 @@ import MessageRenterAgent from './components/MessageRenterAgent/MessageRenterAge
 import ManageAgentProperty from './components/ManageAgentProperty/ManageAgentProperty'
 import ViewAgentProperty from './components/ViewAgentProperty/ViewAgentProperty'
 import AgentApprovalPreview from './components/AgentApprovalPreview/AgentApprovalPreview'
+import ListAgreementAgent from './components/ListAgreementAgent/ListAgreementAgent'
+import CheckRequestAgent from './components/CheckRequestAgent/CheckRequestAgent'
+import CheckRequestAgentMessage from './components/CheckRequestAgentMessage/CheckRequestAgentMessage'
+import AgentChatList from './components/AgentChatList/AgentChatList'
+import AgentChatView from './components/AgentChatView/AgentChatView'
+import HelpAgent from './components/HelpAgent/HelpAgent'
+import AgentWallet from './components/AgentWallet/AgentWallet'
+import AgentEnterBVN from './components/AgentEnterBVN/AgentEnterBVN'
+import AgentVerifyInfo from './components/AgentVerifyInfo/AgentVerifyInfo'
+import AgentMainWallet from './components/AgentMainWallet/AgentMainWallet'
+import AgentTransHistory from './components/AgentTransHistory/AgentTransHistory'
+import AgentNotification from './components/AgentNotification/AgentNotification'
+import AgentFundWallet from './components/AgentFundWallet/AgentFundWallet'
+import AgentCreditWalletWithCard from './components/AgentCreditWalletWithCard/AgentCreditWalletWithCard'
+import AgentWalletPaymentSuccessful from './components/AgentWalletPaymentSuccessful/AgentWalletPaymentSuccessful'
+import AdvancedAgentSettings from './components/AdvancedAgentSettings/AdvancedAgentSettings'
+import AgentProfile from './components/AgentProfile/AgentProfile'
+import ChangeAgentEmail from './components/ChangeAgentEmail/ChangeAgentEmail'
+import ManageUsers from './components/ManageUsers/ManageUsers'
 
 const PageRoutes = () => {
   return (
@@ -232,272 +251,320 @@ const PageRoutes = () => {
         path='/dashboard/agent-appointment-letter'
         element={<AgentAppointmentLetter />}
       ></Route>
-
       {/* Fire Agent */}
       <Route path='/dashboard/fire-agent' element={<FireAgent />}></Route>
-
       {/* Fire Agent Letter*/}
       <Route
         path='/dashboard/fire-agent-letter'
         element={<FireAgentLetter />}
       ></Route>
-
       {/* Replace Agent*/}
       <Route path='/dashboard/replace-agent' element={<ReplaceAgent />}></Route>
-
       {/* Appoint Agent Property*/}
       <Route
         path='/dashboard/appoint-agent-property'
         element={<AppointAgentProperty />}
       ></Route>
-
       {/* Notifications */}
       <Route path='/dashboard/notification' element={<Notification />}></Route>
-
       {/* Advanced Renter Settings */}
       <Route
         path='/dashboard/advanced-renter-settings'
         element={<AdvancedRenterSettings />}
       ></Route>
-
       {/* Personal Info Renter Settings */}
       <Route
         path='/dashboard/renter-info-settings'
         element={<PersonalInfoRenterSettings />}
       ></Route>
-
       {/* Change Renter Email  */}
       <Route
         path='/dashboard/change-renter-email'
         element={<ChangeRenterEmail />}
       ></Route>
-
       {/* Landlord Notification  */}
       <Route
         path='/dashboard/landlord-notification'
         element={<LandlordNotification />}
       ></Route>
-
       {/* Landlord Profile  */}
       <Route
         path='/dashboard/landlord-profile'
         element={<LandlordProfile />}
       ></Route>
-
       {/* View Agent Appointment Letter  */}
       <Route
         path='/dashboard/view-agent-appointment-letter'
         alement={<ViewAgentAppointmentLetter />}
       ></Route>
-
       {/* Message Agent  */}
       <Route path='/dashboard/message-agent' element={<MessageAgent />}></Route>
-
       {/* Agent Listing  */}
       <Route
         path='/dashboard/agent-listing'
         element={<AgentPropertyListing />}
       ></Route>
-
       {/* Agent Overview  */}
       <Route
         path='/dashboard/agent-overview'
         element={<AgentOverview />}
       ></Route>
-
       {/* Message Agent Renters  */}
       <Route
         path='/dashboard/message-agent-renters'
         element={<MessageAgentRenters />}
       ></Route>
-
       {/* My Apartment  */}
       <Route path='/dashboard/my-apartment' element={<MyApartment />}></Route>
-
       {/* Termination Lease  */}
       <Route
         path='/dashboard/termination-lease'
         element={<TerminationLease />}
       ></Route>
-
       {/* Termination Successful  */}
       <Route
         path='/dashboard/termination-sent-successful'
         element={<TerminationSentSuccessful />}
       ></Route>
-
       {/* Rent Payment Successful  */}
       <Route
         path='/dashboard/rent-payment-successful'
         element={<RentPaymentSuccessful />}
       ></Route>
-
       {/* Chat Tenant Agent  */}
       <Route
         path='/dashboard/chat-tenant-agent'
         element={<ChatTenantAgent />}
       ></Route>
-
       {/* View Message Agent  */}
       <Route
         path='/dashboard/view-tenant-agent-message'
         element={<ViewMessageAgent />}
       ></Route>
-
       {/* Tenant Request Repair  */}
       <Route
         path='/dashboard/tenant-request-repair'
         element={<TenantRequestRepair />}
       ></Route>
-
       {/* Renter Agreement List  */}
       <Route
         path='/dashboard/renter-agreement-list'
         element={<RenterAgreementList />}
       ></Route>
-
       {/* Sign Agreement  */}
       <Route
         path='/dashboard/sign-agreement'
         element={<SignAgreement />}
       ></Route>
-
       {/* Tenant Wallet  */}
       <Route path='/dashboard/tenant-wallet' element={<TenantWallet />}></Route>
-
       {/* Reject Renter Agreement Successful  */}
       <Route
         path='/dashboard/reject-renter-agreement-successful'
         element={<RejectRenterAgreementSuccess />}
       ></Route>
-
       {/* Renter Notification Page  */}
       <Route
         path='/dashboard/renter-notification'
         element={<NotificationRenter />}
       ></Route>
-
       {/* Favorite Properties Renters  */}
       <Route
         path='/dashboard/favorite-renter-properties'
         element={<FavoriteRenterProperties />}
       ></Route>
-
       {/* Dashboard Renter  */}
       <Route
         path='/dashboard/dashboard-renter'
         element={<DashboardRenter />}
       ></Route>
-
       {/* Renter Property Preview  */}
       <Route
         path='/dashboard/renter-property-preview'
         element={<RenterPropertyPreview />}
       ></Route>
-
       {/* Reset Renter Password  */}
       <Route
         path='/dashboard/reset-renter-password'
         element={<ResetRenterPassword />}
       ></Route>
-
       {/* Reset Renter Password Successful  */}
       <Route
         path='/dashboard/reset-renter-password-successful'
         element={<ResetRenterPasswordSuccessful />}
       ></Route>
-
       {/* Help Renter  */}
       <Route path='/dashboard/help-renter' element={<HelpRenter />}></Route>
-
       {/* Enter Renter BVN  */}
       <Route
         path='/dashboard/enter-renter-bvn'
         element={<EnterRenterBVN />}
       ></Route>
-
       {/* Verify Renter Info  */}
       <Route
         path='/dashboard/verify-renter-info'
         element={<VerifyRenterInfo />}
       ></Route>
-
       {/* Renter Main Wallet  */}
       <Route
         path='/dashboard/renter-main-wallet'
         element={<RenterMainWallet />}
       ></Route>
-
       {/* Renter Transaction History  */}
       <Route
         path='/dashboard/renter-transaction-history'
         element={<RenterTransactionHistory />}
       ></Route>
-
       {/* Fund Renter Wallet  */}
       <Route
         path='/dashboard/fund-renter-wallet'
         element={<FundRenterWallet />}
       ></Route>
-
       {/* Fund Renter Wallet With Card  */}
       <Route
         path='/dashboard/fund-renter-wallet-with-card'
         element={<FundRenterWalletWithCard />}
       ></Route>
-
       {/* Renter Payment Successful  */}
       <Route
         path='/dashboard/renter-payment-successful'
         element={<RenterPaymentSuccessful />}
       ></Route>
-
       {/* Report Agent  */}
       <Route path='/dashboard/report-agent' element={<ReportAgent />}></Route>
-
       {/* Agent Dashboard  */}
       <Route path='/agent-dashboard' element={<AgentDashboard />}></Route>
-
       {/* Message Owner Agent  */}
       <Route
         path='/dashboard/message-owner-agent'
         element={<MessageOwnerAgent />}
       ></Route>
-
       {/* Edit Property posted by Agent  */}
       <Route
         path='/agent-dashboard/edit-property'
         element={<EditPostAgent />}
       ></Route>
-
       {/* Agent Property Approval  */}
       <Route
         path='/agent-dashboard/property-approval'
         element={<AgentPropertyApproval />}
       ></Route>
-
       {/* Message  Renter  Agent*/}
       <Route
         path='/agent-dashboard/message-renter-agent'
         element={<MessageRenterAgent />}
       ></Route>
-
       {/* Manage Agent Property  */}
       <Route
         path='/agent-dashboard/manage-agent-property'
         element={<ManageAgentProperty />}
       ></Route>
-
       {/* View Agent Property  */}
       <Route
         path='/agent-dashboard/view-agent-property'
         element={<ViewAgentProperty />}
       ></Route>
-
       {/* Agent Approval Preview  */}
       <Route
         path='/agent-dashboard/agent-approval-preview'
         element={<AgentApprovalPreview />}
+      ></Route>
+      {/* List Agreement Agent  */}
+      <Route
+        path='agent-dashboard/list-agreement-agent'
+        element={<ListAgreementAgent />}
+      ></Route>
+      {/* Check Request Agent  */}
+      <Route
+        path='agent-dashboard/check-request-agent'
+        element={<CheckRequestAgent />}
+      ></Route>
+      {/* Chat Request Agent Message  */}
+      <Route
+        path='/agent-dashboard/check-request-agent-message'
+        element={<CheckRequestAgentMessage />}
+      ></Route>
+      {/* Agent Chat List  */}
+      <Route
+        path='/agent-dashboard/agent-chat-list'
+        element={<AgentChatList />}
+      ></Route>
+      {/* Agent Chat View  */}
+      <Route
+        path='/agent-dashboard/agent-chat-view'
+        element={<AgentChatView />}
+      ></Route>
+      {/* Help Agent  */}
+      <Route path='/agent-dashboard/help-agent' element={<HelpAgent />}></Route>
+      {/* Agent Wallet  */}
+      <Route
+        path='/agent-dashboard/agent-wallet'
+        element={<AgentWallet />}
+      ></Route>
+      {/* Agent Enter BVN  */}
+      <Route
+        path='/agent-dashboard/agent-enter-bvn'
+        element={<AgentEnterBVN />}
+      ></Route>
+      {/* Agent Verify Info  */}
+      <Route
+        path='/agent-dashboard/agent-verify-info'
+        element={<AgentVerifyInfo />}
+      ></Route>
+      {/* Agent Main Wallet  */}
+      <Route
+        path='/agent-dashboard/agent-main-wallet'
+        element={<AgentMainWallet />}
+      ></Route>
+      {/* Agent Transaction History  */}
+      <Route
+        path='/agent-dashboard/agent-transaction-history'
+        element={<AgentTransHistory />}
+      ></Route>
+      {/* Agent Notification Page  */}
+      <Route
+        path='/agent-dashboard/agent-notification'
+        element={<AgentNotification />}
+      ></Route>
+      {/* Agent Fund Wallet  */}
+      <Route
+        path='/agent-dashboard/agent-fund-wallet'
+        element={<AgentFundWallet />}
+      ></Route>
+      {/* Agent Credit Wallet With Card  */}
+      <Route
+        path='/agent-dashboard/agent-creditwallet-with-card'
+        element={<AgentCreditWalletWithCard />}
+      ></Route>
+
+      {/* Agent Wallet Payment Successful */}
+      <Route
+        path='/agent-dashboard/agent-wallet-payment-successful'
+        element={<AgentWalletPaymentSuccessful />}
+      ></Route>
+
+      {/* Advanced Agent Settings  */}
+      <Route
+        path='/agent-dashboard/advanced-agent-settings'
+        element={<AdvancedAgentSettings />}
+      ></Route>
+
+      {/* Agent Profile  */}
+      <Route
+        path='/agent-dashboard/agent-profile'
+        element={<AgentProfile />}
+      ></Route>
+
+      {/* Change Agent Email  */}
+      <Route
+        path='/agent-dashboard/change-agent-email'
+        element={<ChangeAgentEmail />}
+      ></Route>
+
+      {/* Manage Users  */}
+      <Route
+        path='/user-dashboard/manage-users'
+        element={<ManageUsers />}
       ></Route>
     </Router>
   )

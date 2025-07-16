@@ -314,7 +314,7 @@ select:focus {
   }
 }
 .preview-agreement-title {
-  color: #4361ee !important;
+  color: #000;
   margin-bottom: 0.8rem;
 }
 
@@ -380,5 +380,36 @@ select:focus {
     flex-direction: column;
     width: 100%;
     align-content: center;
+  }
+}
+
+/* New Styles  */
+.renter-info-containter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.renter-info-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem 0;
+}
+
+.renter-settings-item {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  & > input {
+    margin-bottom: 0;
+    margin-right: -6rem;
+  }
+
+  & .update-btn {
+    padding: 0;
   }
 }

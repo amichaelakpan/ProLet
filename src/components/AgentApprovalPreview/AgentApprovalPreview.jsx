@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './AgentApprovalPreview.css'
 import '../RenterReg/RenterReg.css'
@@ -13,9 +13,8 @@ import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
-import estate from '../../assets/images/estate.png'
+
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -28,8 +27,78 @@ import landlordmapimage from '../../assets/images/landlord-map-image.png'
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
+const RejectAgreementForm = ({
+  handleSubmit,
+  closeModal,
+  handleRejectAgreement,
+}) => {
+  return (
+    <div className='modal-overlay'>
+      <div className='modal-content'>
+        <div className='terminate-rent-header pay-renter-header'>
+          <div className='transaction-history-title pay-renter-title'>
+            Reasons for Rejection
+          </div>
+          <div className='cancel-agreement-btn'>
+            <Button
+              text={'Cancel'}
+              bgcolor={'#e5ebff'}
+              color={'#3357d0'}
+              onClick={closeModal}
+            />
+          </div>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className='reg-data-div'>
+            <h5>Reasons for rejection (if any)</h5>
+            <textarea
+              className='textarea'
+              placeholder='Enter your message here'
+            ></textarea>
+          </div>
+          <div className='go-to-wallet pay-renter-action-btns'>
+            <Button
+              text={`Confirm`}
+              bgcolor={'#3357D0'}
+              color='#fff'
+              borderColor={'#fff'}
+              width='100%'
+              onClick={handleRejectAgreement}
+            />
+          </div>
+          {/* <div className='modal-actions  pay-renter-action-btns'>
+            <button type='submit'>Submit</button>
+            <button type='button' onClick={closeModal}>
+              Cancel
+            </button>
+          </div> */}
+        </form>
+      </div>
+    </div>
+  )
+}
+
 function AgentApprovalPreview() {
   // Code Block to handle File Upload
+  const [isOpen, setIsOpen] = useState(false)
+  const openModal = () => setIsOpen(true)
+  const closeModal = () => setIsOpen(false)
+
+  // handle signed agreement
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Handle form submission logic here
+    alert('Signed Successfully 👍')
+    closeModal()
+  }
+
+  // handle reject agreement
+  const handleRejectAgreement = (e) => {
+    e.preventDefault()
+    // Handle form submission logic here
+    alert('Property Successfully Rejected ❌')
+    closeModal()
+  }
 
   return (
     <div className='dashboard-container'>
@@ -51,19 +120,18 @@ function AgentApprovalPreview() {
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={market} text={'See Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={agreement} text={'Approvals'} />
           </div>
           <div>
-            <SidebarMenu img={information} text={'Check Request'} />
+            <SidebarMenu img={agreement} text={'Check Request'} />
           </div>
           <div>
             <SidebarMenu img={chat} text={'Chat'} />
           </div>
         </menu>
-
         <h5>Others</h5>
         <menu>
           <div>
@@ -92,6 +160,13 @@ function AgentApprovalPreview() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
+          {isOpen && (
+            <RejectAgreementForm
+              handleSubmit={handleSubmit}
+              closeModal={closeModal}
+              handleRejectAgreement={handleRejectAgreement}
+            />
+          )}
           <div className='comp-dash-renter-container'>
             <section className='reg-main-content'>
               <section className='comp-main-content'>
@@ -162,6 +237,7 @@ function AgentApprovalPreview() {
                             color='#fff'
                             borderColor={'#fff'}
                             width='100%'
+                            onClick={openModal}
                           />
                         </div>
                       </div>

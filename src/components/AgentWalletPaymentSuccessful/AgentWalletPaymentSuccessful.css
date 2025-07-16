@@ -204,7 +204,7 @@ select:focus {
   }
 }
 
-.verify-info-container {
+.wallet-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -216,12 +216,16 @@ select:focus {
   margin: 5rem auto;
   border-radius: 20px;
 
-  @media screen and (max-width: 1085px) {
+  @media screen and (max-width: 1000px) {
     width: 80%;
-    padding: 6rem 2rem;
+    padding: 6rem 4rem;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 700px) {
     width: 95%;
     padding: 3rem 1rem;
   }
@@ -240,38 +244,71 @@ select:focus {
 }
 
 /* New Styles  */
-.verify-btn-container {
-  display: flex;
-  margin-top: 2rem;
-  gap: 1.5rem;
-  width: 100%;
-  justify-items: center;
+.fund-wallet-header {
+  width: 60%;
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  margin-top: 0;
+  margin-bottom: -4rem;
+  margin-left: auto;
+  margin-right: auto;
 
-  & .go-back-div {
-    flex: 1;
+  @media screen and (max-width: 1100px) {
+    grid-column-gap: 0rem;
+
+    grid-row-gap: 1rem;
   }
 
-  & .create-wallet-div {
-    flex: 1;
+  @media screen and (max-width: 1000px) {
+    width: 80%;
   }
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
   }
 }
 
-.verify-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  background-color: #e5ebff;
-  padding: 1rem 2rem;
-  width: 80%;
-
-  & .verify-name {
+/* New Styles  */
+.wallet-container {
+  & .payment-successful-text {
     color: #000;
-    font-weight: 500;
-    flex: 1;
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: 50%;
+
+    @media screen and (max-width: 1650px) {
+      width: 80%;
+    }
   }
+
+  & .go-to-wallet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.wallet-container-successful {
+  @media screen and (max-width: 1150px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+}
+
+.payment-successful-div {
+  height: 6.8rem;
+  width: 6.8rem;
+  background: #e8f4ee;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

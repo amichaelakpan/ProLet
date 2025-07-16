@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './AgentEnterBVN.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -18,7 +18,7 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
+function AgentEnterBVN() {
   // Code Block to handle File Upload
 
   return (
@@ -41,10 +41,10 @@ function Wallet() {
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={estate} text={'See Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={agreement} text={'Approvals'} />
           </div>
           <div>
             <SidebarMenu img={information} text={'Check Request'} />
@@ -82,35 +82,27 @@ function Wallet() {
 
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
+          <div className='wallet-container'>
+            <h2>Enter your BVN (Agent)</h2>
             <p className='bvn-prompt-text'>
-              Confirm your name and phone number
+              Enter your BVN to create a new wallet
             </p>
             {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
+            <div className='reg-data-div'>
+              <input
+                type='number'
+                className='textbox enter-bvn'
+                placeholder='1234567890'
+              />
             </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
+            <div>
+              <Button
+                text={`Create Wallet`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width=''
+              />
             </div>
           </div>
         </section>
@@ -119,4 +111,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default AgentEnterBVN

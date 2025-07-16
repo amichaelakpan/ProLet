@@ -203,75 +203,49 @@ select:focus {
     }
   }
 }
-
-.verify-info-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 10rem 6rem;
-  color: #3357d0;
-  align-items: center;
-  border: 1px solid #3357d0;
-  width: 60%;
-  margin: 5rem auto;
-  border-radius: 20px;
-
-  @media screen and (max-width: 1085px) {
-    width: 80%;
-    padding: 6rem 2rem;
-  }
-
-  @media screen and (max-width: 800px) {
-    width: 95%;
-    padding: 3rem 1rem;
-  }
-}
-
-/* New Styles  */
-.reg-data-div {
-  & .enter-bvn {
-    background-color: #e6eaf0;
-    text-align: center;
-  }
-}
-
-.bvn-prompt-text {
-  color: #000 !important;
-}
-
-/* New Styles  */
-.verify-btn-container {
-  display: flex;
-  margin-top: 2rem;
-  gap: 1.5rem;
-  width: 100%;
-  justify-items: center;
-
-  & .go-back-div {
-    flex: 1;
-  }
-
-  & .create-wallet-div {
-    flex: 1;
-  }
-
-  @media screen and (max-width: 1150px) {
-    width: 100%;
-  }
-}
-
-.verify-details {
-  display: flex;
-  flex-direction: column;
+.active-dash-proplist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
   gap: 1rem;
-  align-items: center;
-  background-color: #e5ebff;
-  padding: 1rem 2rem;
-  width: 80%;
+  padding: 2rem;
 
-  & .verify-name {
-    color: #000;
-    font-weight: 500;
-    flex: 1;
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.active-landlord-options-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem;
+
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* New Styles  */
+
+.chat-log-settings-container {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+  /* margin-top: 2rem; */
+}
+
+/* New Styles  */
+.list-agreement-agent-header {
+  display: grid;
+  grid-template-columns: minmax (max-content, 1fr);
+  grid-gap: 1.8rem;
+  padding: 2rem 2rem;
+  margin-top: 2.5rem;
 }

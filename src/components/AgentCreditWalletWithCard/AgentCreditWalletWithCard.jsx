@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './AgentCreditWalletWithCard.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -15,10 +15,11 @@ import information from '../../assets/images/information.png'
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
+import infoalert from '../../assets/images/info-alert.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
+function AgentCreditWalletWithCard() {
   // Code Block to handle File Upload
 
   return (
@@ -80,37 +81,75 @@ function Wallet() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        {/* Fund Wallet Header  */}
+        <div className='fund-wallet-header'>
+          <div className='transaction-history-title'>
+            Add money to Agent wallet
+          </div>
+          <div className='back-to-wallet-div'>
+            <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
+          </div>
+        </div>
+
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
-            {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
+          <div className='wallet-container credit-wallet-container'>
+            <div className='reg-data-div '>
+              <section className='header-info-icon'>
+                <h5>Name on card</h5>
+                <figure>
+                  <img src={infoalert} alt='Info Icon' />{' '}
+                </figure>
+              </section>
+
+              <input type='text' className='textbox' placeholder='Uwem Stack' />
             </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
+            <div className='reg-data-div'>
+              <section className='header-info-icon'>
+                <h5>Card Number</h5>
+                <figure>
+                  <img src={infoalert} alt='Info Icon' />{' '}
+                </figure>
+              </section>
+
+              <input type='number' className='textbox' placeholder='1 2 3 4' />
+            </div>
+
+            <div className='cvv-exp-date'>
+              <div className='reg-data-div'>
+                <section className='header-info-icon'>
+                  <h5>CCV</h5>
+                  <figure>
+                    <img src={infoalert} alt='Info Icon' />
+                  </figure>
+                </section>
+
+                <input type='number' className='textbox' placeholder='999' />
+              </div>
+
+              <div className='reg-data-div'>
+                <section className='header-info-icon'>
+                  <h5>Exp. Date</h5>
+                  <figure>
+                    <img src={infoalert} alt='Info Icon' />
+                  </figure>
+                </section>
+
+                <input
+                  type='number'
+                  className='textbox'
+                  placeholder='MM / YYYY'
                 />
               </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
+            </div>
+
+            <div className='reg-data-div pay-btn'>
+              <Button
+                text={'Pay'}
+                bgcolor={'#3357d0'}
+                color={'#fff'}
+                width='100%'
+              />
             </div>
           </div>
         </section>
@@ -119,4 +158,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default AgentCreditWalletWithCard

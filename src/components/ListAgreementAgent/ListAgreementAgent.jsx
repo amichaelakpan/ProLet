@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './ListAgreementAgent.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -8,9 +8,8 @@ import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
-import estate from '../../assets/images/estate.png'
 import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
+import favorite from '../../assets/images/favorite.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
@@ -18,9 +17,9 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
-  // Code Block to handle File Upload
+import ChatLogItem from '../../utilities/ChatLogItem'
 
+function ListAgreementAgent() {
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -37,18 +36,23 @@ function Wallet() {
           <div>
             <SidebarMenu img={dashboard} text={'Dashboard'} />
           </div>
+
           <div>
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
+
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={agreement} text={'See Agreement'} />
           </div>
+
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={market} text={'Approvals'} />
           </div>
+
           <div>
-            <SidebarMenu img={information} text={'Check Request'} />
+            <SidebarMenu img={favorite} text={'Check Request'} />
           </div>
+
           <div>
             <SidebarMenu img={chat} text={'Chat'} />
           </div>
@@ -80,38 +84,59 @@ function Wallet() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        <section className='comp-get-started list-agreement-agent-header'>
+          <div className='transaction-history-title tenant-prop-options'>
+            <div>
+              <Button
+                text={'Landlords'}
+                bgcolor={'#e5ebff'}
+                color={'#3357d0'}
+                width='100%'
+              />
+            </div>
+            <div>
+              <Button
+                text={'Renters'}
+                bgcolor={'#e5ebff'}
+                color={'#3357d0'}
+                width='100%'
+              />
+            </div>
+            <div>
+              <Button
+                text={'All'}
+                bgcolor={'#3357d0'}
+                color={'#fff'}
+                width='100%'
+              />
+            </div>
+          </div>
+
+          <h1>List of Agreements</h1>
+        </section>
+
         {/* Content Section  */}
-        <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
-            <p className='bvn-prompt-text'>
-              Confirm your name and phone number
-            </p>
-            {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
-            </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-            </div>
+        <section className='comp-main-content chat-log-settings-container'>
+          <div>
+            <ChatLogItem
+              name={'Daniel' + '(Landlord)'}
+              message={'Sign Agreement'}
+              time={'4:20pm'}
+            />
+          </div>
+          <div>
+            <ChatLogItem
+              name={'Monalisa' + '(Landlord)'}
+              message={'Sign Agreement'}
+              time={'Friday'}
+            />
+          </div>
+          <div>
+            <ChatLogItem
+              name={'Jane' + '(Renter)'}
+              message={'Sign Agreement'}
+              time={'Thursday'}
+            />
           </div>
         </section>
       </div>
@@ -119,4 +144,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default ListAgreementAgent

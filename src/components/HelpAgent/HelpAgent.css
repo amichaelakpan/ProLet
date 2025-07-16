@@ -266,7 +266,7 @@
 
     font-weight: 700;
     opacity: 100%;
-    color: #fff;
+    /* text-align: left; */
   }
 }
 

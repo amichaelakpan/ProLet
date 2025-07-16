@@ -1,12 +1,10 @@
 import React from 'react'
 
-import './RequestRepairMessage.css'
+import './CheckRequestAgentMessage.css'
 import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
-import { TenantRecords } from '../../utilities/TenantRecords'
-import { TenantRecordsHeader } from '../../utilities/TenantRecords'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
@@ -25,7 +23,7 @@ import faultyitem from '../../assets/images/faulty-item.png'
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
-function RequestRepairMessage() {
+function CheckRequestAgentMessage() {
   // Code Block to handle File Upload
 
   return (
@@ -48,10 +46,10 @@ function RequestRepairMessage() {
             <SidebarMenu img={market} text={'Manage Tenants'} />
           </div>
           <div>
-            <SidebarMenu img={estate} text={'Manage Agents'} />
+            <SidebarMenu img={estate} text={'See Agreement'} />
           </div>
           <div>
-            <SidebarMenu img={agreement} text={'Agreement'} />
+            <SidebarMenu img={agreement} text={'Approvals'} />
           </div>
           <div>
             <SidebarMenu img={information} text={'Check Request'} />
@@ -88,7 +86,7 @@ function RequestRepairMessage() {
         </section>
 
         <section className='comp-get-started manage-tenants-header-text'>
-          <h2>Request for repair on apartment</h2>
+          <h2>Request for repair on apartment (Agent Module)</h2>
           <p>
             This section is for tenants to report any maintenance or repair
             issues in their apartment. It includes details such as the problem
@@ -105,7 +103,7 @@ function RequestRepairMessage() {
               <section className='comp-main-content'>
                 {/* Transactions Section  */}
                 <div className='request-repair-message-from-tenant'>
-                  <h3>Message from Jerome Bell</h3>
+                  <h3>Message from (Jerome Bell)</h3>
                   <p>
                     Dear Landlord, <br /> <br />I hope you are doing well. I am
                     writing to inform you about a maintenance issue in my
@@ -166,4 +164,4 @@ function RequestRepairMessage() {
   )
 }
 
-export default RequestRepairMessage
+export default CheckRequestAgentMessage

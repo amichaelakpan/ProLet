@@ -1,4 +1,4 @@
-import './VerifyInfo.css'
+import './AgentFundWallet.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
@@ -18,7 +18,7 @@ import logout from '../../assets/images/logout.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 
-function Wallet() {
+function AgentFundWallet() {
   // Code Block to handle File Upload
 
   return (
@@ -80,37 +80,38 @@ function Wallet() {
           <img src={bell} alt='Bell Icon' />
         </section>
 
+        {/* Fund Wallet Header  */}
+        <div className='fund-wallet-header'>
+          <div className='transaction-history-title'>
+            Add money to Agent wallet
+          </div>
+          <div className='back-to-wallet-div'>
+            <Button text={'Cancel'} bgcolor={'#e5ebff'} color={'#3357d0'} />
+          </div>
+        </div>
+
         {/* Content Section  */}
         <section className='comp-main-content'>
-          <div className='verify-info-container'>
-            <h2>Verify your information</h2>
+          <div className='wallet-container'>
             <p className='bvn-prompt-text'>
-              Confirm your name and phone number
+              Enter the amount you wish to add to your wallet
             </p>
             {/* NIN Verification */}
-            <div className='verify-details'>
-              <p className='verify-name'>Uwem Stack</p>
-              <p className='verify-number'>09022234356</p>
+            <div className='reg-data-div'>
+              <input
+                type='number'
+                className='textbox enter-bvn'
+                placeholder='₦ 0.00'
+              />
             </div>
-            <div className='verify-btn-container'>
-              <div className='go-back-div'>
-                <Button
-                  text={`Go Back`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
-              <div className='create-wallet-div'>
-                <Button
-                  text={`Create Wallet`}
-                  bgcolor={'#3357D0'}
-                  color='#fff'
-                  borderColor={'#fff'}
-                  width='100%'
-                />
-              </div>
+            <div>
+              <Button
+                text={`Continue`}
+                bgcolor={'#3357D0'}
+                color='#fff'
+                borderColor={'#fff'}
+                width=''
+              />
             </div>
           </div>
         </section>
@@ -119,4 +120,4 @@ function Wallet() {
   )
 }
 
-export default Wallet
+export default AgentFundWallet
