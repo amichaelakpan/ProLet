@@ -107,6 +107,9 @@ import AdvancedAgentSettings from './components/AdvancedAgentSettings/AdvancedAg
 import AgentProfile from './components/AgentProfile/AgentProfile'
 import ChangeAgentEmail from './components/ChangeAgentEmail/ChangeAgentEmail'
 import ManageUsers from './components/ManageUsers/ManageUsers'
+import AdminChatList from './components/AdminChatList/AdminChatList'
+import AdminChatView from './components/AdminChatView/AdminChatView'
+import AdminProfile from './components/AdminProfile/AdminProfile'
 
 const PageRoutes = () => {
   return (
@@ -565,6 +568,24 @@ const PageRoutes = () => {
       <Route
         path='/user-dashboard/manage-users'
         element={<ManageUsers />}
+      ></Route>
+
+      {/* User Chat List  */}
+      <Route
+        path='/admin-dashboard/admin-chat-list'
+        element={<AdminChatList />}
+      ></Route>
+
+      {/* Admin Chat View  */}
+      <Route
+        path='/admin-dashboard/admin-chat-view'
+        element={<AdminChatView />}
+      ></Route>
+
+      {/* Admin Profile  */}
+      <Route
+        path='/admin-dashboard/admin-profile'
+        element={<AdminProfile />}
       ></Route>
     </Router>
   )

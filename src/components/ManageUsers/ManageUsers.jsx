@@ -5,28 +5,24 @@ import '../RenterReg/RenterReg.css'
 import Logo from '../Header/Logo'
 import SidebarMenu from '../../utilities/SidebarMenu'
 import Button from '../../utilities/Button'
-import { TenantRecords } from '../../utilities/TenantRecords'
-import { TenantRecordsHeader } from '../../utilities/TenantRecords'
+import { ManageUsersRecords } from '../../utilities/ManageUsersRecords'
+import { ManageUsersRecordsHeader } from '../../utilities/ManageUsersRecords'
 
 import arrow from '../../assets/images/arrow.png'
 import dashboardimg from '../../assets/images/dashboardimg.png'
 import bell from '../../assets/images/bell.png'
 import dashboard from '../../assets/images/dashboard.png'
 import market from '../../assets/images/market.png'
-import estate from '../../assets/images/estate.png'
-import agreement from '../../assets/images/agreement.png'
-import information from '../../assets/images/information.png'
 
 import chat from '../../assets/images/chat.png'
 import settings from '../../assets/images/settings.png'
 import logout from '../../assets/images/logout.png'
+import agreement from '../../assets/images/agreement.png'
 
 import '../CompDashRenter/CompDashRenter.css'
 import WalletActionsCard from '../../utilities/WalletActionsCard'
 
 function ManageUsers() {
-  // Code Block to handle File Upload
-
   return (
     <div className='dashboard-container'>
       <div className='dashboard-sidebar'>
@@ -46,11 +42,13 @@ function ManageUsers() {
           <div>
             <SidebarMenu img={market} text={'Manage Users'} />
           </div>
+
           <div>
-            <SidebarMenu img={chat} text={'Chat'} />
+            <SidebarMenu img={chat} text={'Chats'} />
           </div>
+
           <div>
-            <SidebarMenu img={information} text={'Support'} />
+            <SidebarMenu img={agreement} text={'Support'} />
           </div>
         </menu>
 
@@ -59,9 +57,7 @@ function ManageUsers() {
           <div>
             <SidebarMenu img={dashboard} text={'Wallet'} />
           </div>
-          <div>
-            <SidebarMenu img={market} text={'Help'} />
-          </div>
+
           <div>
             <SidebarMenu img={settings} text={'Advance Settings'} />
           </div>
@@ -113,21 +109,21 @@ function ManageUsers() {
                   <div className='transaction-history-title tenant-prop-options'>
                     <div>
                       <Button
-                        text={'Apartments'}
+                        text={'Renters'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
                       />
                     </div>
                     <div>
                       <Button
-                        text={'Shortlet'}
+                        text={'Landlords'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
                       />
                     </div>
                     <div>
                       <Button
-                        text={'Studios'}
+                        text={'Agents'}
                         bgcolor={'#e5ebff'}
                         color={'#3357d0'}
                         width='100%'
@@ -156,94 +152,87 @@ function ManageUsers() {
                 {/* Transactions Section  */}
                 <div className='transactions'>
                   <div className='transactions-records'>
-                    {/* name = 'Name/ID', email = 'Email/Phone Number', propAddress
-                    = 'Property Address', amount = 'Amount Paid/Type', sedate =
-                    'Start - End Date', duration = 'Duration/Status', pytstatus
-                    = 'Payment Status', */}
-                    <TenantRecordsHeader name={"Owner's Name/ID"} />
-                    <TenantRecords
-                      name={'John Doe'}
-                      ID={43384}
-                      email={'john.doe@gmail.com'}
-                      phone={'+234 803 123 4567'}
-                      state={'Lagos'}
-                      city={'Ikeja'}
+                    {/* ownerName, ownerID, renterName, renterEmail, renterPhone,
+                    renterID, numProperties, amount, registeredDate, duration,
+                    pytstatus, */}
+                    <ManageUsersRecordsHeader />
+                    <ManageUsersRecords
+                      ownerName={'John Doe'}
+                      ownerID={43384}
+                      renterName={'Black Wood'}
+                      renterEmail={'black.wood@yahoo.co.uk'}
+                      renterPhone={'+234 803 123 4567'}
+                      renterID={'22345'}
+                      numProperties={'3'}
                       amount={4500000}
-                      type={'3 Bedroom Flat'}
-                      sdate={'6th June 2025'}
-                      edate={'6th July 2025'}
+                      registeredDate={'6th June 2025'}
                       duration={'1 year'}
                       pytstatus={'Paid'}
                     />
-                    <TenantRecords
-                      name={'Isaac Newton'}
-                      ID={43384}
-                      email={'isaac.newton@gmail.com'}
-                      phone={'+234 803 123 4537'}
-                      state={'New York'}
-                      city={'Alabama'}
-                      amount={2500000}
-                      type={'1 Bedroom Flat'}
-                      sdate={'6th June 2025'}
-                      edate={'6th July 2025'}
-                      duration={'1 month'}
-                      pytstatus={'Due'}
-                    />
-                    <TenantRecords
-                      name={'Mark Zuckerberg'}
-                      ID={43284}
-                      email={'mark.zuck@gmail.com'}
-                      phone={'+234 803 123 4567'}
-                      state={'Portugal'}
-                      city={'Ohio'}
+                    <ManageUsersRecords
+                      ownerName={'John Doe'}
+                      ownerID={43384}
+                      renterName={'Black Wood'}
+                      renterEmail={'black.wood@yahoo.co.uk'}
+                      renterPhone={'+234 803 123 4567'}
+                      renterID={'22345'}
+                      numProperties={'3'}
                       amount={4500000}
-                      type={'3 Bedroom Flat'}
-                      sdate={'6th June 2025'}
-                      edate={'6th July 2025'}
+                      registeredDate={'6th June 2025'}
                       duration={'1 year'}
                       pytstatus={'Paid'}
                     />
-                    <TenantRecords
-                      name={'Donald Trump'}
-                      ID={43381}
-                      email={'donald.trump@gmail.com'}
-                      phone={'+234 803 123 4567'}
-                      state={'America'}
-                      city={'Illinois'}
-                      amount={2500000}
-                      type={'2 Bedroom Flat'}
-                      sdate={'6th June 2025'}
-                      edate={'6th July 2025'}
-                      duration={'1 year'}
-                      pytstatus={'Due'}
-                    />
-                    <TenantRecords
-                      name={'Baba Ijebu'}
-                      ID={43384}
-                      email={'baba.ijebu@gmail.com'}
-                      phone={'+234 803 123 4567'}
-                      state={'Ondo'}
-                      city={'Akure'}
+                    <ManageUsersRecords
+                      ownerName={'John Doe'}
+                      ownerID={43384}
+                      renterName={'Black Wood'}
+                      renterEmail={'black.wood@yahoo.co.uk'}
+                      renterPhone={'+234 803 123 4567'}
+                      renterID={'22345'}
+                      numProperties={'3'}
                       amount={4500000}
-                      type={'3 Bedroom Flat'}
-                      sdate={'6th June 2025'}
-                      edate={'6th July 2025'}
+                      registeredDate={'6th June 2025'}
                       duration={'1 year'}
                       pytstatus={'Paid'}
                     />
-                    <TenantRecords
-                      name={'Razak Akanji'}
-                      ID={43384}
-                      email={'razak.akanji@gmail.com'}
-                      phone={'+234 803 123 4567'}
-                      state={'Bayelsa'}
-                      city={'Ikoli'}
+                    <ManageUsersRecords
+                      ownerName={'John Doe'}
+                      ownerID={43384}
+                      renterName={'Black Wood'}
+                      renterEmail={'black.wood@yahoo.co.uk'}
+                      renterPhone={'+234 803 123 4567'}
+                      renterID={'22345'}
+                      numProperties={'3'}
                       amount={4500000}
-                      type={'3 Bedroom Flat'}
-                      sdate={'6th June 2025'}
-                      edate={'6th July 2025'}
+                      registeredDate={'6th June 2025'}
+                      duration={'1 year'}
+                      pytstatus={'Failed'}
+                    />
+                    <ManageUsersRecords
+                      ownerName={'John Doe'}
+                      ownerID={43384}
+                      renterName={'Black Wood'}
+                      renterEmail={'black.wood@yahoo.co.uk'}
+                      renterPhone={'+234 803 123 4567'}
+                      renterID={'22345'}
+                      numProperties={'3'}
+                      amount={4500000}
+                      registeredDate={'6th June 2025'}
                       duration={'1 year'}
                       pytstatus={'Paid'}
+                    />
+                    <ManageUsersRecords
+                      ownerName={'John Doe'}
+                      ownerID={43384}
+                      renterName={'Black Wood'}
+                      renterEmail={'black.wood@yahoo.co.uk'}
+                      renterPhone={'+234 803 123 4567'}
+                      renterID={'22345'}
+                      numProperties={'3'}
+                      amount={4500000}
+                      registeredDate={'6th June 2025'}
+                      duration={'1 year'}
+                      pytstatus={'Failed'}
                     />
                   </div>
                 </div>
