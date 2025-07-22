@@ -115,6 +115,12 @@ import ManageUsers from './components/ManageUsers/ManageUsers'
 import AdminChatList from './components/AdminChatList/AdminChatList'
 import AdminChatView from './components/AdminChatView/AdminChatView'
 import AdminProfile from './components/AdminProfile/AdminProfile'
+import SeeAllActivities from './components/SeeAllActivities/SeeAllActivities'
+import AdminMainWallet from './components/AdminMainWallet/AdminMainWallet'
+import UsersWallet from './components/UsersWallet/UsersWallet'
+import AdminDashboard from './components/AdminDashboard/AdminDashboard'
+import AdminUploadedProperties from './components/AdminUploadedProperties/AdminUploadedProperties'
+import AdminUploadedPreview from './components/AdminUploadedPreview/AdminUploadedPreview'
 
 function App() {
   return (
@@ -625,6 +631,42 @@ function App() {
           <Route
             path='/admin-dashboard/admin-profile'
             element={<AdminProfile />}
+          ></Route>
+
+          {/* Admin See All Activities  */}
+          <Route
+            path='/admin-dashboard/see-all-activities'
+            element={<SeeAllActivities />}
+          ></Route>
+
+          {/* Admin Main Wallet  */}
+          <Route
+            path='/admin-dashboard/admin-main-wallet'
+            element={<AdminMainWallet />}
+          ></Route>
+
+          {/* Admin  - Users Wallets  */}
+          <Route
+            path='/admin-dashboard/admin-users-wallets'
+            element={<UsersWallet />}
+          ></Route>
+
+          {/* Admin Dashboard  */}
+          <Route
+            path='/admin-dashboard/admin-dashboard'
+            element={<AdminDashboard />}
+          ></Route>
+
+          {/* Admin Uploaded Properties  */}
+          <Route
+            path='/admin-dashboard/admin-uploaded-properties'
+            element={<AdminUploadedProperties />}
+          ></Route>
+
+          {/* Admin Uploaded Preview  */}
+          <Route
+            path='/admin-dashboard/admin-uploaded-preview'
+            element={<AdminUploadedPreview />}
           ></Route>
         </Routes>
       </BrowserRouter>

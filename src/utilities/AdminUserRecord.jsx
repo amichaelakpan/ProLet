@@ -7,7 +7,7 @@ import React, { useState, useRef, useEffect } from 'react'
 
 // export default TenantRecords
 
-import './TenantRecords.css'
+import './AdminUserRecord.css'
 import Button from './Button'
 import edit from '../assets/images/edit.png'
 
@@ -175,21 +175,15 @@ const PayLandlordForm = ({ handleSubmit, closeModal }) => {
   )
 }
 
-export function TenantRecords({
-  recordType,
+export function AdminUserRecord({
   name,
-  ID,
   email,
   phone,
+  dob,
   state,
   city,
-  amount,
-  type,
-  sdate,
-  edate,
-  duration,
-  pytstatus,
-  myApartment,
+  date,
+  status,
 }) {
   // show action menu for tenant records
   const [showMenu, setShowMenu] = useState(false)
@@ -232,24 +226,8 @@ export function TenantRecords({
         <div className='tenant-record-item'>
           <div className='tenant-records-item-header'>{name}</div>
           <div className='tenant-records-item-content' ref={menuRef}>
-            {pytstatus === 'View' ? '' : <span> ID: {ID} </span>}
-            {pytstatus === 'View' ? (
-              ''
-            ) : (
-              <button onClick={toggleMenu}>
-                <img src={edit} alt='Edit Action' />
-              </button>
-            )}
-
             {/* Show Action Menu  */}
-            {
-              showMenu &&
-                ActionMenu({
-                  openModal,
-                  myApartment,
-                  recordType,
-                }) /* Render the action menu when showMenu is true */
-            }
+
             {/* Open modal dialog to pay renter */}
             {isOpen &&
               PayRenterForm({
@@ -269,96 +247,45 @@ export function TenantRecords({
         <div className='tenant-record-item'>
           <div className='tenant-records-item-header'>{email}</div>
           <div className='tenant-records-item-content'>{phone}</div>
+          <div className='tenant-records-item-content'>DOB: {dob}</div>
+          <div className='tenant-records-item-content'>
+            <button onClick={toggleMenu}>
+              <img src={edit} alt='Edit Action' />
+            </button>
+          </div>
         </div>
+
         <div className='tenant-record-item'>
           <div className='tenant-records-item-header'>{state}</div>
           <div className='tenant-records-item-content'>{city}</div>
         </div>
+
         <div className='tenant-record-item'>
-          <div className='tenant-records-item-header'>{amount}</div>
-          <div className='tenant-records-item-content'>{type}</div>
-        </div>
-        <div
-          className={`tenant-record-item ${
-            pytstatus === 'Due' ? 'red-text' : ''
-          }`}
-        >
-          <div className='tenant-records-item-header'>{sdate}</div>
-          <div className='tenant-records-item-content'>{edate}</div>
-        </div>
-        <div className='tenant-record-item'>
-          <div className='tenant-records-item-header'>{duration}</div>
-          <div
-            className={`tenant-records-item-content ${
-              pytstatus === 'Paid' ||
-              pytstatus === 'check' ||
-              pytstatus === 'chat' ||
-              pytstatus === 'issueagreement'
-                ? ''
-                : 'red-text'
-            }`}
-          >
-            {pytstatus === 'Paid' ||
-            pytstatus === 'check' ||
-            pytstatus === 'chat' ||
-            pytstatus === 'issueagreement'
-              ? 'Active'
-              : duration && 'Expired'}
-          </div>
+          <div className='tenant-records-item-header'>{date}</div>
         </div>
 
         <div>
-          <Button
-            text={
-              pytstatus === 'Paid'
-                ? 'Paid'
-                : pytstatus === 'check'
-                ? 'Check'
-                : pytstatus === 'chat'
-                ? 'Chat'
-                : pytstatus === 'issueagreement'
-                ? 'Issue Agreement'
-                : pytstatus === 'View'
-                ? 'View'
-                : 'Due'
-            }
-            bgcolor={
-              pytstatus === 'Paid'
-                ? '#15a85a'
-                : pytstatus === 'check'
-                ? '#15a85a'
-                : pytstatus === 'chat' ||
-                  pytstatus === 'issueagreement' ||
-                  pytstatus === 'View'
-                ? '#3357d0'
-                : '#c9184a'
-            }
-            color={'#fff'}
-          />
+          <Button text={status} bgcolor={'#3357d0'} color={'#fff'} />
         </div>
       </div>
     </div>
   )
 }
 
-export function TenantRecordsHeader({
-  name = 'Name/ID',
-  email = 'Email/Phone Number',
-  propAddress = 'Property Address',
-  amount = 'Amount Paid/Type',
-  sedate = 'Start - End Date',
-  duration = 'Duration/Status',
-  pytstatus = 'Payment Status',
+export function AdminUserRecordHeader({
+  name = 'Name',
+  userDetails = 'User Details',
+  address = 'address',
+  date = 'Date',
+  status = 'Status',
 }) {
   return (
     <div className='tenant-record-items tenant-record-items-header'>
       <div>{name}</div>
-      <div>{email}</div>
-      <div>{propAddress}</div>
-      <div>{amount} </div>
-      <div>{sedate} </div>
-      <div>{duration}</div>
-      <div>{pytstatus}</div>
+      <div>{userDetails}</div>
+      <div>{address}</div>
+      <div>{date} </div>
+      <div>{status}</div>
     </div>
   )
 }

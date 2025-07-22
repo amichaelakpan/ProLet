@@ -110,6 +110,12 @@ import ManageUsers from './components/ManageUsers/ManageUsers'
 import AdminChatList from './components/AdminChatList/AdminChatList'
 import AdminChatView from './components/AdminChatView/AdminChatView'
 import AdminProfile from './components/AdminProfile/AdminProfile'
+import SeeAllActivities from './components/SeeAllActivities/SeeAllActivities'
+import AdminMainWallet from './components/AdminMainWallet/AdminMainWallet'
+import UsersWallet from './components/UsersWallet/UsersWallet'
+import AdminDashboard from './components/AdminDashboard/AdminDashboard'
+import AdminUploadedProperties from './components/AdminUploadedProperties/AdminUploadedProperties'
+import AdminUploadedPreview from './components/AdminUploadedPreview/AdminUploadedPreview'
 
 const PageRoutes = () => {
   return (
@@ -539,53 +545,81 @@ const PageRoutes = () => {
         path='/agent-dashboard/agent-creditwallet-with-card'
         element={<AgentCreditWalletWithCard />}
       ></Route>
-
       {/* Agent Wallet Payment Successful */}
       <Route
         path='/agent-dashboard/agent-wallet-payment-successful'
         element={<AgentWalletPaymentSuccessful />}
       ></Route>
-
       {/* Advanced Agent Settings  */}
       <Route
         path='/agent-dashboard/advanced-agent-settings'
         element={<AdvancedAgentSettings />}
       ></Route>
-
       {/* Agent Profile  */}
       <Route
         path='/agent-dashboard/agent-profile'
         element={<AgentProfile />}
       ></Route>
-
       {/* Change Agent Email  */}
       <Route
         path='/agent-dashboard/change-agent-email'
         element={<ChangeAgentEmail />}
       ></Route>
-
       {/* Manage Users  */}
       <Route
         path='/user-dashboard/manage-users'
         element={<ManageUsers />}
       ></Route>
-
       {/* User Chat List  */}
       <Route
         path='/admin-dashboard/admin-chat-list'
         element={<AdminChatList />}
       ></Route>
-
       {/* Admin Chat View  */}
       <Route
         path='/admin-dashboard/admin-chat-view'
         element={<AdminChatView />}
       ></Route>
-
       {/* Admin Profile  */}
       <Route
         path='/admin-dashboard/admin-profile'
         element={<AdminProfile />}
+      ></Route>
+
+      {/* Admin See All Activities */}
+      <Route
+        path='/admin-dashboard/see-all-activities'
+        element={<SeeAllActivities />}
+      ></Route>
+
+      {/* Admin Main Wallet  */}
+      <Route
+        path='/admin-dashboard/admin-main-wallet'
+        element={<AdminMainWallet />}
+      ></Route>
+
+      {/* Admin - Users Wallets  */}
+      <Route
+        path='/admin-dashboard/admin-users-wallets'
+        element={<UsersWallet />}
+      ></Route>
+
+      {/* Admin Dashboard  */}
+      <Route
+        path='/admin-dashboard/admin-dashboard'
+        element={<AdminDashboard />}
+      ></Route>
+
+      {/* Admin Dashboard  */}
+      <Route
+        path='/admin-dashboard/admin-uploaded-properties'
+        element={<AdminUploadedProperties />}
+      ></Route>
+
+      {/* Admin Uploaded Preview  */}
+      <Route
+        path='/admin-dashboard/admin-uploaded-preview'
+        element={<AdminUploadedPreview />}
       ></Route>
     </Router>
   )
