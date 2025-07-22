@@ -121,6 +121,8 @@ import UsersWallet from './components/UsersWallet/UsersWallet'
 import AdminDashboard from './components/AdminDashboard/AdminDashboard'
 import AdminUploadedProperties from './components/AdminUploadedProperties/AdminUploadedProperties'
 import AdminUploadedPreview from './components/AdminUploadedPreview/AdminUploadedPreview'
+import AdminChat from './components/AdminChat/AdminChat'
+import AdminSupportMessages from './components/AdminChat copy/AdminSupportMessages'
 
 function App() {
   return (
@@ -667,6 +669,18 @@ function App() {
           <Route
             path='/admin-dashboard/admin-uploaded-preview'
             element={<AdminUploadedPreview />}
+          ></Route>
+
+          {/* Admin Chat  */}
+          <Route
+            path='/admin-dashboard/admin-chat'
+            element={<AdminChat />}
+          ></Route>
+
+          {/* Admin Support Messages  */}
+          <Route
+            path='/admin-dashboard/admin-support-messages'
+            element={<AdminSupportMessages />}
           ></Route>
         </Routes>
       </BrowserRouter>
